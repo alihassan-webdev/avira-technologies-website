@@ -19,16 +19,16 @@ const TopHeader = () => {
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-2">
-            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#1877F2'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#E4405F'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FF0000'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
               <Youtube className="w-4 h-4" />
             </a>
           </div>
