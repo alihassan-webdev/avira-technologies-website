@@ -59,43 +59,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Policies and Social Icons */}
           <div>
-            <h4 className="font-display font-semibold mb-4 text-black">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              {[
-                { label: "About Us", path: "/about" },
-                { label: "Smart Care", path: "/smart-care" },
-                { label: "Office Supplies", path: "/office-supplies" },
-                { label: "Partners", path: "/partners" },
-                { label: "Careers", path: "/careers" },
-                { label: "Contact", path: "/contact" },
-              ].map((l) => (
-                <li key={l.path}>
-                  <Link to={l.path} onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="font-display font-semibold mb-4 text-black">Policies</h4>
+            <ul className="space-y-3 text-sm mb-6">
+              <li>
+                <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">
+                  Legal Notice
+                </Link>
+              </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Footer Bottom Section */}
-        <div className="border-t border-gray-200 mt-10 pt-8">
-          {/* Policies with Social Icons */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <h4 className="font-display font-semibold mb-6 text-black text-center">Policies</h4>
-
-            {/* Policy Links */}
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-              <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
-              <div className="hidden md:block w-1 h-1 rounded-full bg-gray-300"></div>
-              <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
-            </div>
-
             {/* Social Icons */}
-            <div className="flex items-center gap-6 justify-center">
+            <div className="flex items-center gap-4">
               <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -110,11 +90,11 @@ const Footer = () => {
               </a>
             </div>
           </div>
+        </div>
 
-          {/* Centered Copyright */}
-          <div className="text-center">
-            <p className="text-gray-600 text-sm">© 2026 Avira Technologies. All rights reserved. hr sale</p>
-          </div>
+        {/* Footer Bottom Section */}
+        <div className="border-t border-gray-200 mt-10 pt-8 text-center">
+          <p className="text-gray-600 text-sm">© 2026 Avira Technologies. All rights reserved. hr sale</p>
         </div>
       </div>
     </footer>
