@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            className="w-full"
           >
             {/* Privacy Policy Content */}
             <div className="space-y-8 prose prose-lg max-w-none">
