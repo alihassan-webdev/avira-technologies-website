@@ -18,7 +18,7 @@ const TopHeader = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#1877F2'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
               <Facebook className="w-4 h-4" />
             </a>
