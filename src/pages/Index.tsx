@@ -104,19 +104,19 @@ const Index = () => {
       </motion.section>
 
       {/* Welcome Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-secondary">
+      <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold text-sm mb-4">
+            <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold text-sm mb-3">
               Welcome to Innovation
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
               Avira Technologies
             </h1>
-            <p className="text-xl md:text-2xl text-red-600 font-semibold text-center mb-6">
+            <p className="text-xl md:text-2xl text-red-600 font-semibold text-center mb-4">
               Your Technology Partner in Innovation
             </p>
-            <div className="w-16 h-1 bg-gradient-electric mx-auto mb-8 rounded-full"></div>
+            <div className="w-16 h-1 bg-gradient-electric mx-auto rounded-full"></div>
           </motion.div>
         </div>
       </section>
