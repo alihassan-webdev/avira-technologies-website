@@ -91,7 +91,7 @@ const Index = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-32 md:pt-40"
           >
-            <div className="p-8 md:p-12 max-w-3xl">
+            <div className="p-8 md:p-12 w-full">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].title}
               </h2>
@@ -105,8 +105,8 @@ const Index = () => {
 
       {/* Welcome Section */}
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto text-center">
+        <div className="container mx-auto px-2">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-red-200 bg-red-50 mb-3">
               <span className="w-2 h-2 rounded-full bg-red-600"></span>
               <span className="text-red-700 font-semibold text-sm tracking-wide">Welcome to Innovation</span>
@@ -124,7 +124,7 @@ const Index = () => {
 
       {/* Key Features */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2">
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
@@ -143,8 +143,8 @@ const Index = () => {
 
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-2">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               About Our Mission
             </h2>
@@ -166,8 +166,8 @@ const Index = () => {
 
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-2">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
             </h2>
@@ -194,8 +194,8 @@ const Index = () => {
 
       {/* Our Approach */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-2">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               Our Approach
             </h2>
@@ -220,7 +220,7 @@ const Index = () => {
 
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
