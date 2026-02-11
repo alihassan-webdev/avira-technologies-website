@@ -132,7 +132,7 @@ const Index = () => {
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
               <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-card border border-border shadow-card">
-                <feature.icon className="w-12 h-12 text-electric mb-4" />
+                <feature.icon className="w-8 h-8 text-electric mb-4" />
                 <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
               </motion.div>
@@ -239,7 +239,7 @@ const Index = () => {
 
                 {/* Right Side - Phone Button */}
                 <div className="flex flex-col items-center gap-3 flex-shrink-0">
-                  <Phone className="w-12 h-12 text-red-600" />
+                  <Phone className="w-8 h-8 text-electric" />
                   <a href="tel:03111433316" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg gradient-electric text-white font-bold text-base hover:opacity-90 transition-opacity shadow-glow whitespace-nowrap">
                     <Phone className="w-4 h-4" />
                     03-111 433 316
