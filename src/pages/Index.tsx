@@ -222,27 +222,25 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* Left Side - Text Content */}
-                <div className="flex-1 text-left md:text-left">
-                  <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+                <div className="flex-1">
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
                     Need Help? Contact Us
                   </h2>
-                  <p className="text-gray-300 text-base mb-2">
+                  <p className="text-gray-400 text-base mb-8">
                     24/7 Support Available
                   </p>
-                  <p className="text-gray-400 text-sm mt-6">
+                  <p className="text-gray-400 text-sm">
                     Immediate Assistance Available
                   </p>
                 </div>
 
                 {/* Right Side - Phone Button */}
-                <div className="flex flex-col items-center md:items-end gap-4 flex-shrink-0">
-                  <div className="mb-2">
-                    <Phone className="w-14 h-14 text-red-600" />
-                  </div>
-                  <a href="tel:03111433316" className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-lg gradient-electric text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-glow whitespace-nowrap">
-                    <Phone className="w-5 h-5" />
+                <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                  <Phone className="w-12 h-12 text-red-600" />
+                  <a href="tel:03111433316" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg gradient-electric text-white font-bold text-base hover:opacity-90 transition-opacity shadow-glow whitespace-nowrap">
+                    <Phone className="w-4 h-4" />
                     03-111 433 316
                   </a>
                 </div>
