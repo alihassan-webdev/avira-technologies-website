@@ -25,16 +25,6 @@ const LegalNotice = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
-            {/* Back Button */}
-            <Link
-              to="/"
-              onClick={scrollToTop}
-              className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 transition-colors font-semibold mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Home
-            </Link>
-
             {/* Legal Notice Content */}
             <div className="space-y-8">
               {/* Company Name */}
