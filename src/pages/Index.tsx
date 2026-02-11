@@ -105,7 +105,7 @@ const Index = () => {
 
       {/* Welcome Section */}
       <section className="py-20 bg-gradient-to-b from-white to-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold text-sm mb-4">
               Welcome to Innovation
@@ -123,7 +123,7 @@ const Index = () => {
 
       {/* Key Features */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
@@ -142,7 +142,7 @@ const Index = () => {
 
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               About Our Mission
@@ -165,7 +165,7 @@ const Index = () => {
 
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
@@ -193,7 +193,7 @@ const Index = () => {
 
       {/* Our Approach */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               Our Approach
@@ -219,7 +219,7 @@ const Index = () => {
 
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-12 bg-gradient-to-r from-black to-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center">
             <div className="mb-4 inline-block">
               <Phone className="w-12 h-12 text-red-600 mx-auto" />

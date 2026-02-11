@@ -17,7 +17,7 @@ const Solutions = () => (
   <Layout>
     <PageHero title="Our Solutions" description="Comprehensive technology solutions designed to protect, connect, and empower your business." breadcrumbs={[{ label: "Home", path: "/" }, { label: "Solutions", path: "/solutions" }]} />
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <SectionHeader label="Solutions" title="Technology Solutions for Every Need" description="Explore our full range of integrated solutions built to drive efficiency and security." />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((s, i) => <ServiceCard key={s.title} {...s} index={i} />)}
