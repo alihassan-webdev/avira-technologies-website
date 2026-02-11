@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const WhatsAppButton = () => {
@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.5 }}
     >
-      <MessageCircle className="w-6 h-6" />
+      <FaWhatsapp className="w-6 h-6" />
     </motion.a>
   );
 };
