@@ -100,7 +100,7 @@ const Footer = () => {
           <p className="text-gray-600">© 2025 Avira Technologies. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="#" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
-            <Link to="#" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
+            <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
           </div>
         </div>
       </div>
