@@ -97,7 +97,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-200 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p className="text-gray-600">© 2025 Avira Technologies. All rights reserved.</p>
+          <p className="text-gray-600">© 2026 Avira Technologies. All rights reserved. hr sale</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
             <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
