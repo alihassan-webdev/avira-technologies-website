@@ -83,18 +83,18 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <div className="border-t border-gray-200 mt-10 pt-8">
-          {/* Policy Links with Heading */}
+          {/* Policies with Social Icons */}
           <div className="mb-8 pb-8 border-b border-gray-200">
-            <h4 className="font-display font-semibold mb-4 text-black text-center">Policies</h4>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+            <h4 className="font-display font-semibold mb-6 text-black text-center">Policies</h4>
+
+            {/* Policy Links */}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
               <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
               <div className="hidden md:block w-1 h-1 rounded-full bg-gray-300"></div>
               <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
             </div>
-          </div>
 
-          {/* Social Icons */}
-          <div className="mb-8 pb-8 border-b border-gray-200">
+            {/* Social Icons */}
             <div className="flex items-center gap-6 justify-center">
               <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Facebook className="w-5 h-5" />
