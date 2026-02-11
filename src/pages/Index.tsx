@@ -218,26 +218,30 @@ const Index = () => {
       </section>
 
       {/* 24-Hour Hotline - Main Contact CTA */}
-      <section className="py-12 bg-gradient-to-r from-black to-gray-900">
+      <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center">
-            <div className="mb-4 inline-block">
-              <Phone className="w-12 h-12 text-red-600 mx-auto" />
-            </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
-              Need Help? Contact Us
-            </h2>
-            <p className="text-gray-300 text-sm mb-6">
-              24/7 Support Available
-            </p>
-            <div className="space-y-3">
-              <a href="tel:03111433316" className="inline-flex items-center justify-center gap-3 px-8 py-3 rounded-lg gradient-electric text-white font-bold text-xl hover:opacity-90 transition-opacity shadow-glow">
-                <Phone className="w-5 h-5" />
-                03-111 433 316
-              </a>
-              <p className="text-gray-400 text-xs">
-                Immediate Assistance Available
-              </p>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
+              <div className="text-center">
+                <div className="mb-6 inline-block">
+                  <Phone className="w-14 h-14 text-red-600 mx-auto" />
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+                  Need Help? Contact Us
+                </h2>
+                <p className="text-gray-300 text-base mb-8">
+                  24/7 Support Available
+                </p>
+                <div className="space-y-4">
+                  <a href="tel:03111433316" className="inline-flex items-center justify-center gap-3 px-8 py-3 rounded-lg gradient-electric text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-glow">
+                    <Phone className="w-5 h-5" />
+                    03-111 433 316
+                  </a>
+                  <p className="text-gray-400 text-sm">
+                    Immediate Assistance Available
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
