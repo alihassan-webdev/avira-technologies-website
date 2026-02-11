@@ -11,33 +11,17 @@ const WhatsAppButton = () => {
 
   return (
     <div className="fixed bottom-8 right-8 z-40 flex flex-col items-end gap-3">
-      {/* Contact Info Bar */}
+      {/* Contact Us Message */}
       <motion.div
         initial={{ opacity: 0, y: 10, x: 20 }}
         animate={showContact ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: 10, x: 20 }}
         transition={{ duration: 0.2 }}
-        className="bg-white rounded-lg shadow-lg p-4 min-w-max"
+        className="bg-white rounded-lg shadow-lg px-4 py-2 min-w-max"
         style={{
           pointerEvents: showContact ? "auto" : "none",
         }}
       >
-        <h3 className="font-display font-semibold text-foreground mb-3 text-sm">Contact Us</h3>
-        <div className="space-y-2 text-xs">
-          <a
-            href="tel:03111433316"
-            className="flex items-center gap-2 text-foreground hover:text-red-600 transition-colors"
-          >
-            <span className="font-medium">Phone:</span>
-            <span>03-111 433 316</span>
-          </a>
-          <a
-            href="mailto:info@aviratechnologies.com"
-            className="flex items-center gap-2 text-foreground hover:text-red-600 transition-colors"
-          >
-            <span className="font-medium">Email:</span>
-            <span>info@aviratechnologies.com</span>
-          </a>
-        </div>
+        <p className="font-display font-semibold text-foreground text-sm">Contact Us</p>
       </motion.div>
 
       {/* WhatsApp Button */}
