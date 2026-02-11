@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-black border-t border-gray-200">
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company */}
           <div>
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <div className="border-t border-gray-200 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-gray-600">© 2025 Avira Technologies. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="#" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
