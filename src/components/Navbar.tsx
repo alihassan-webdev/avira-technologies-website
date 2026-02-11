@@ -35,7 +35,23 @@ const navItems = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const location = useLocation();
+
+  const handleDropdownEnter = (label: string) => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setOpenDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 300);
+    setDropdownTimeout(timeout);
+  };
 
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 bg-white border-b border-gray-100 h-14 min-h-14">
@@ -52,8 +68,8 @@ const Navbar = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => item.children && handleDropdownEnter(item.label)}
+                onMouseLeave={() => item.children && handleDropdownLeave()}
               >
                 <Link
                   to={item.path}
