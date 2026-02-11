@@ -131,9 +131,9 @@ const Index = () => {
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-white border-l-4 border-red-600 shadow-card hover:shadow-glow transition-all">
-                <feature.icon className="w-12 h-12 text-red-600 mb-4" />
-                <h3 className="font-display font-semibold text-lg text-foreground mb-3">{feature.title}</h3>
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-card border border-border shadow-card">
+                <feature.icon className="w-12 h-12 text-electric mb-4" />
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
               </motion.div>
             ))}
@@ -172,19 +172,19 @@ const Index = () => {
               What Sets Us Apart?
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="p-6 rounded-xl bg-white border border-border shadow-card">
-                <h3 className="font-display text-2xl font-bold text-red-600 mb-2">10+</h3>
-                <p className="text-foreground font-semibold mb-2">Years of Experience</p>
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display text-2xl font-bold text-electric mb-2">10+</h3>
+                <p className="text-card-foreground font-semibold mb-2">Years of Experience</p>
                 <p className="text-muted-foreground">Decade of proven expertise in IT solutions and digital transformation</p>
               </div>
-              <div className="p-6 rounded-xl bg-white border border-border shadow-card">
-                <h3 className="font-display text-2xl font-bold text-red-600 mb-2">100+</h3>
-                <p className="text-foreground font-semibold mb-2">Clients Worldwide</p>
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display text-2xl font-bold text-electric mb-2">100+</h3>
+                <p className="text-card-foreground font-semibold mb-2">Clients Worldwide</p>
                 <p className="text-muted-foreground">Building long-term partnerships across diverse industries</p>
               </div>
             </div>
-            <div className="p-8 rounded-xl bg-white border-l-4 border-red-600 shadow-card">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="p-8 rounded-xl bg-card border border-border shadow-card">
+              <p className="text-lg text-card-foreground leading-relaxed">
                 We're not just selling technology — we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
               </p>
             </div>
@@ -201,15 +201,15 @@ const Index = () => {
             </h2>
             <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8"></div>
             <div className="space-y-6">
-              <div className="p-6 rounded-lg bg-secondary border-l-4 border-red-600">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Premier Partnership</h3>
-                <p className="text-foreground leading-relaxed">
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
                 </p>
               </div>
-              <div className="p-6 rounded-lg bg-secondary border-l-4 border-red-600">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Continuous Innovation</h3>
-                <p className="text-foreground leading-relaxed">
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Continuous Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   Through innovation and process improvement, we enhance our capabilities, ensuring seamless delivery of tailored solutions and superior support services.
                 </p>
               </div>
