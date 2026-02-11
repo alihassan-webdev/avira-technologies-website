@@ -26,14 +26,14 @@ const PrivacyPolicy = () => {
             className="w-full"
           >
             {/* Privacy Policy Content */}
-            <div className="space-y-8 prose prose-lg max-w-none">
-              <div>
-                <h2 className="font-display text-3xl font-bold text-foreground mb-4">Privacy Policy</h2>
-                <p className="text-foreground leading-relaxed">An overview of data protection</p>
+            <div className="space-y-10">
+              <div className="text-center border-b-2 border-gray-200 pb-8">
+                <h2 className="font-display text-4xl font-bold text-foreground mb-2">Privacy Policy</h2>
+                <p className="text-lg text-muted-foreground">An overview of data protection</p>
               </div>
 
               {/* General Section */}
-              <div>
+              <div className="bg-secondary rounded-xl p-6 border border-border">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">General</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   The following gives a simple overview of what kind of personal information we collect, why we collect them and how we handle your data when you are visiting or using our website. Personal information is any data with which you could be personally identified. Detailed information on the subject of data protection can be found in our privacy policy found below.
@@ -41,9 +41,9 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Data Collection Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Data Collection on Our Website</h3>
-                
+              <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Data Collection on Our Website</h3>
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-display text-xl font-semibold text-foreground mb-3">Who is Responsible for the Data Collection on This Website?</h4>
@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Analytics Section */}
-              <div>
+              <div className="bg-secondary rounded-xl p-6 border border-border">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">Analytics and Third-Party Tools</h3>
                 <p className="text-foreground leading-relaxed">
                   When visiting our website, statistical analyses may be made of your surfing behavior. This happens primarily using cookies and analytics. The analysis of your surfing behavior is usually anonymous, encrypted, and pseudonimized, meaning that we will not be able to identify you through this data. You can object to this analysis or prevent it by not using certain tools. Detailed information can be found in the following privacy policy.
@@ -165,8 +165,8 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Cookies Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Cookies</h3>
+              <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Cookies</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   Some of our web pages use cookies. Cookies do not harm your computer and do not contain any viruses. Cookies help make our website more user-friendly, efficient, and secure. Cookies are small text files that are stored on your computer and saved by your browser.
                 </p>
@@ -182,8 +182,8 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Server Log Files Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Server Log Files</h3>
+              <div className="bg-secondary rounded-xl p-6 border border-border">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Server Log Files</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   The website provider automatically collects and stores information that your browser automatically transmits to us in "server log files". These are:
                 </p>
@@ -201,8 +201,8 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Contact Form Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Contact Form</h3>
+              <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Contact Form</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   Should you send us questions via contact form on our website, we will collect the data entered on in the form, including the contact details you provide, to answer your question and any follow-up questions. We do not share this information without your permission.
                 </p>
@@ -232,9 +232,9 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Analytics and Advertising Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Analytics and Advertising</h3>
-                
+              <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Analytics and Advertising</h3>
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-display text-xl font-semibold text-foreground mb-3">Matomo (Formerly Piwik)</h4>
@@ -268,8 +268,8 @@ const PrivacyPolicy = () => {
               </div>
 
               {/* Plugins and Tools Section */}
-              <div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4">Plugins and Tools</h3>
+              <div className="bg-secondary rounded-xl p-6 border border-border">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Plugins and Tools</h3>
                 
                 <div className="space-y-6">
                   <div>

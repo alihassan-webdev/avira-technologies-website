@@ -26,10 +26,10 @@ const LegalNotice = () => {
             className="w-full"
           >
             {/* Legal Notice Content */}
-            <div className="space-y-8">
+            <div className="space-y-10">
               {/* Company Name */}
-              <div className="text-center border-b-2 border-gray-200 pb-8">
-                <h1 className="font-display text-4xl font-bold text-foreground mb-2">
+              <div className="text-center border-b-2 border-red-600 pb-8 mb-8">
+                <h1 className="font-display text-4xl font-bold text-foreground mb-3">
                   Legal Notice
                 </h1>
                 <p className="font-display text-2xl font-semibold text-red-600">
@@ -38,7 +38,7 @@ const LegalNotice = () => {
               </div>
 
               {/* Address */}
-              <div className="bg-secondary rounded-xl p-8 border border-border">
+              <div className="bg-white rounded-xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4 mb-6">
                   <MapPin className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                   <div>
@@ -86,8 +86,8 @@ const LegalNotice = () => {
 
               {/* Additional Legal Info */}
               <div className="space-y-6">
-                <div>
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-3">
+                <div className="bg-secondary rounded-xl p-6 border border-border">
+                  <h3 className="font-display font-semibold text-lg text-foreground mb-3 pb-3 border-b-2 border-red-600">
                     Company Information
                   </h3>
                   <p className="text-foreground leading-relaxed">
@@ -95,8 +95,8 @@ const LegalNotice = () => {
                   </p>
                 </div>
 
-                <div>
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-3">
+                <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
+                  <h3 className="font-display font-semibold text-lg text-foreground mb-3 pb-3 border-b-2 border-red-600">
                     Service Excellence
                   </h3>
                   <p className="text-foreground leading-relaxed">
