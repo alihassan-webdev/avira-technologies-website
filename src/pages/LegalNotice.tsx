@@ -29,9 +29,6 @@ const LegalNotice = () => {
             <div className="space-y-10">
               {/* Company Name */}
               <div className="text-center border-b-2 border-red-600 pb-8 mb-8">
-                <h1 className="font-display text-4xl font-bold text-foreground mb-3">
-                  Legal Notice
-                </h1>
                 <p className="font-display text-2xl font-semibold text-red-600">
                   :: Avira Technologies ::
                 </p>

@@ -27,11 +27,6 @@ const PrivacyPolicy = () => {
           >
             {/* Privacy Policy Content */}
             <div className="space-y-10">
-              <div className="text-center border-b-2 border-gray-200 pb-8">
-                <h2 className="font-display text-4xl font-bold text-foreground mb-2">Privacy Policy</h2>
-                <p className="text-lg text-muted-foreground">An overview of data protection</p>
-              </div>
-
               {/* General Section */}
               <div className="bg-secondary rounded-xl p-6 border border-border">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">General</h3>
