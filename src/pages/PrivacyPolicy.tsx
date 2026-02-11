@@ -42,9 +42,8 @@ const PrivacyPolicy = () => {
 
               {/* Data Collection Section */}
               <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Data Collection on Our Website</h3>
-
-                <div className="space-y-6">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Data Collection on Our Website</h3>
+                <div className="space-y-6 mt-6">
                   <div>
                     <h4 className="font-display text-xl font-semibold text-foreground mb-3">Who is Responsible for the Data Collection on This Website?</h4>
                     <p className="text-foreground leading-relaxed">
@@ -166,7 +165,7 @@ const PrivacyPolicy = () => {
 
               {/* Cookies Section */}
               <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Cookies</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Cookies</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   Some of our web pages use cookies. Cookies do not harm your computer and do not contain any viruses. Cookies help make our website more user-friendly, efficient, and secure. Cookies are small text files that are stored on your computer and saved by your browser.
                 </p>
@@ -183,7 +182,7 @@ const PrivacyPolicy = () => {
 
               {/* Server Log Files Section */}
               <div className="bg-secondary rounded-xl p-6 border border-border">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Server Log Files</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Server Log Files</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   The website provider automatically collects and stores information that your browser automatically transmits to us in "server log files". These are:
                 </p>
@@ -202,7 +201,7 @@ const PrivacyPolicy = () => {
 
               {/* Contact Form Section */}
               <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Contact Form</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Contact Form</h3>
                 <p className="text-foreground leading-relaxed mb-4">
                   Should you send us questions via contact form on our website, we will collect the data entered on in the form, including the contact details you provide, to answer your question and any follow-up questions. We do not share this information without your permission.
                 </p>
@@ -233,7 +232,7 @@ const PrivacyPolicy = () => {
 
               {/* Analytics and Advertising Section */}
               <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Analytics and Advertising</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Analytics and Advertising</h3>
 
                 <div className="space-y-6">
                   <div>
@@ -269,7 +268,7 @@ const PrivacyPolicy = () => {
 
               {/* Plugins and Tools Section */}
               <div className="bg-secondary rounded-xl p-6 border border-border">
-                <h3 className="font-display text-2xl font-bold text-foreground mb-6 pb-4 border-b-2 border-red-600">Plugins and Tools</h3>
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 pb-4 border-b-2 border-red-600">Plugins and Tools</h3>
                 
                 <div className="space-y-6">
                   <div>

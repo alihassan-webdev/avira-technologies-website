@@ -87,18 +87,14 @@ const LegalNotice = () => {
               {/* Additional Legal Info */}
               <div className="space-y-6">
                 <div className="bg-secondary rounded-xl p-6 border border-border">
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-3 pb-3 border-b-2 border-red-600">
-                    Company Information
-                  </h3>
+                  <h3 className="font-display font-semibold text-lg text-foreground mb-2 pb-3 border-b-2 border-red-600">Company Information</h3>
                   <p className="text-foreground leading-relaxed">
                     Avira Technologies is a leading provider of comprehensive IT solutions, managed services, and technology integration services. We are committed to delivering cutting-edge technology solutions and exceptional customer service to businesses across various industries.
                   </p>
                 </div>
 
                 <div className="bg-white rounded-xl p-6 border border-border shadow-sm">
-                  <h3 className="font-display font-semibold text-lg text-foreground mb-3 pb-3 border-b-2 border-red-600">
-                    Service Excellence
-                  </h3>
+                  <h3 className="font-display font-semibold text-lg text-foreground mb-2 pb-3 border-b-2 border-red-600">Service Excellence</h3>
                   <p className="text-foreground leading-relaxed">
                     Our dedicated team of certified professionals is committed to providing the highest standards of service, reliability, and support to all our clients. We maintain the highest levels of professionalism and technical expertise in everything we do.
                   </p>
