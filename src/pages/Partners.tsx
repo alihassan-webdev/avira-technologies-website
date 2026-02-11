@@ -22,7 +22,7 @@ const Partners = () => (
     <PageHero title="Partners & Certifications" description="Strategic partnerships with leading technology providers ensure we deliver the best solutions." breadcrumbs={[{ label: "Home", path: "/" }, { label: "Partners", path: "/partners" }]} />
 
     <section className="py-20">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <SectionHeader label="Partners" title="Our Technology Partners" description="We work with the world's leading technology brands." />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {partners.map((p, i) => (
@@ -35,7 +35,7 @@ const Partners = () => (
     </section>
 
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <SectionHeader label="Benefits" title="Partner Benefits" description="What our strategic partnerships mean for you." />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((b, i) => (

@@ -21,7 +21,7 @@ const Contact = () => {
       <PageHero title="Contact Us" description="Get in touch with our team. We're here to help with your technology needs." breadcrumbs={[{ label: "Home", path: "/" }, { label: "Contact", path: "/contact" }]} />
 
       <section className="py-20">
-        <div className="container mx-auto px-3">
+        <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="space-y-6">

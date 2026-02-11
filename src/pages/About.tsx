@@ -31,7 +31,7 @@ const About = () => (
 
     {/* Overview */}
     <section className="py-20">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <div className="text-center">
           <SectionHeader label="Our Story" title="Pioneering IT Excellence Since 2010" description="Founded with a vision to empower businesses through technology, Avira Technologies has grown into a leading IT solutions provider serving enterprises across diverse industries." />
           <p className="text-muted-foreground leading-relaxed">
@@ -43,7 +43,7 @@ const About = () => (
 
     {/* Mission & Vision */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="p-8 rounded-xl bg-card border border-border shadow-card">
             <Target className="w-10 h-10 text-electric mb-4" />
@@ -61,7 +61,7 @@ const About = () => (
 
     {/* Core Values */}
     <section className="py-20">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <SectionHeader label="Values" title="Our Core Values" description="The principles that guide everything we do." />
         <FeatureSection features={values} />
       </div>
@@ -69,7 +69,7 @@ const About = () => (
 
     {/* Leadership */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         <SectionHeader label="Team" title="Leadership Team" description="Meet the people driving Avira's vision forward." />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {team.map((member, i) => (

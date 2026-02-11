@@ -10,7 +10,7 @@ interface PageHeroProps {
 const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
   return (
     <section className="gradient-navy py-20 md:py-28">
-      <div className="container mx-auto px-3">
+      <div className="container mx-auto px-6">
         {breadcrumbs && (
           <div className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">
             {breadcrumbs.map((bc, i) => (
