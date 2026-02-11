@@ -66,19 +66,7 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black cursor-grab active:cursor-grabbing"
-        drag="x"
-        dragElastic={0.2}
-        onDragEnd={(e, info) => {
-          const swipeThreshold = 50;
-          if (info.offset.x < -swipeThreshold) {
-            // Swiped left - next slide
-            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-          } else if (info.offset.x > swipeThreshold) {
-            // Swiped right - previous slide
-            setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-          }
-        }}
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black"
       >
         <AnimatePresence mode="wait">
           <motion.div
