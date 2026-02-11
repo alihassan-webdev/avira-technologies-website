@@ -31,16 +31,16 @@ const Footer = () => {
             </div>
             {/* Social Links */}
             <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
-              <a href="#" className="text-gray-600 hover:text-red-600 transition-colors">
+              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-red-600 transition-colors">
+              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-red-600 transition-colors">
+              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-red-600 transition-colors">
+              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>

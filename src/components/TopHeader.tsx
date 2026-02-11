@@ -19,16 +19,16 @@ const TopHeader = () => {
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Youtube className="w-4 h-4" />
             </a>
           </div>
