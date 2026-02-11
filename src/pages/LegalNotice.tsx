@@ -17,13 +17,13 @@ const LegalNotice = () => {
         breadcrumbs={[{ label: "Home", path: "/" }, { label: "Legal Notice", path: "/legal-notice" }]}
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
             {/* Legal Notice Content */}
             <div className="space-y-8">

@@ -17,13 +17,13 @@ const PrivacyPolicy = () => {
         breadcrumbs={[{ label: "Home", path: "/" }, { label: "Privacy Policy", path: "/privacy-policy" }]}
       />
 
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
             {/* Privacy Policy Content */}
             <div className="space-y-8 prose prose-lg max-w-none">
