@@ -101,12 +101,15 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-end justify-start pointer-events-none z-10"
+            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10"
           >
             <div className="p-8 md:p-12 max-w-3xl">
-              <h2 className="font-display text-2xl md:text-4xl font-black text-white leading-none tracking-tight drop-shadow-2xl" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)' }}>
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].title}
               </h2>
+              <p className="text-lg md:text-xl text-white drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
+                {heroSlides[currentSlide].tagline}
+              </p>
             </div>
           </motion.div>
         </AnimatePresence>
