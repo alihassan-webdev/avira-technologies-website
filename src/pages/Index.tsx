@@ -145,10 +145,10 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               About Our Mission
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8"></div>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
             <div className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
@@ -196,10 +196,10 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8"></div>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
             <div className="space-y-6">
               <div className="p-6 rounded-xl bg-card border border-border shadow-card">
                 <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
