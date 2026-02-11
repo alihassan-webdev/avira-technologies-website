@@ -29,21 +29,6 @@ const Footer = () => {
                 <MapPin className="w-4 h-4" /> Pakistan
               </div>
             </div>
-            {/* Social Links */}
-            <div className="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
-              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Solutions */}
@@ -96,11 +81,39 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p className="text-gray-600">© 2026 Avira Technologies. All rights reserved. hr sale</p>
-          <div className="flex gap-6">
-            <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
-            <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
+        {/* Footer Bottom Section */}
+        <div className="border-t border-gray-200 mt-10 pt-8">
+          {/* Policy Links with Heading */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <h4 className="font-display font-semibold mb-4 text-black text-center">Policies</h4>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+              <Link to="/privacy-policy" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Privacy Policy</Link>
+              <div className="hidden md:block w-1 h-1 rounded-full bg-gray-300"></div>
+              <Link to="/legal-notice" onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors">Legal Notice</Link>
+            </div>
+          </div>
+
+          {/* Social Icons */}
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <div className="flex items-center gap-6 justify-center">
+              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Centered Copyright */}
+          <div className="text-center">
+            <p className="text-gray-600 text-sm">© 2026 Avira Technologies. All rights reserved. hr sale</p>
           </div>
         </div>
       </div>
