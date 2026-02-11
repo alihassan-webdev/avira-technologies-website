@@ -1,4 +1,4 @@
-import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, Youtube, MapPin, Music } from "lucide-react";
+import { Phone, Mail, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 
 const TopHeader = () => {
   return (
@@ -22,23 +22,14 @@ const TopHeader = () => {
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
-              <Twitter className="w-4 h-4" />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+              <Instagram className="w-4 h-4" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
-              <Instagram className="w-4 h-4" />
-            </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
               <Youtube className="w-4 h-4" />
-            </a>
-            <a href="https://google.com/maps" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
-              <MapPin className="w-4 h-4" />
-            </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
-              <Music className="w-4 h-4" />
             </a>
           </div>
         </div>
