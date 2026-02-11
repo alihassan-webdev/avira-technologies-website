@@ -17,7 +17,7 @@ const SmartCare = () => (
   <Layout>
     <PageHero title="Smart Care" description="Comprehensive device care, maintenance, and support programs to keep your technology running smoothly." breadcrumbs={[{ label: "Home", path: "/" }, { label: "Smart Care", path: "/smart-care" }]} />
     <section className="py-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <SectionHeader label="Smart Care" title="Intelligent Maintenance & Support" description="Protect your investment with our proactive care programs." />
         <FeatureSection features={features} />
       </div>
