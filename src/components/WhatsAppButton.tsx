@@ -1,4 +1,5 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 
 const WhatsAppButton = () => {
@@ -11,20 +12,23 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-40 flex items-center justify-center w-16 h-16 rounded-full text-white shadow-lg transition-all duration-300"
+      className="fixed bottom-8 right-8 z-40 flex items-center justify-center w-14 h-14 rounded-full shadow-lg cursor-pointer hover:scale-110 transition-all duration-300"
       style={{
         backgroundColor: "#25D366",
       }}
       whileHover={{
-        scale: 1.08,
+        scale: 1.1,
       }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: 0.5, type: "spring", stiffness: 400 }}
+      transition={{ duration: 0.3, delay: 0.5 }}
       title="Chat with us on WhatsApp"
     >
-      <FaWhatsapp size={26} color="#FFFFFF" />
+      <FontAwesomeIcon
+        icon={faWhatsapp}
+        className="text-white text-3xl"
+      />
     </motion.a>
   );
 };
