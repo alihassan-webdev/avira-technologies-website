@@ -18,7 +18,7 @@ const Careers = () => (
 
     {/* Culture */}
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         <SectionHeader label="Culture" title="Why Work With Us" description="We foster an environment of growth, innovation, and collaboration." />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
@@ -39,7 +39,7 @@ const Careers = () => (
 
     {/* Open Positions */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         <SectionHeader label="Openings" title="Open Positions" description="Explore current opportunities to join our team." />
         <div className="max-w-3xl mx-auto space-y-4">
           {openPositions.map((pos, i) => (

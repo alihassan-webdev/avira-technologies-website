@@ -18,7 +18,7 @@ const LegalNotice = () => {
       />
 
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -22,7 +22,7 @@ const ServiceDetail = ({ title, description, overview, features }: ServiceDetail
   <Layout>
     <PageHero title={title} description={description} breadcrumbs={[{ label: "Home", path: "/" }, { label: "Services", path: "/services" }, { label: title, path: "#" }]} />
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-muted-foreground leading-relaxed text-lg">{overview}</p>
         </div>
@@ -31,7 +31,7 @@ const ServiceDetail = ({ title, description, overview, features }: ServiceDetail
       </div>
     </section>
     <section className="py-16 bg-secondary">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-3 text-center">
         <h3 className="font-display text-2xl font-bold text-foreground mb-4">Ready to Get Started?</h3>
         <p className="text-muted-foreground mb-6">Let's discuss how our services can benefit your organization.</p>
         <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg gradient-electric text-accent-foreground font-semibold hover:opacity-90 transition-opacity">

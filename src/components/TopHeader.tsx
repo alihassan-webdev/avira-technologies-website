@@ -3,7 +3,7 @@ import { Phone, Mail, Facebook, Linkedin, Instagram, Youtube } from "lucide-reac
 const TopHeader = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-40 bg-black text-white py-1.5 text-xs md:text-sm h-8 min-h-8 flex items-center">
-      <div className="container mx-auto px-4 w-full">
+      <div className="container mx-auto px-3 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 min-h-fit">
           {/* Contact Info */}
           <div className="flex items-center gap-4 md:gap-6">

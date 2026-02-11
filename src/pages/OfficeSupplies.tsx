@@ -17,7 +17,7 @@ const OfficeSupplies = () => (
   <Layout>
     <PageHero title="Office Supplies" description="IT hardware, networking accessories, and office equipment from trusted brands." breadcrumbs={[{ label: "Home", path: "/" }, { label: "Office Supplies", path: "/office-supplies" }]} />
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-3">
         <SectionHeader label="Products" title="Everything Your Office Needs" description="Quality IT products and office supplies with competitive pricing." />
         <FeatureSection features={features} />
       </div>
