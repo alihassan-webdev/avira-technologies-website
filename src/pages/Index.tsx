@@ -110,13 +110,13 @@ const Index = () => {
             <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold text-sm mb-4">
               Welcome to Innovation
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-4">
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
               Avira Technologies
             </h1>
-            <div className="w-16 h-1 bg-gradient-electric mx-auto mb-6 rounded-full"></div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-center text-red-600 mb-4">
+            <p className="text-xl md:text-2xl text-red-600 font-semibold text-center mb-6">
               Your Technology Partner in Innovation
-            </h2>
+            </p>
+            <div className="w-16 h-1 bg-gradient-electric mx-auto mb-8 rounded-full"></div>
           </motion.div>
         </div>
       </section>
