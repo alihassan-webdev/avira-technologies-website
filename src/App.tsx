@@ -23,6 +23,8 @@ import OfficeSupplies from "./pages/OfficeSupplies";
 import Partners from "./pages/Partners";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import LegalNotice from "./pages/LegalNotice";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +56,8 @@ const App = () => (
           <Route path="/partners" element={<Partners />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/legal-notice" element={<LegalNotice />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

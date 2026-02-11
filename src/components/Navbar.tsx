@@ -35,15 +35,31 @@ const navItems = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const location = useLocation();
+
+  const handleDropdownEnter = (label: string) => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setOpenDropdown(label);
+  };
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 300);
+    setDropdownTimeout(timeout);
+  };
 
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 bg-white border-b border-gray-100 h-14 min-h-14">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-14 min-h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-10 w-auto object-contain" style={{ maxHeight: '40px' }} />
+            <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto object-contain" style={{ maxHeight: '48px' }} />
           </Link>
 
           {/* Desktop Nav */}
@@ -52,8 +68,8 @@ const Navbar = () => {
               <div
                 key={item.label}
                 className="relative"
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => item.children && handleDropdownEnter(item.label)}
+                onMouseLeave={() => item.children && handleDropdownLeave()}
               >
                 <Link
                   to={item.path}

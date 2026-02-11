@@ -66,19 +66,7 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black cursor-grab active:cursor-grabbing"
-        drag="x"
-        dragElastic={0.2}
-        onDragEnd={(e, info) => {
-          const swipeThreshold = 50;
-          if (info.offset.x < -swipeThreshold) {
-            // Swiped left - next slide
-            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-          } else if (info.offset.x > swipeThreshold) {
-            // Swiped right - previous slide
-            setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-          }
-        }}
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -101,47 +89,51 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-end justify-start pointer-events-none z-10"
+            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80"
           >
-            <div className="p-8 md:p-12 max-w-3xl">
-              <h2 className="font-display text-2xl md:text-4xl font-black text-white leading-none tracking-tight drop-shadow-2xl" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)' }}>
+            <div className="p-8 md:p-12 w-full">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].title}
               </h2>
+              <p className="text-sm md:text-lg text-white drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
+                {heroSlides[currentSlide].tagline}
+              </p>
             </div>
           </motion.div>
         </AnimatePresence>
       </motion.section>
 
       {/* Welcome Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold text-sm mb-4">
-              Welcome to Innovation
+      <section className="py-10 bg-gradient-to-b from-white to-secondary">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-red-200 bg-red-50 mb-3">
+              <span className="w-2 h-2 rounded-full bg-red-600"></span>
+              <span className="text-red-700 font-semibold text-sm tracking-wide">Welcome to Innovation</span>
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-4">
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
               Avira Technologies
             </h1>
-            <div className="w-16 h-1 bg-gradient-electric mx-auto mb-6 rounded-full"></div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-center text-red-600 mb-4">
+            <p className="text-xl md:text-2xl text-red-600 font-semibold text-center mb-4">
               Your Technology Partner in Innovation
-            </h2>
+            </p>
+            <div className="w-16 h-1 bg-gradient-electric mx-auto rounded-full"></div>
           </motion.div>
         </div>
       </section>
 
       {/* Key Features */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-white border-l-4 border-red-600 shadow-card hover:shadow-glow transition-all">
-                <feature.icon className="w-12 h-12 text-red-600 mb-4" />
-                <h3 className="font-display font-semibold text-lg text-foreground mb-3">{feature.title}</h3>
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-card border border-border shadow-card">
+                <feature.icon className="w-8 h-8 text-electric mb-4" />
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
               </motion.div>
             ))}
@@ -151,12 +143,12 @@ const Index = () => {
 
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               About Our Mission
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8"></div>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
             <div className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
@@ -174,25 +166,25 @@ const Index = () => {
 
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
             </h2>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div className="p-6 rounded-xl bg-white border border-border shadow-card">
-                <h3 className="font-display text-2xl font-bold text-red-600 mb-2">10+</h3>
-                <p className="text-foreground font-semibold mb-2">Years of Experience</p>
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display text-2xl font-bold text-electric mb-2">10+</h3>
+                <p className="text-card-foreground font-semibold mb-2">Years of Experience</p>
                 <p className="text-muted-foreground">Decade of proven expertise in IT solutions and digital transformation</p>
               </div>
-              <div className="p-6 rounded-xl bg-white border border-border shadow-card">
-                <h3 className="font-display text-2xl font-bold text-red-600 mb-2">100+</h3>
-                <p className="text-foreground font-semibold mb-2">Clients Worldwide</p>
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display text-2xl font-bold text-electric mb-2">100+</h3>
+                <p className="text-card-foreground font-semibold mb-2">Clients Worldwide</p>
                 <p className="text-muted-foreground">Building long-term partnerships across diverse industries</p>
               </div>
             </div>
-            <div className="p-8 rounded-xl bg-white border-l-4 border-red-600 shadow-card">
-              <p className="text-lg text-foreground leading-relaxed">
+            <div className="p-8 rounded-xl bg-card border border-border shadow-card">
+              <p className="text-lg text-card-foreground leading-relaxed">
                 We're not just selling technology — we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
               </p>
             </div>
@@ -202,22 +194,22 @@ const Index = () => {
 
       {/* Our Approach */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8"></div>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
             <div className="space-y-6">
-              <div className="p-6 rounded-lg bg-secondary border-l-4 border-red-600">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Premier Partnership</h3>
-                <p className="text-foreground leading-relaxed">
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
                 </p>
               </div>
-              <div className="p-6 rounded-lg bg-secondary border-l-4 border-red-600">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">Continuous Innovation</h3>
-                <p className="text-foreground leading-relaxed">
+              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Continuous Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
                   Through innovation and process improvement, we enhance our capabilities, ensuring seamless delivery of tailored solutions and superior support services.
                 </p>
               </div>
@@ -227,26 +219,33 @@ const Index = () => {
       </section>
 
       {/* 24-Hour Hotline - Main Contact CTA */}
-      <section className="py-12 bg-gradient-to-r from-black to-gray-900">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center">
-            <div className="mb-4 inline-block">
-              <Phone className="w-12 h-12 text-red-600 mx-auto" />
-            </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
-              Need Help? Contact Us
-            </h2>
-            <p className="text-gray-300 text-sm mb-6">
-              24/7 Support Available
-            </p>
-            <div className="space-y-3">
-              <a href="tel:03111433316" className="inline-flex items-center justify-center gap-3 px-8 py-3 rounded-lg gradient-electric text-white font-bold text-xl hover:opacity-90 transition-opacity shadow-glow">
-                <Phone className="w-5 h-5" />
-                03-111 433 316
-              </a>
-              <p className="text-gray-400 text-xs">
-                Immediate Assistance Available
-              </p>
+      <section className="py-16 bg-secondary">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+            <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+                {/* Left Side - Text Content */}
+                <div className="flex-1">
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+                    Need Help? Contact Us
+                  </h2>
+                  <p className="text-gray-400 text-base mb-8">
+                    24/7 Support Available
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    Immediate Assistance Available
+                  </p>
+                </div>
+
+                {/* Right Side - Phone Button */}
+                <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                  <Phone className="w-8 h-8 text-electric" />
+                  <a href="tel:03111433316" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg gradient-electric text-white font-bold text-base hover:opacity-90 transition-opacity shadow-glow whitespace-nowrap">
+                    <Phone className="w-4 h-4" />
+                    03-111 433 316
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
