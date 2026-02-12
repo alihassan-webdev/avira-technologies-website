@@ -2,7 +2,6 @@ import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
 import { Lightbulb, Zap, Shield, Users } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const whyChooseUs = [
   {
@@ -57,7 +56,7 @@ const About = () => (
 
     {/* Who We Are */}
     <section className="py-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,21 +74,13 @@ const About = () => (
               With an impressive decade of experience in System Integration and a dedicated team of over 40 highly skilled professionals, Avira Technologies has successfully addressed and exceeded the needs of more than 100 clients worldwide. Our relentless dedication to delivering innovative IT solutions has empowered businesses to navigate challenges with confidence, facilitating sustained growth and success in their respective markets. At Avira Technologies, we recognize the importance of adapting to the ever-evolving tech landscape and strive to be a trusted partner in our clients' journeys toward digital transformation and operational excellence.
             </p>
           </div>
-          <div className="mt-10 text-center">
-            <Link
-              to="/contact"
-              className="inline-block px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
-            >
-              Learn more
-            </Link>
-          </div>
         </motion.div>
       </div>
     </section>
 
     {/* Mission & Vision */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Mission */}
           <motion.div
@@ -124,7 +115,7 @@ const About = () => (
 
     {/* Why Choose Us */}
     <section className="py-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
