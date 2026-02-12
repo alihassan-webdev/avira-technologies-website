@@ -78,16 +78,16 @@ const Footer = () => {
             <h5 className="font-display font-semibold mb-3 text-black text-sm">Follow</h5>
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 transition-colors p-1" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#1877F2'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(75, 85, 99)'}>
+              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#1877F2' }}>
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="text-gray-600 transition-colors p-1" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#E4405F'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(75, 85, 99)'}>
+              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#E4405F' }}>
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-600 transition-colors p-1" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(75, 85, 99)'}>
+              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#0A66C2' }}>
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="text-gray-600 transition-colors p-1" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FF0000'} onMouseLeave={(e) => e.currentTarget.style.color = 'rgb(75, 85, 99)'}>
+              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#FF0000' }}>
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
