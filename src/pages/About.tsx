@@ -115,7 +115,7 @@ const About = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="rounded-xl overflow-hidden shadow-lg md:order-2"
+            className="rounded-xl overflow-hidden shadow-lg order-2"
           >
             <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
           </motion.div>
@@ -125,7 +125,7 @@ const About = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="md:order-1"
+            className="order-1"
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
               OUR VISION
