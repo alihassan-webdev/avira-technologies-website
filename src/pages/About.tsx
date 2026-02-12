@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { Lightbulb, Zap, Shield, Users } from "lucide-react";
+import { Shield, Zap, Users, Target } from "lucide-react";
 
 const whyChooseUs = [
   {
@@ -12,7 +12,7 @@ const whyChooseUs = [
       "Certified Professionals – Our team includes top-tier engineers, cybersecurity specialists, and system integrators.",
       "Award-Winning Solutions – Recognized for innovation in access control, fire safety, and IT infrastructure.",
     ],
-    icon: Lightbulb,
+    icon: Shield,
   },
   {
     title: "Future-Ready Technology",
@@ -32,7 +32,7 @@ const whyChooseUs = [
       "Redundant Systems – Minimize downtime with fail-safe architectures.",
       "Scalable for Growth – From small businesses to enterprise-level deployments.",
     ],
-    icon: Shield,
+    icon: Users,
   },
   {
     title: "Customer-Centric Approach",
@@ -42,7 +42,7 @@ const whyChooseUs = [
       "End-to-End Service – From consultation to installation, training, and lifetime upgrades.",
       "Proven Success – Trusted by Fortune 500 companies, governments, and critical infrastructure providers.",
     ],
-    icon: Users,
+    icon: Target,
   },
 ];
 
