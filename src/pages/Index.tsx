@@ -74,7 +74,7 @@ const Index = () => {
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1.4, ease: "easeInOut" }}
             className="absolute inset-0 pointer-events-none"
           >
             <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" />
@@ -88,7 +88,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
             className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80"
           >
             <div className="p-8 md:p-12 w-full">
@@ -106,7 +106,7 @@ const Index = () => {
       {/* Welcome Section */}
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
               <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
             </div>
@@ -130,7 +130,7 @@ const Index = () => {
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 1.0, ease: "easeOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
                 <feature.icon className="w-8 h-8 text-electric mb-4" />
                 <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
@@ -172,7 +172,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
             </h2>
@@ -200,7 +200,7 @@ const Index = () => {
       {/* Our Approach */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
@@ -226,7 +226,7 @@ const Index = () => {
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* Left Side - Text Content */}

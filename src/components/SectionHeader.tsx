@@ -14,7 +14,7 @@ const SectionHeader = ({ label, title, description, centered = true, light = fal
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1.0, ease: "easeInOut" }}
       className={`mb-12 ${centered ? "text-center" : ""}`}
     >
       {label && (

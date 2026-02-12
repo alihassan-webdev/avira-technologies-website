@@ -45,7 +45,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-2">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="lg:col-span-2">
               <div className="p-8 rounded-xl bg-card border border-border shadow-card">
                 <h3 className="font-display text-xl font-bold text-card-foreground mb-6">Send Us a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">

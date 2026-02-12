@@ -99,6 +99,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                     className="absolute top-full left-0 mt-1 w-56 rounded-lg bg-card shadow-lg border border-border overflow-hidden"
                   >
                     {item.children.map((child) => (
@@ -134,6 +135,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
@@ -173,6 +175,7 @@ const Navbar = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="ml-4 space-y-1 overflow-hidden"
                     >
                       {item.children.map((child) => (

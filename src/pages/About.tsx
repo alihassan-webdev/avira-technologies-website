@@ -61,7 +61,7 @@ const About = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
           className="max-w-full mx-auto px-4"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
@@ -88,7 +88,7 @@ const About = () => (
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
               OUR MISSION
@@ -102,7 +102,7 @@ const About = () => (
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
             className="rounded-xl overflow-hidden shadow-lg"
           >
             <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" />
@@ -115,7 +115,7 @@ const About = () => (
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
             className="rounded-xl overflow-hidden shadow-lg order-2 md:order-1"
           >
             <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
@@ -125,7 +125,7 @@ const About = () => (
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
             className="order-1 md:order-2"
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
@@ -146,7 +146,7 @@ const About = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: "easeInOut" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
           className="text-center mb-16 max-w-full mx-auto px-4"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -170,7 +170,7 @@ const About = () => (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 1.2, ease: "easeInOut" }}
+                transition={{ delay: index * 0.12, duration: 0.8, ease: "easeInOut" }}
                 className="p-8 rounded-xl bg-card border border-border shadow-card hover:shadow-lg transition-shadow"
               >
                 <Icon className="w-8 h-8 text-electric mb-4" />
