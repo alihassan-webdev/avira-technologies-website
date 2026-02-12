@@ -107,8 +107,8 @@ const Index = () => {
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 border-red-600 bg-white mb-3">
-              <span className="text-red-600 font-semibold text-xs tracking-wide">Welcome to Innovation</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
+              <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
               Avira Technologies
