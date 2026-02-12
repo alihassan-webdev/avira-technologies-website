@@ -75,7 +75,7 @@ const Footer = () => {
               </li>
             </ul>
             {/* Follow Heading */}
-            <h5 className="font-display font-semibold mb-3 text-black text-sm">Follow</h5>
+            <h5 className="font-display font-semibold mb-3 text-black text-sm">Follow on</h5>
             {/* Social Icons */}
             <div className="flex items-center gap-4">
               <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#1877F2' }}>
