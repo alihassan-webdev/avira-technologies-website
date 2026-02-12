@@ -127,8 +127,8 @@ const Navbar = () => {
               <X className="w-5 h-5" />
             ) : (
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <line x1="3" y1="6" x2="21" y2="6" strokeWidth="3" strokeLinecap="round" />
-                <line x1="3" y1="14" x2="21" y2="14" strokeWidth="1.5" strokeLinecap="round" />
+                <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round" />
+                <line x1="3" y1="14" x2="15" y2="14" strokeWidth="2" strokeLinecap="round" />
               </svg>
             )}
           </button>
