@@ -105,7 +105,7 @@ const About = () => (
             transition={{ duration: 0.9, ease: "easeInOut" }}
             className="rounded-xl overflow-hidden shadow-lg"
           >
-            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" />
+            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           </motion.div>
         </div>
 
@@ -118,7 +118,7 @@ const About = () => (
             transition={{ duration: 0.9, ease: "easeInOut" }}
             className="rounded-xl overflow-hidden shadow-lg order-2 md:order-1"
           >
-            <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
+            <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" loading="lazy" decoding="async" />
           </motion.div>
 
           <motion.div

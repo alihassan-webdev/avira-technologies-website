@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, LucideIcon } from "lucide-react";
+import { memo } from "react";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -35,4 +36,4 @@ const ServiceCard = ({ icon: Icon, title, description, link, index = 0 }: Servic
   );
 };
 
-export default ServiceCard;
+export default memo(ServiceCard);

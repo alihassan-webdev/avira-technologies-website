@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -211,4 +211,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

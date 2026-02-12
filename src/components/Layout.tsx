@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, memo } from "react";
 import TopHeader from "./TopHeader";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -20,4 +20,4 @@ const Layout = ({ children }: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default memo(Layout);

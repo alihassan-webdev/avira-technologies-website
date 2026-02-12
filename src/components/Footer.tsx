@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { memo } from "react";
 
-const Footer = () => {
+const Footer = memo(() => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
@@ -101,6 +102,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;

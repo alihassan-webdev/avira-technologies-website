@@ -1,6 +1,7 @@
 import { Phone, Mail, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { memo } from "react";
 
-const TopHeader = () => {
+const TopHeader = memo(() => {
   return (
     <div className="fixed top-0 left-0 right-0 z-40 bg-black text-white py-1.5 text-xs md:text-sm h-8 min-h-8 flex items-center">
       <div className="container mx-auto px-6 w-full">
@@ -19,16 +20,16 @@ const TopHeader = () => {
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#1877F2'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
+            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-600">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#E4405F'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
+            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-pink-600">
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#0A66C2'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
+            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-700">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: 'inherit' }} onMouseEnter={(e) => e.currentTarget.style.color = '#FF0000'} onMouseLeave={(e) => e.currentTarget.style.color = 'inherit'}>
+            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600">
               <Youtube className="w-4 h-4" />
             </a>
           </div>
@@ -36,6 +37,6 @@ const TopHeader = () => {
       </div>
     </div>
   );
-};
+});
 
 export default TopHeader;

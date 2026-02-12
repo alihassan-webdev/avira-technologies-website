@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -75,9 +75,9 @@ const Index = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0 pointer-events-none will-change-[opacity,transform]"
           >
-            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" />
+            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" loading="eager" decoding="async" />
           </motion.div>
         </AnimatePresence>
 
@@ -89,7 +89,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80"
+            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80 will-change-[opacity,transform]"
           >
             <div className="p-8 md:p-12 w-full">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
@@ -163,7 +163,7 @@ const Index = () => {
 
             {/* Image */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" />
+              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </motion.div>
           </div>
         </div>

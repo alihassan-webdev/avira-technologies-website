@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, memo } from "react";
 
 const WhatsAppButton = () => {
   const [showContact, setShowContact] = useState(false);
@@ -53,4 +53,4 @@ const WhatsAppButton = () => {
   );
 };
 
-export default WhatsAppButton;
+export default memo(WhatsAppButton);

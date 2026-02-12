@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { memo } from "react";
 
 interface PageHeroProps {
   title: string;
@@ -42,4 +43,4 @@ const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
   );
 };
 
-export default PageHero;
+export default memo(PageHero);

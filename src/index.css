@@ -144,6 +144,8 @@
 
   .nav-link {
     position: relative;
+    will-change: color;
+    transform: translateZ(0);
   }
 
   .nav-link::after {
@@ -155,6 +157,7 @@
     height: 2px;
     background-color: hsl(0, 100%, 50%);
     transition: width 0.3s ease;
+    will-change: width;
   }
 
   .nav-link:hover::after {
@@ -163,5 +166,36 @@
 
   .nav-link.active::after {
     width: 100%;
+  }
+
+  /* GPU Acceleration for animations */
+  [class*="motion"] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  /* Optimize shadows and transitions */
+  .shadow-glow {
+    will-change: box-shadow;
+  }
+
+  .shadow-card {
+    will-change: box-shadow;
+  }
+
+  /* Optimize button interactions */
+  button, a {
+    transform: translateZ(0);
+  }
+
+  /* Image optimization */
+  img {
+    will-change: opacity;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
   }
 }

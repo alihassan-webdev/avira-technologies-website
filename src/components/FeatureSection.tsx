@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { memo } from "react";
 
 interface Feature {
   icon: LucideIcon;
@@ -34,4 +35,4 @@ const FeatureSection = ({ features }: FeatureSectionProps) => {
   );
 };
 
-export default FeatureSection;
+export default memo(FeatureSection);

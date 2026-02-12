@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 
 interface SectionHeaderProps {
   label?: string;
@@ -34,4 +35,4 @@ const SectionHeader = ({ label, title, description, centered = true, light = fal
   );
 };
 
-export default SectionHeader;
+export default memo(SectionHeader);
