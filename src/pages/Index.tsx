@@ -149,7 +149,7 @@ const Index = () => {
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1.5, ease: "easeInOut" }} className="space-y-6">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
               </p>
@@ -162,7 +162,7 @@ const Index = () => {
             </motion.div>
 
             {/* Image */}
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1.5, ease: "easeInOut" }} className="rounded-xl overflow-hidden shadow-lg">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
               <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" />
             </motion.div>
           </div>
