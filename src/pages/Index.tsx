@@ -154,7 +154,7 @@ const Index = () => {
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
-                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions — we design and deliver custom technology strategies that align with your business goals.
+                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions, we design and deliver custom technology strategies that align with your business goals.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
                 At Avira Technologies, we empower the future with cutting-edge digital solutions designed to elevate your business. As a leader in cybersecurity, cloud computing, and AI-driven innovations, we provide the tools and expertise to safeguard your digital journey.
@@ -190,7 +190,7 @@ const Index = () => {
             </div>
             <div className="p-8 rounded-xl bg-card border border-border shadow-card">
               <p className="text-lg text-card-foreground leading-relaxed">
-                We're not just selling technology — we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
+                We're not just selling technology, we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
               </p>
             </div>
           </motion.div>

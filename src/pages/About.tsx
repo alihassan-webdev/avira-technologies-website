@@ -38,7 +38,7 @@ const whyChooseUs = [
     title: "Customer-Centric Approach",
     description: "Solutions designed specifically for your unique needs.",
     points: [
-      "Tailored Solutions – No one-size-fits-all—we design for your unique challenges.",
+      "Tailored Solutions – No one-size-fits-all, we design for your unique challenges.",
       "End-to-End Service – From consultation to installation, training, and lifetime upgrades.",
       "Proven Success – Trusted by Fortune 500 companies, governments, and critical infrastructure providers.",
     ],
@@ -153,7 +153,7 @@ const About = () => (
             Why Choose US?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            we don't just provide solutions— we deliver
+            we don't just provide solutions, we deliver
           </p>
           <p className="text-2xl font-bold text-red-600">Trust, innovation, & excellence</p>
           <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
