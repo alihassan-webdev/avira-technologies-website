@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -74,10 +74,10 @@ const Index = () => {
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute inset-0 pointer-events-none"
+            transition={{ duration: 1.4, ease: "easeInOut" }}
+            className="absolute inset-0 pointer-events-none will-change-[opacity,transform]"
           >
-            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" />
+            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" loading="eager" decoding="async" />
           </motion.div>
         </AnimatePresence>
 
@@ -88,8 +88,8 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80"
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80 will-change-[opacity,transform]"
           >
             <div className="p-8 md:p-12 w-full">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
@@ -106,7 +106,7 @@ const Index = () => {
       {/* Welcome Section */}
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
               <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
             </div>
@@ -122,7 +122,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-secondary bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`}}>
+      <section className="py-20 bg-secondary bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`, backgroundAttachment: 'fixed'}}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -130,7 +130,7 @@ const Index = () => {
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 1.0, ease: "easeOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
                 <feature.icon className="w-8 h-8 text-electric mb-4" />
                 <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
@@ -149,12 +149,12 @@ const Index = () => {
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
-                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions — we design and deliver custom technology strategies that align with your business goals.
+                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions, we design and deliver custom technology strategies that align with your business goals.
               </p>
               <p className="text-lg text-foreground leading-relaxed">
                 At Avira Technologies, we empower the future with cutting-edge digital solutions designed to elevate your business. As a leader in cybersecurity, cloud computing, and AI-driven innovations, we provide the tools and expertise to safeguard your digital journey.
@@ -162,8 +162,8 @@ const Index = () => {
             </motion.div>
 
             {/* Image */}
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" />
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
+              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </motion.div>
           </div>
         </div>
@@ -172,7 +172,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
             </h2>
@@ -190,7 +190,7 @@ const Index = () => {
             </div>
             <div className="p-8 rounded-xl bg-card border border-border shadow-card">
               <p className="text-lg text-card-foreground leading-relaxed">
-                We're not just selling technology — we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
+                We're not just selling technology, we're building long-term partnerships through service excellence, technical expertise, and strategic insight. Join thousands of enterprises and individuals who trust Avira Technologies for a safer, faster, and smarter digital experience.
               </p>
             </div>
           </motion.div>
@@ -200,7 +200,7 @@ const Index = () => {
       {/* Our Approach */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
@@ -226,7 +226,7 @@ const Index = () => {
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
             <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* Left Side - Text Content */}

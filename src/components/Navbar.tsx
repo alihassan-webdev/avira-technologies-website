@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -99,6 +99,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                     className="absolute top-full left-0 mt-1 w-56 rounded-lg bg-card shadow-lg border border-border overflow-hidden"
                   >
                     {item.children.map((child) => (
@@ -122,7 +123,14 @@ const Navbar = () => {
             className="lg:hidden text-black flex items-center justify-center w-10 h-10 flex-shrink-0"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileOpen ? (
+              <X className="w-5 h-5" />
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round" />
+                <line x1="6" y1="14" x2="18" y2="14" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
@@ -134,6 +142,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
@@ -151,7 +160,7 @@ const Navbar = () => {
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                         mobileExpandedDropdown === item.label ? 'rotate-180' : ''
                       }`} />
                     </button>
@@ -173,6 +182,7 @@ const Navbar = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="ml-4 space-y-1 overflow-hidden"
                     >
                       {item.children.map((child) => (
@@ -201,4 +211,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

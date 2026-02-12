@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { memo } from "react";
 
 interface SectionHeaderProps {
   label?: string;
@@ -14,7 +15,7 @@ const SectionHeader = ({ label, title, description, centered = true, light = fal
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1.0, ease: "easeInOut" }}
       className={`mb-12 ${centered ? "text-center" : ""}`}
     >
       {label && (
@@ -34,4 +35,4 @@ const SectionHeader = ({ label, title, description, centered = true, light = fal
   );
 };
 
-export default SectionHeader;
+export default memo(SectionHeader);

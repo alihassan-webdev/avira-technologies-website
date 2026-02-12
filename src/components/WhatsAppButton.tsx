@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, memo } from "react";
 
 const WhatsAppButton = () => {
   const [showContact, setShowContact] = useState(false);
@@ -15,7 +15,7 @@ const WhatsAppButton = () => {
       <motion.div
         initial={{ opacity: 0, y: 10, x: 20 }}
         animate={showContact ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: 10, x: 20 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
         className="bg-white rounded-lg shadow-lg px-4 py-2 min-w-max"
         style={{
           pointerEvents: showContact ? "auto" : "none",
@@ -41,7 +41,7 @@ const WhatsAppButton = () => {
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
         title="Chat with us on WhatsApp"
       >
         <FontAwesomeIcon
@@ -53,4 +53,4 @@ const WhatsAppButton = () => {
   );
 };
 
-export default WhatsAppButton;
+export default memo(WhatsAppButton);

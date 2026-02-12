@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { memo } from "react";
 
 interface Feature {
   icon: LucideIcon;
@@ -20,7 +21,7 @@ const FeatureSection = ({ features }: FeatureSectionProps) => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: i * 0.1 }}
+          transition={{ delay: i * 0.1, duration: 0.8, ease: "easeInOut" }}
           className="p-6 rounded-xl bg-card border border-border shadow-card"
         >
           <div className="w-10 h-10 rounded-lg gradient-electric flex items-center justify-center mb-4">
@@ -34,4 +35,4 @@ const FeatureSection = ({ features }: FeatureSectionProps) => {
   );
 };
 
-export default FeatureSection;
+export default memo(FeatureSection);

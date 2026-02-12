@@ -1,20 +1,15 @@
-import ServiceDetail from "@/pages/ServiceDetail";
-import { Network, Search, Gauge, Shield, FileCheck, BarChart3 } from "lucide-react";
+import Layout from "@/components/Layout";
+import PageHero from "@/components/PageHero";
 
 const NetworkAudit = () => (
-  <ServiceDetail
-    title="Network Audit"
-    description="Comprehensive network assessment and optimization services."
-    overview="Understand your network's strengths and vulnerabilities with our thorough audit services. We assess performance, identify bottlenecks, test security posture, and provide actionable recommendations to optimize your network infrastructure."
-    features={[
-      { icon: Search, title: "Network Assessment", description: "Complete inventory and topology mapping of your network." },
-      { icon: Gauge, title: "Performance Optimization", description: "Identify and resolve bottlenecks for optimal throughput." },
-      { icon: Shield, title: "Security Testing", description: "Vulnerability scanning and penetration testing." },
-      { icon: Network, title: "Traffic Analysis", description: "Deep packet inspection and traffic flow analysis." },
-      { icon: FileCheck, title: "Compliance Review", description: "Ensure network meets industry compliance standards." },
-      { icon: BarChart3, title: "Audit Reporting", description: "Detailed reports with prioritized recommendations." },
-    ]}
-  />
+  <Layout>
+    <PageHero title="Network Audit" description="Coming Soon" breadcrumbs={[{ label: "Home", path: "/" }, { label: "Services", path: "/services" }]} />
+    <section className="py-20">
+      <div className="container mx-auto px-6 text-center">
+        <p className="text-lg text-muted-foreground">This page is coming soon.</p>
+      </div>
+    </section>
+  </Layout>
 );
 
 export default NetworkAudit;
