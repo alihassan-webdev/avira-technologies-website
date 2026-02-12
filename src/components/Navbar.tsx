@@ -142,7 +142,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
@@ -160,7 +160,7 @@ const Navbar = () => {
                       }`}
                     >
                       {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                         mobileExpandedDropdown === item.label ? 'rotate-180' : ''
                       }`} />
                     </button>
@@ -182,7 +182,7 @@ const Navbar = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
                       className="ml-4 space-y-1 overflow-hidden"
                     >
                       {item.children.map((child) => (
