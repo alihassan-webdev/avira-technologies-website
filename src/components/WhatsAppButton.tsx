@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <div className="fixed bottom-4 md:bottom-8 right-4 md:right-8 z-40 flex flex-col items-end gap-3">
+    <div className="fixed bottom-16 md:bottom-8 right-4 md:right-8 z-40 flex flex-col items-end gap-3">
       {/* Contact Us Message */}
       <motion.div
         initial={{ opacity: 0, y: 10, x: 20 }}
