@@ -9,11 +9,11 @@ const TopHeader = () => {
           <div className="flex items-center gap-3 md:gap-4">
             <a href="tel:03111433316" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
               <Phone className="w-4 h-4" />
-              <span>03-111 433 316</span>
+              <span className="hidden md:inline">03-111 433 316</span>
             </a>
             <a href="mailto:info@aviratechnologies.com" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
               <Mail className="w-4 h-4" />
-              <span>info@aviratechnologies.com</span>
+              <span className="hidden md:inline">info@aviratechnologies.com</span>
             </a>
           </div>
 
