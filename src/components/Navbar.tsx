@@ -36,6 +36,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [mobileExpandedDropdown, setMobileExpandedDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   const handleDropdownEnter = (label: string) => {
@@ -127,19 +128,42 @@ const Navbar = () => {
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.label}>
-                  <Link
-                    to={item.path}
-                    onClick={() => !item.children && setMobileOpen(false)}
-                    className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
-                      location.pathname === item.path || location.pathname.startsWith(item.path + "/")
-                        ? "text-red-600 active"
-                        : "text-black/70 hover:text-black"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-4 space-y-1">
+                  {item.children ? (
+                    <button
+                      onClick={() => setMobileExpandedDropdown(
+                        mobileExpandedDropdown === item.label ? null : item.label
+                      )}
+                      className={`w-full text-left flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link ${
+                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                          ? "text-red-600 active"
+                          : "text-black/70 hover:text-black"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        mobileExpandedDropdown === item.label ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
+                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                          ? "text-red-600 active"
+                          : "text-black/70 hover:text-black"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                  {item.children && mobileExpandedDropdown === item.label && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="ml-4 space-y-1 overflow-hidden"
+                    >
                       {item.children.map((child) => (
                         <Link
                           key={child.path}
@@ -154,7 +178,7 @@ const Navbar = () => {
                           {child.label}
                         </Link>
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               ))}
