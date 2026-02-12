@@ -89,7 +89,7 @@ const About = () => (
             viewport={{ once: true }}
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
-              our MISSION
+              OUR MISSION
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our mission is to empower businesses by providing them with cutting-edge technology solutions that not only enhance their operational efficiency but also drive sustainable growth and ensure long-term success in a competitive market. We aim to equip organizations with the tools they need to thrive in today's fast-paced business environment.
@@ -103,7 +103,7 @@ const About = () => (
             viewport={{ once: true }}
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
-              our VISION
+              OUR VISION
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Our vision is to establish ourselves as a global leader in IT innovation, dedicated to shaping the future of various industries through the transformative power of technology. We aspire to lead the way in developing groundbreaking solutions that not only enhance operational efficiency but also drive growth and progress across diverse sectors on a worldwide scale.
