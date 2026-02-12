@@ -87,6 +87,7 @@ const About = () => (
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
               OUR MISSION
@@ -100,6 +101,7 @@ const About = () => (
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="rounded-xl overflow-hidden shadow-lg"
           >
             <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" />
@@ -112,6 +114,7 @@ const About = () => (
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="rounded-xl overflow-hidden shadow-lg md:order-2"
           >
             <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
@@ -121,6 +124,7 @@ const About = () => (
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="md:order-1"
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
