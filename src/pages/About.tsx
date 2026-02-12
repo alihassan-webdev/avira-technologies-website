@@ -154,10 +154,7 @@ const About = () => (
           <p className="text-xl text-muted-foreground mb-8">
             we don't just provide solutions— we deliver
           </p>
-          <div className="space-y-2">
-            <p className="text-2xl font-bold text-red-600">trust, innovation,</p>
-            <p className="text-2xl font-bold text-red-600">&amp; excellence</p>
-          </div>
+          <p className="text-2xl font-bold text-red-600">Trust, innovation, & excellence</p>
           <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
             in every system we design. Here's why businesses and organizations worldwide rely on us:
           </p>
