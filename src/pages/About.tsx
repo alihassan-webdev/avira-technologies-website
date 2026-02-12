@@ -56,12 +56,12 @@ const About = () => (
 
     {/* Who We Are */}
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-full mx-auto px-4"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
             Who We Are?
@@ -80,8 +80,8 @@ const About = () => (
 
     {/* Mission & Vision */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
+      <div className="container mx-auto px-0">
+        <div className="grid md:grid-cols-2 gap-12 px-4">
           {/* Mission */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -115,12 +115,12 @@ const About = () => (
 
     {/* Why Choose Us */}
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 max-w-3xl mx-auto"
+          className="text-center mb-16 max-w-full mx-auto px-4"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             Why Choose US?
@@ -137,7 +137,7 @@ const About = () => (
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 px-4">
           {whyChooseUs.map((item, index) => {
             const Icon = item.icon;
             return (
