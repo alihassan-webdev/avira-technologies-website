@@ -81,8 +81,8 @@ const About = () => (
     {/* Mission & Vision */}
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-0">
-        <div className="grid md:grid-cols-2 gap-12 px-4">
-          {/* Mission */}
+        {/* Mission */}
+        <div className="grid md:grid-cols-2 gap-12 items-center px-4 mb-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -96,11 +96,32 @@ const About = () => (
             </p>
           </motion.div>
 
-          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="rounded-xl overflow-hidden shadow-lg"
+          >
+            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" />
+          </motion.div>
+        </div>
+
+        {/* Vision */}
+        <div className="grid md:grid-cols-2 gap-12 items-center px-4">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="rounded-xl overflow-hidden shadow-lg md:order-2"
+          >
+            <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="md:order-1"
           >
             <h3 className="font-display text-3xl font-bold text-foreground mb-6">
               OUR VISION
@@ -114,8 +135,8 @@ const About = () => (
     </section>
 
     {/* Why Choose Us */}
-    <section className="py-20">
-      <div className="container mx-auto px-0">
+    <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`}}>
+      <div className="container mx-auto px-0 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
