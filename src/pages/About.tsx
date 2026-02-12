@@ -145,7 +145,7 @@ const About = () => (
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
           className="text-center mb-16 max-w-full mx-auto px-4"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -169,7 +169,7 @@ const About = () => (
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+                transition={{ delay: index * 0.1, duration: 1.0, ease: "easeOut" }}
                 className="p-8 rounded-xl bg-card border border-border shadow-card hover:shadow-lg transition-shadow"
               >
                 <Icon className="w-8 h-8 text-electric mb-4" />
