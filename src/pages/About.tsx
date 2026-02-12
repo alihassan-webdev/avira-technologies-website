@@ -149,7 +149,7 @@ const About = () => (
                 transition={{ delay: index * 0.1 }}
                 className="p-8 rounded-xl bg-card border border-border shadow-card hover:shadow-lg transition-shadow"
               >
-                <Icon className="w-12 h-12 text-red-600 mb-6" />
+                <Icon className="w-8 h-8 text-electric mb-4" />
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4">
                   {item.title}
                 </h3>
