@@ -1,87 +1,192 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
-import SectionHeader from "@/components/SectionHeader";
-import FeatureSection from "@/components/FeatureSection";
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Lightbulb, Shield, Users, Award, TrendingUp } from "lucide-react";
+import { Shield, Zap, Users, Target } from "lucide-react";
 
-const values = [
-  { icon: Lightbulb, title: "Innovation", description: "We embrace new technologies and creative solutions to stay ahead." },
-  { icon: Shield, title: "Integrity", description: "Transparency and honesty guide every client engagement." },
-  { icon: Users, title: "Collaboration", description: "We work as an extension of your team, not just a vendor." },
-  { icon: Award, title: "Excellence", description: "We deliver nothing short of the highest quality in every project." },
-  { icon: TrendingUp, title: "Growth", description: "Continuously learning and improving to better serve our clients." },
-  { icon: Heart, title: "Commitment", description: "Dedicated to long-term partnerships and client success." },
-];
-
-const team = [
-  { name: "Mohammed Al-Fayed", role: "CEO & Founder", bio: "20+ years in enterprise IT leadership." },
-  { name: "Priya Sharma", role: "CTO", bio: "Expert in cloud architecture and cyber security." },
-  { name: "James Wilson", role: "VP of Operations", bio: "Specializes in IT service delivery and SLA management." },
-  { name: "Fatima Hassan", role: "Director of Sales", bio: "Drives strategic partnerships across the region." },
+const whyChooseUs = [
+  {
+    title: "Industry-Leading Expertise",
+    description: "Decades of Experience – Proven track record in security, automation, and smart technology.",
+    points: [
+      "Decades of Experience – Proven track record in security, automation, and smart technology.",
+      "Certified Professionals – Our team includes top-tier engineers, cybersecurity specialists, and system integrators.",
+      "Award-Winning Solutions – Recognized for innovation in access control, fire safety, and IT infrastructure.",
+    ],
+    icon: Shield,
+  },
+  {
+    title: "Future-Ready Technology",
+    description: "Advanced solutions that evolve with your needs.",
+    points: [
+      "AI & IoT-Powered Systems – Smart, adaptive solutions that evolve with your needs.",
+      "Military-Grade Security – Advanced encryption, real-time threat detection, and compliance with global standards.",
+      "Seamless Integration – Unified platforms for access control, surveillance, alarms, and communications.",
+    ],
+    icon: Zap,
+  },
+  {
+    title: "Unmatched Reliability",
+    description: "24/7 monitoring and support for your peace of mind.",
+    points: [
+      "24/7 Monitoring & Support – Proactive maintenance and instant incident response.",
+      "Redundant Systems – Minimize downtime with fail-safe architectures.",
+      "Scalable for Growth – From small businesses to enterprise-level deployments.",
+    ],
+    icon: Users,
+  },
+  {
+    title: "Customer-Centric Approach",
+    description: "Solutions designed specifically for your unique needs.",
+    points: [
+      "Tailored Solutions – No one-size-fits-all—we design for your unique challenges.",
+      "End-to-End Service – From consultation to installation, training, and lifetime upgrades.",
+      "Proven Success – Trusted by Fortune 500 companies, governments, and critical infrastructure providers.",
+    ],
+    icon: Target,
+  },
 ];
 
 const About = () => (
   <Layout>
     <PageHero
-      title="About Avira Technologies"
-      description="A trusted technology partner delivering innovative IT solutions across the Middle East and beyond."
+      title="About US"
+      description="Where Technology Meets Vision"
       breadcrumbs={[{ label: "Home", path: "/" }, { label: "About Us", path: "/about" }]}
     />
 
-    {/* Overview */}
+    {/* Who We Are */}
     <section className="py-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center">
-          <SectionHeader label="Our Story" title="Pioneering IT Excellence Since 2010" description="Founded with a vision to empower businesses through technology, Avira Technologies has grown into a leading IT solutions provider serving enterprises across diverse industries." />
-          <p className="text-muted-foreground leading-relaxed">
-            From our headquarters in Dubai, we've expanded our reach to serve clients across the GCC and beyond. Our team of certified professionals combines deep technical expertise with a genuine commitment to understanding each client's unique challenges and goals.
-          </p>
-        </div>
+      <div className="container mx-auto px-0">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-full mx-auto px-4"
+        >
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
+            Who We Are?
+          </h2>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Avira Technologies proudly stands at the forefront of the IT services sector, dedicated to delivering exceptional and professional IT solutions that span a wide array of IT infrastructure and comprehensive services across diverse platforms. As a leading System Integrator and Technology Solutions provider, our mission is to support a diverse clientele, including both large enterprises and small to medium-sized enterprises (SMEs). We have established a strong presence not only in Pakistan but also in key markets such as the United States, the Middle East, and Africa. Our unwavering commitment revolves around assisting our clients through the strategic processes of planning, building, supporting, and effectively managing their Information and Communication Technology (ICT) and digital infrastructure.
+            </p>
+            <p>
+              With an impressive decade of experience in System Integration and a dedicated team of over 40 highly skilled professionals, Avira Technologies has successfully addressed and exceeded the needs of more than 100 clients worldwide. Our relentless dedication to delivering innovative IT solutions has empowered businesses to navigate challenges with confidence, facilitating sustained growth and success in their respective markets. At Avira Technologies, we recognize the importance of adapting to the ever-evolving tech landscape and strive to be a trusted partner in our clients' journeys toward digital transformation and operational excellence.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
 
     {/* Mission & Vision */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-8">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="p-8 rounded-xl bg-card border border-border shadow-card">
-            <Target className="w-10 h-10 text-electric mb-4" />
-            <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">Our Mission</h3>
-            <p className="text-muted-foreground leading-relaxed">To deliver world-class technology solutions that enable businesses to operate securely, efficiently, and innovatively in an increasingly digital world.</p>
+      <div className="container mx-auto px-0">
+        {/* Mission */}
+        <div className="grid md:grid-cols-2 gap-12 items-center px-4 mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h3 className="font-display text-3xl font-bold text-foreground mb-6">
+              OUR MISSION
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our mission is to empower businesses by providing them with cutting-edge technology solutions that not only enhance their operational efficiency but also drive sustainable growth and ensure long-term success in a competitive market. We aim to equip organizations with the tools they need to thrive in today's fast-paced business environment.
+            </p>
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="p-8 rounded-xl bg-card border border-border shadow-card">
-            <Eye className="w-10 h-10 text-electric mb-4" />
-            <h3 className="font-display text-2xl font-bold text-card-foreground mb-3">Our Vision</h3>
-            <p className="text-muted-foreground leading-relaxed">To be the most trusted and innovative technology partner in the region, setting the benchmark for excellence in IT solutions and services.</p>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="rounded-xl overflow-hidden shadow-lg"
+          >
+            <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="IT professionals monitoring data servers" className="w-full h-full object-cover" />
+          </motion.div>
+        </div>
+
+        {/* Vision */}
+        <div className="grid md:grid-cols-2 gap-12 items-center px-4">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="rounded-xl overflow-hidden shadow-lg order-2 md:order-1"
+          >
+            <img src="https://images.pexels.com/photos/1181734/pexels-photo-1181734.jpeg" alt="Diverse professionals collaborating in a meeting" className="w-full h-full object-cover" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="order-1 md:order-2"
+          >
+            <h3 className="font-display text-3xl font-bold text-foreground mb-6">
+              OUR VISION
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our vision is to establish ourselves as a global leader in IT innovation, dedicated to shaping the future of various industries through the transformative power of technology. We aspire to lead the way in developing groundbreaking solutions that not only enhance operational efficiency but also drive growth and progress across diverse sectors on a worldwide scale.
+            </p>
           </motion.div>
         </div>
       </div>
     </section>
 
-    {/* Core Values */}
-    <section className="py-20">
-      <div className="container mx-auto px-6">
-        <SectionHeader label="Values" title="Our Core Values" description="The principles that guide everything we do." />
-        <FeatureSection features={values} />
-      </div>
-    </section>
+    {/* Why Choose Us */}
+    <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`}}>
+      <div className="container mx-auto px-0 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.0, ease: "easeOut" }}
+          className="text-center mb-16 max-w-full mx-auto px-4"
+        >
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Why Choose US?
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8">
+            we don't just provide solutions— we deliver
+          </p>
+          <p className="text-2xl font-bold text-red-600">Trust, innovation, & excellence</p>
+          <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
+            in every system we design. Here's why businesses and organizations worldwide rely on us:
+          </p>
+        </motion.div>
 
-    {/* Leadership */}
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-6">
-        <SectionHeader label="Team" title="Leadership Team" description="Meet the people driving Avira's vision forward." />
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((member, i) => (
-            <motion.div key={member.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-6 rounded-xl bg-card border border-border shadow-card text-center">
-              <div className="w-20 h-20 rounded-full gradient-navy mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl font-display font-bold text-primary-foreground">{member.name.charAt(0)}</span>
-              </div>
-              <h3 className="font-display font-semibold text-card-foreground">{member.name}</h3>
-              <p className="text-electric text-sm mb-2">{member.role}</p>
-              <p className="text-muted-foreground text-sm">{member.bio}</p>
-            </motion.div>
-          ))}
+        <div className="grid md:grid-cols-2 gap-8 px-4">
+          {whyChooseUs.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 1.0, ease: "easeOut" }}
+                className="p-8 rounded-xl bg-card border border-border shadow-card hover:shadow-lg transition-shadow"
+              >
+                <Icon className="w-8 h-8 text-electric mb-4" />
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                  {item.title}
+                </h3>
+                <ul className="space-y-3">
+                  {item.points.map((point, i) => (
+                    <li key={i} className="flex gap-3 text-muted-foreground">
+                      <span className="text-red-600 font-bold mt-1">✨</span>
+                      <span className="leading-relaxed">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

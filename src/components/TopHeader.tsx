@@ -4,16 +4,16 @@ const TopHeader = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-40 bg-black text-white py-1.5 text-xs md:text-sm h-8 min-h-8 flex items-center">
       <div className="container mx-auto px-6 w-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2 min-h-fit">
+        <div className="flex flex-row items-center justify-between gap-2 min-h-fit">
           {/* Contact Info */}
           <div className="flex items-center gap-3 md:gap-4">
             <a href="tel:03111433316" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
               <Phone className="w-4 h-4" />
-              <span>03-111 433 316</span>
+              <span className="hidden md:inline">03-111 433 316</span>
             </a>
             <a href="mailto:info@aviratechnologies.com" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
               <Mail className="w-4 h-4" />
-              <span>info@aviratechnologies.com</span>
+              <span className="hidden md:inline">info@aviratechnologies.com</span>
             </a>
           </div>
 

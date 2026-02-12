@@ -107,9 +107,8 @@ const Index = () => {
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full text-center">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-red-200 bg-red-50 mb-3">
-              <span className="w-2 h-2 rounded-full bg-red-600"></span>
-              <span className="text-red-700 font-semibold text-sm tracking-wide">Welcome to Innovation</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
+              <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
             </div>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
               Avira Technologies
@@ -123,15 +122,15 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-secondary bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`}}>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="p-8 rounded-xl bg-card border border-border shadow-card">
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 1.0, ease: "easeOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
                 <feature.icon className="w-8 h-8 text-electric mb-4" />
                 <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.desc}</p>
@@ -144,12 +143,13 @@ const Index = () => {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="w-full">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
-              About Our Mission
-            </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
-            <div className="space-y-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
+            About Our Mission
+          </h2>
+          <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
               <p className="text-lg text-foreground leading-relaxed">
                 Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
               </p>
@@ -159,8 +159,13 @@ const Index = () => {
               <p className="text-lg text-foreground leading-relaxed">
                 At Avira Technologies, we empower the future with cutting-edge digital solutions designed to elevate your business. As a leader in cybersecurity, cloud computing, and AI-driven innovations, we provide the tools and expertise to safeguard your digital journey.
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* Image */}
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
+              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" />
+            </motion.div>
+          </div>
         </div>
       </section>
 

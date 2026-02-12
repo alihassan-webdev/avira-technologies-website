@@ -36,7 +36,17 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [mobileExpandedDropdown, setMobileExpandedDropdown] = useState<string | null>(null);
   const location = useLocation();
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const handleLinkClick = () => {
+    scrollToTop();
+    setMobileOpen(false);
+  };
 
   const handleDropdownEnter = (label: string) => {
     if (dropdownTimeout) {
@@ -58,7 +68,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-14 min-h-14">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
+          <Link to="/" onClick={handleLinkClick} className="flex items-center gap-2 flex-shrink-0">
             <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto object-contain" style={{ maxHeight: '48px' }} />
           </Link>
 
@@ -73,6 +83,7 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
+                  onClick={handleLinkClick}
                   className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors nav-link ${
                     location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                       ? "text-red-600 active"
@@ -94,6 +105,7 @@ const Navbar = () => {
                       <Link
                         key={child.path}
                         to={child.path}
+                        onClick={handleLinkClick}
                         className="block px-4 py-2.5 text-sm text-card-foreground hover:bg-secondary transition-colors"
                       >
                         {child.label}
@@ -127,24 +139,47 @@ const Navbar = () => {
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
               {navItems.map((item) => (
                 <div key={item.label}>
-                  <Link
-                    to={item.path}
-                    onClick={() => !item.children && setMobileOpen(false)}
-                    className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
-                      location.pathname === item.path || location.pathname.startsWith(item.path + "/")
-                        ? "text-red-600 active"
-                        : "text-black/70 hover:text-black"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-4 space-y-1">
+                  {item.children ? (
+                    <button
+                      onClick={() => setMobileExpandedDropdown(
+                        mobileExpandedDropdown === item.label ? null : item.label
+                      )}
+                      className={`w-full text-left flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link ${
+                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                          ? "text-red-600 active"
+                          : "text-black/70 hover:text-black"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        mobileExpandedDropdown === item.label ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={handleLinkClick}
+                      className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
+                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                          ? "text-red-600 active"
+                          : "text-black/70 hover:text-black"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                  {item.children && mobileExpandedDropdown === item.label && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="ml-4 space-y-1 overflow-hidden"
+                    >
                       {item.children.map((child) => (
                         <Link
                           key={child.path}
                           to={child.path}
-                          onClick={() => setMobileOpen(false)}
+                          onClick={handleLinkClick}
                           className={`block px-3 py-1.5 text-sm nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
@@ -154,7 +189,7 @@ const Navbar = () => {
                           {child.label}
                         </Link>
                       ))}
-                    </div>
+                    </motion.div>
                   )}
                 </div>
               ))}
