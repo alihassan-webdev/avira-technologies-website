@@ -103,49 +103,57 @@ const Solutions = () => {
       {/* Solutions Grid */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="group h-full"
-              >
-                <Link to={solution.link} className="block h-full">
-                  <div className="h-full rounded-xl overflow-hidden shadow-card bg-card border border-border hover:shadow-lg hover:border-electric/50 transition-all duration-300 flex flex-col">
-                    {/* Image */}
-                    <div className="relative h-40 overflow-hidden bg-secondary">
-                      <img 
-                        src={solution.image} 
-                        alt={solution.title} 
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {solutionCategories.map((solution, index) => {
+              const Icon = solution.icon;
+              return (
+                <motion.div
+                  key={solution.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  className="group h-full"
+                >
+                  <Link to={solution.link} className="block h-full">
+                    <div className="h-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+                      {/* Image - Larger Airbnb style */}
+                      <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+                        <img
+                          src={solution.image}
+                          alt={solution.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="eager"
+                          decoding="async"
+                        />
+                      </div>
 
-                    {/* Content */}
-                    <div className="p-6 flex flex-col flex-grow">
-                      <div className="mb-3">
-                        <solution.icon className="w-8 h-8 text-electric" />
-                      </div>
-                      <h3 className="font-display text-lg font-bold text-card-foreground mb-3 group-hover:text-electric transition-colors">
-                        {solution.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                        {solution.description}
-                      </p>
-                      <div className="flex items-center text-electric font-semibold text-sm">
-                        Read more
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      {/* Content - Clean Airbnb style */}
+                      <div className="p-5 flex flex-col flex-grow">
+                        {/* Icon and Title Row */}
+                        <div className="flex items-start gap-3 mb-3">
+                          <Icon className="w-6 h-6 text-electric flex-shrink-0 mt-1" />
+                          <h3 className="font-semibold text-lg text-foreground group-hover:text-electric transition-colors">
+                            {solution.title}
+                          </h3>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed line-clamp-3">
+                          {solution.description}
+                        </p>
+
+                        {/* Read More Link */}
+                        <div className="flex items-center text-electric font-medium text-sm hover:gap-2 transition-all">
+                          Read more
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
