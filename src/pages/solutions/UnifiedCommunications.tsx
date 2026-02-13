@@ -177,6 +177,72 @@ const UnifiedCommunications = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Trusted Brands Section */}
+      <section className="py-20 bg-secondary/20">
+        <div className="container mx-auto px-6">
+          <motion.div className="max-w-5xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
+              Trusted Brands We Represent
+            </h2>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb610ed4d224b4bdc8324a6b0d854d216?format=webp&width=800&height=1200"
+                  alt="Yeastar"
+                  className="max-h-32 object-contain"
+                  loading="eager"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fc520a94b93984016a68e7b1ca3a1e4f2?format=webp&width=800&height=1200"
+                  alt="Zcoo"
+                  className="max-h-32 object-contain"
+                  loading="eager"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F891f596bc2334642a8a4e8a36af1325c?format=webp&width=800&height=1200"
+                  alt="Fanvil"
+                  className="max-h-32 object-contain"
+                  loading="eager"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb1fa871bc3cd4fdf97d22c6a596af8e9?format=webp&width=800&height=1200"
+                  alt="Asterisk"
+                  className="max-h-32 object-contain"
+                  loading="eager"
+                />
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </Layout>
   );
 };
