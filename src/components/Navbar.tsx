@@ -112,7 +112,11 @@ const Navbar = () => {
                         key={child.path}
                         to={child.path}
                         onClick={handleLinkClick}
-                        className="block px-4 py-2.5 text-sm text-card-foreground hover:bg-secondary transition-colors"
+                        className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                          location.pathname === child.path
+                            ? "text-red-600 bg-secondary"
+                            : "text-card-foreground hover:bg-secondary"
+                        }`}
                       >
                         {child.label}
                       </Link>
@@ -195,7 +199,7 @@ const Navbar = () => {
                           key={child.path}
                           to={child.path}
                           onClick={handleLinkClick}
-                          className={`block px-3 py-1.5 text-sm nav-link ${
+                          className={`block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
                               : "text-black/50 hover:text-black"
