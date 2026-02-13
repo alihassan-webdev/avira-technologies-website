@@ -46,12 +46,11 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             The Challenge
           </h3>
-          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed max-w-4xl">
             <p>
               In today's digital landscape, cybersecurity demands a proactive and intelligent approach. Modern businesses face constant challenges — from phishing attacks and ransomware to insider threats — that can disrupt operations and harm reputations.
             </p>
@@ -80,7 +79,7 @@ const CyberSecurity = () => (
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
             {/* Threats Column */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -147,7 +146,7 @@ const CyberSecurity = () => (
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Security Audits */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -273,14 +272,13 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Why Choose Avira for Cybersecurity?
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
 
-          <ul className="space-y-4">
+          <ul className="space-y-4 max-w-4xl mx-auto">
             {[
               {
                 title: "End-to-End Protection",
