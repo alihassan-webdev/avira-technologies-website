@@ -26,7 +26,7 @@ const solutionCategories = [
     icon: Cloud,
     title: "Network Infrastructure",
     description: "IT Infrastructure Solutions encompassing foundational hardware, software, and services for enterprise-grade performance.",
-    image: "https://images.pexels.com/photos/3498597/pexels-photo-3498597.jpeg",
+    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
     link: "/solutions/network-infrastructure"
   },
   {
@@ -68,7 +68,7 @@ const solutionCategories = [
     icon: Video,
     title: "Video Surveillance",
     description: "Monitor, protect, and manage your premises with AI-based CCTV and advanced remote monitoring solutions.",
-    image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg",
+    image: "https://images.pexels.com/photos/3651656/pexels-photo-3651656.jpeg",
     link: "/solutions/video-surveillance"
   }
 ];
