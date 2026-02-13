@@ -217,7 +217,7 @@ const Index = () => {
             <div className="space-y-6">
               <div className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col">
                 <div className="h-40 overflow-hidden">
-                  <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="Premier Partnership" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" alt="Premier Partnership" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-6">
                   <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
