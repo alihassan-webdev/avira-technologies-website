@@ -43,13 +43,14 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Enterprise Network Solutions
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Software-Defined Networking */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -122,7 +123,7 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center"
+          className="text-center"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Network Infrastructure
@@ -145,13 +146,14 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Solutions under IT Infrastructure
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Data Center Solutions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
