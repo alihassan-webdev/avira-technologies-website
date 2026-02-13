@@ -15,26 +15,6 @@ const EnterpriseWork = () => (
       ]}
     />
 
-    {/* Main Message Section */}
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto"
-        >
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Enterprise Networks. Engineered for Speed, Secured for Tomorrow.
-          </h2>
-          <p className="text-2xl md:text-3xl text-red-600 font-bold mb-8">
-            A strong NETWORK is the backbone of a SMART & SCALABLE Enterprise.
-          </p>
-        </motion.div>
-      </div>
-    </section>
-
     {/* Enterprise Network Solutions */}
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
