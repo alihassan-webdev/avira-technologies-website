@@ -215,11 +215,16 @@ const Index = () => {
             </h2>
             <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
             <div className="space-y-6">
-              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
-                </p>
+              <div className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col">
+                <div className="h-40 overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="Premier Partnership" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
+                  </p>
+                </div>
               </div>
               <div className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col">
                 <div className="h-40 overflow-hidden">
