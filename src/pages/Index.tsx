@@ -5,7 +5,8 @@ import {
   Shield, Server, Phone, Fingerprint, Zap, Camera,
   Settings, Network, Cable, FileCheck, Users,
   ChevronRight, CheckCircle, Star, ArrowRight,
-  Building, Landmark, Stethoscope, GraduationCap, ShoppingCart, Factory
+  Building, Landmark, Stethoscope, GraduationCap, ShoppingCart, Factory,
+  Handshake, Lightbulb
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
@@ -213,20 +214,34 @@ const Index = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
-            <div className="space-y-6">
-              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Premier Partnership</h3>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="p-8 rounded-xl bg-card border border-border shadow-card flex flex-col h-full"
+              >
+                <Handshake className="w-8 h-8 text-electric mb-4 flex-shrink-0" />
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">Premier Partnership</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
                 </p>
-              </div>
-              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Continuous Innovation</h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="p-8 rounded-xl bg-card border border-border shadow-card flex flex-col h-full"
+              >
+                <Lightbulb className="w-8 h-8 text-electric mb-4 flex-shrink-0" />
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">Continuous Innovation</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Through innovation and process improvement, we enhance our capabilities, ensuring seamless delivery of tailored solutions and superior support services.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
