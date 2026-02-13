@@ -71,7 +71,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-14 min-h-14">
           {/* Logo */}
-          <Link to="/" onClick={handleLinkClick} className="flex items-center gap-2 flex-shrink-0">
+          <Link to="/" onClick={() => {
+            window.scrollTo(0, 0);
+            handleLinkClick();
+          }} className="flex items-center gap-2 flex-shrink-0">
             <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto object-contain" style={{ maxHeight: '48px' }} />
           </Link>
 
@@ -86,7 +89,10 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  onClick={handleLinkClick}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    handleLinkClick();
+                  }}
                   className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors nav-link ${
                     location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                       ? "text-red-600 active"
@@ -111,7 +117,10 @@ const Navbar = () => {
                       <Link
                         key={child.path}
                         to={child.path}
-                        onClick={handleLinkClick}
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          handleLinkClick();
+                        }}
                         className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
                           location.pathname === child.path
                             ? "text-red-600 bg-secondary"
@@ -176,7 +185,10 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      onClick={handleLinkClick}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        handleLinkClick();
+                      }}
                       className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
                         location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                           ? "text-red-600 active"
@@ -198,7 +210,10 @@ const Navbar = () => {
                         <Link
                           key={child.path}
                           to={child.path}
-                          onClick={handleLinkClick}
+                          onClick={() => {
+                            window.scrollTo(0, 0);
+                            handleLinkClick();
+                          }}
                           className={`block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
