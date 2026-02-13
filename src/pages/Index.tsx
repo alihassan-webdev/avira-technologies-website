@@ -128,7 +128,7 @@ const Index = () => {
             {[
               { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation", image: null },
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing", image: null },
-              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience", image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg" },
+              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience", image: null },
             ].map((feature, i) => (
               <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col h-full">
                 {feature.image && (
