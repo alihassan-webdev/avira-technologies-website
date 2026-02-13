@@ -15,31 +15,6 @@ const PowerEnergy = () => (
       ]}
     />
 
-    {/* Hero Statement Section */}
-    <section className="py-12 md:py-20 bg-gradient-to-r from-electric/10 to-yellow-500/10">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="w-full text-center"
-        >
-          <div className="space-y-3 md:space-y-4">
-            <p className="font-display text-2xl md:text-4xl font-bold text-foreground">
-              In the future, energy will be clean,
-            </p>
-            <p className="font-display text-2xl md:text-4xl font-bold text-electric">
-              Continuous, and Connected.
-            </p>
-            <p className="font-display text-xl md:text-3xl font-bold text-foreground mt-6">
-              Avira brings that future to your doorstep today.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-
     {/* Solar & Power Energy Section */}
     <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-6">
