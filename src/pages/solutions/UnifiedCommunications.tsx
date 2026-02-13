@@ -196,7 +196,7 @@ const UnifiedCommunications = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb610ed4d224b4bdc8324a6b0d854d216?format=webp&width=800&height=1200"
                   alt="Yeastar"
-                  className="max-h-20 object-contain"
+                  className="max-h-12 object-contain"
                   loading="eager"
                 />
               </motion.div>
@@ -209,7 +209,7 @@ const UnifiedCommunications = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fc520a94b93984016a68e7b1ca3a1e4f2?format=webp&width=800&height=1200"
                   alt="Zcoo"
-                  className="max-h-20 object-contain"
+                  className="max-h-12 object-contain"
                   loading="eager"
                 />
               </motion.div>
@@ -222,7 +222,7 @@ const UnifiedCommunications = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F891f596bc2334642a8a4e8a36af1325c?format=webp&width=800&height=1200"
                   alt="Fanvil"
-                  className="max-h-20 object-contain"
+                  className="max-h-12 object-contain"
                   loading="eager"
                 />
               </motion.div>
@@ -235,7 +235,7 @@ const UnifiedCommunications = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb1fa871bc3cd4fdf97d22c6a596af8e9?format=webp&width=800&height=1200"
                   alt="Asterisk"
-                  className="max-h-20 object-contain"
+                  className="max-h-12 object-contain"
                   loading="eager"
                 />
               </motion.div>
