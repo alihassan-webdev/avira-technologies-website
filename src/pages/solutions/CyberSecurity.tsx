@@ -17,13 +17,13 @@ const CyberSecurity = () => (
 
     {/* Main Message Section */}
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center px-4 max-w-4xl mx-auto"
+          className="text-center max-w-4xl mx-auto"
         >
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Cybersecurity is much more than a matter of IT.
@@ -40,13 +40,13 @@ const CyberSecurity = () => (
 
     {/* Introduction Section */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="px-4 max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             The Challenge
@@ -68,13 +68,12 @@ const CyberSecurity = () => (
 
     {/* Our Approach Section */}
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="px-4"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Our Approach
@@ -136,13 +135,12 @@ const CyberSecurity = () => (
 
     {/* Services Grid */}
     <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="px-4"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Our Cybersecurity Services
@@ -269,13 +267,13 @@ const CyberSecurity = () => (
 
     {/* Why Choose Avira */}
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-0">
+      <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="px-4 max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Why Choose Avira for Cybersecurity?
