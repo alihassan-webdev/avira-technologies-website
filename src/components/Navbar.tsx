@@ -214,22 +214,23 @@ const Navbar = () => {
                       className="ml-4 space-y-1 overflow-hidden"
                     >
                       {item.children.map((child) => (
-                        <Link
+                        <button
                           key={child.path}
-                          to={child.path}
+                          type="button"
                           onClick={() => {
+                            navigate(child.path);
                             window.scrollTo(0, 0);
                             setMobileOpen(false);
                             setMobileExpandedDropdown(null);
                           }}
-                          className={`block px-3 py-1.5 text-sm font-medium nav-link ${
+                          className={`w-full text-left block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
                               : "text-black/50 hover:text-black"
                           }`}
                         >
                           {child.label}
-                        </Link>
+                        </button>
                       ))}
                     </motion.div>
                   )}
