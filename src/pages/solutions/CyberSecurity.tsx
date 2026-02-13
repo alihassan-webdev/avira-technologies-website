@@ -46,7 +46,7 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl text-center"
+          className="max-w-3xl mx-auto text-center"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             The Challenge
