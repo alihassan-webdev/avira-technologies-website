@@ -5,10 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const solutions = [
   { label: "Cyber Security", path: "/solutions/cyber-security" },
-  { label: "Enterprise Work", path: "/solutions/enterprise-work" },
+  { label: "Enterprise Network", path: "/solutions/enterprise-work" },
+  { label: "Network Infrastructure", path: "/solutions/network-infrastructure" },
   { label: "Unified Communications", path: "/solutions/unified-communications" },
   { label: "Access Control", path: "/solutions/access-control" },
   { label: "Power & Energy", path: "/solutions/power-energy" },
+  { label: "IP PABX", path: "/solutions/ip-pabx" },
+  { label: "Video Conferencing", path: "/solutions/video-conferencing" },
   { label: "Video Surveillance", path: "/solutions/video-surveillance" },
 ];
 
@@ -100,7 +103,9 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="absolute top-full left-0 mt-1 w-56 rounded-lg bg-card shadow-lg border border-border overflow-hidden"
+                    className={`absolute top-full left-0 mt-1 rounded-lg bg-card shadow-lg border border-border overflow-hidden ${
+                      item.label === "Solutions" ? "w-72" : "w-56"
+                    }`}
                   >
                     {item.children.map((child) => (
                       <Link
