@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
-import { Shield, Lock, Eye, Cloud, AlertCircle, Clock } from "lucide-react";
+import { Shield, Lock, Eye, Cloud, AlertCircle, Clock, Settings, Zap } from "lucide-react";
 
 const CyberSecurity = () => (
   <Layout>
@@ -284,34 +284,41 @@ const CyberSecurity = () => (
             {[
               {
                 title: "End-to-End Protection",
-                desc: "From endpoints to the cloud, we've got you covered"
+                desc: "From endpoints to the cloud, we've got you covered",
+                icon: Shield
               },
               {
                 title: "Proactive Monitoring",
-                desc: "Identify and neutralize threats before they impact your business"
+                desc: "Identify and neutralize threats before they impact your business",
+                icon: Eye
               },
               {
                 title: "Custom Security Strategies",
-                desc: "Solutions tailored to your industry, size, and compliance needs"
+                desc: "Solutions tailored to your industry, size, and compliance needs",
+                icon: Settings
               },
               {
                 title: "24/7 Incident Response",
-                desc: "Immediate support when it matters most"
+                desc: "Immediate support when it matters most",
+                icon: Clock
               }
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="rounded-xl bg-card border border-border shadow-card p-8 flex flex-col h-full"
-              >
-                <Shield className="w-8 h-8 text-electric mb-4 flex-shrink-0" />
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </motion.div>
-            ))}
+            ].map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.6 }}
+                  className="rounded-xl bg-card border border-border shadow-card p-8 flex flex-col h-full"
+                >
+                  <Icon className="w-8 h-8 text-electric mb-4 flex-shrink-0" />
+                  <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
