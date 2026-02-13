@@ -33,7 +33,7 @@ const solutionCategories = [
     icon: Phone,
     title: "Unified Communications",
     description: "VoIP, collaboration tools, and seamless cloud communications to connect your organization globally.",
-    image: "https://images.pexels.com/photos/3839969/pexels-photo-3839969.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F98a465a6aa334131b7152b53b1b3ee4a?format=webp&width=800&height=1200",
     link: "/solutions/unified-communications"
   },
   {
