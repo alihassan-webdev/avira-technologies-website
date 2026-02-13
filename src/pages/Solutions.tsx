@@ -26,7 +26,7 @@ const solutionCategories = [
     icon: Cloud,
     title: "Network Infrastructure",
     description: "IT Infrastructure Solutions encompassing foundational hardware, software, and services for enterprise-grade performance.",
-    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb1e54328476447a1a4567c45ab1ccc01?format=webp&width=800&height=1200",
     link: "/solutions/network-infrastructure"
   },
   {
