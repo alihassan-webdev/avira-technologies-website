@@ -84,13 +84,13 @@ const Solutions = () => {
 
       {/* IT Solutions Introduction */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto px-4"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">IT Solutions</h2>
             <p className="text-lg text-muted-foreground">
@@ -102,8 +102,8 @@ const Solutions = () => {
 
       {/* Solutions Grid */}
       <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="container mx-auto px-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {solutionCategories.map((solution, index) => {
               const Icon = solution.icon;
               return (
@@ -160,19 +160,19 @@ const Solutions = () => {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-3xl mx-auto px-4"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               Choose the Best Solution you want
             </h2>
             <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
-            
+
             <p className="text-lg text-muted-foreground leading-relaxed">
               Avira Technologies is an end-to-end IT Solution provider company focusing on the solution of IT infrastructure, IT security, Software & applications, end to end managed services, Cloud & Collaborations. Focusing on enterprise-class solutions that provide accessible and agile answers to today's business challenges.
             </p>
