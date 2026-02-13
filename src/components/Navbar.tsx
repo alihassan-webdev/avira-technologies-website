@@ -168,9 +168,14 @@ const Navbar = () => {
                 <div key={item.label}>
                   {item.children ? (
                     <button
-                      onClick={() => setMobileExpandedDropdown(
-                        mobileExpandedDropdown === item.label ? null : item.label
-                      )}
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setMobileExpandedDropdown(
+                          mobileExpandedDropdown === item.label ? null : item.label
+                        );
+                      }}
                       className={`w-full text-left flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link ${
                         location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                           ? "text-red-600 active"
