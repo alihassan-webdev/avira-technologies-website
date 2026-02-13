@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
-import { Shield, Lock, Eye, Cloud, AlertCircle, Clock, Settings, Zap } from "lucide-react";
+import { Shield, Lock, Eye, Cloud, AlertTriangle, Clock, Settings, Zap, CheckCircle2 } from "lucide-react";
 
 const CyberSecurity = () => (
   <Layout>
@@ -23,7 +23,7 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto text-center"
+          className="w-full"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             The Challenge
@@ -75,7 +75,7 @@ const CyberSecurity = () => (
                   "Cloud & Hybrid Vulnerabilities – Expanding attack surfaces"
                 ].map((threat, i) => (
                   <li key={i} className="flex gap-3 text-muted-foreground">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                    <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
                     <span>{threat}</span>
                   </li>
                 ))}
@@ -99,7 +99,7 @@ const CyberSecurity = () => (
                   "Business-Enabled Security – Safeguard data without slowing innovation"
                 ].map((solution, i) => (
                   <li key={i} className="flex gap-3 text-muted-foreground">
-                    <Shield className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span>{solution}</span>
                   </li>
                 ))}
@@ -208,7 +208,7 @@ const CyberSecurity = () => (
               transition={{ delay: 0.4, duration: 0.6 }}
               className="p-6 rounded-xl bg-card border border-border shadow-card"
             >
-              <AlertCircle className="w-8 h-8 text-electric mb-4" />
+              <Shield className="w-8 h-8 text-electric mb-4" />
               <h3 className="font-display text-xl font-bold text-card-foreground mb-3">
                 End Point Security
               </h3>
@@ -250,7 +250,7 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="w-full"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Why Choose Avira for Cybersecurity?

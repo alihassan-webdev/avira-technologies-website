@@ -23,7 +23,7 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="w-full"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Enterprise Network Solutions
@@ -126,7 +126,7 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="w-full"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Solutions under IT Infrastructure
@@ -259,7 +259,7 @@ const EnterpriseWork = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="w-full"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Why Choose Avira for Enterprise Networks?

@@ -1,5 +1,5 @@
 import { useState, memo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,6 +41,7 @@ const Navbar = () => {
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const [mobileExpandedDropdown, setMobileExpandedDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -49,6 +50,7 @@ const Navbar = () => {
   const handleLinkClick = () => {
     scrollToTop();
     setMobileOpen(false);
+    setMobileExpandedDropdown(null);
   };
 
   const handleDropdownEnter = (label: string) => {
@@ -167,21 +169,37 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
-                    <button
-                      onClick={() => setMobileExpandedDropdown(
-                        mobileExpandedDropdown === item.label ? null : item.label
-                      )}
-                      className={`w-full text-left flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link ${
-                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
-                          ? "text-red-600 active"
-                          : "text-black/70 hover:text-black"
-                      }`}
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        mobileExpandedDropdown === item.label ? 'rotate-180' : ''
-                      }`} />
-                    </button>
+                    <div className="flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link group">
+                      <Link
+                        to={item.path}
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          handleLinkClick();
+                        }}
+                        className={`flex-1 ${
+                          location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                            ? "text-red-600 active"
+                            : "text-black/70 group-hover:text-black"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setMobileExpandedDropdown(
+                            mobileExpandedDropdown === item.label ? null : item.label
+                          );
+                        }}
+                        className="ml-2 flex-shrink-0"
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          mobileExpandedDropdown === item.label ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                    </div>
                   ) : (
                     <Link
                       to={item.path}
@@ -207,21 +225,23 @@ const Navbar = () => {
                       className="ml-4 space-y-1 overflow-hidden"
                     >
                       {item.children.map((child) => (
-                        <Link
+                        <button
                           key={child.path}
-                          to={child.path}
+                          type="button"
                           onClick={() => {
+                            navigate(child.path);
                             window.scrollTo(0, 0);
-                            handleLinkClick();
+                            setMobileOpen(false);
+                            setMobileExpandedDropdown(null);
                           }}
-                          className={`block px-3 py-1.5 text-sm font-medium nav-link ${
+                          className={`w-full text-left block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
                               : "text-black/50 hover:text-black"
                           }`}
                         >
                           {child.label}
-                        </Link>
+                        </button>
                       ))}
                     </motion.div>
                   )}
