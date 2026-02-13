@@ -279,7 +279,7 @@ const CyberSecurity = () => (
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
 
-          <ul className="space-y-4 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
               {
                 title: "End-to-End Protection",
@@ -300,20 +300,18 @@ const CyberSecurity = () => (
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="flex gap-4 p-4 rounded-lg bg-secondary border-l-4 border-red-600"
+                className="rounded-xl bg-card border border-border shadow-card p-8 flex flex-col h-full"
               >
-                <Shield className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
+                <Shield className="w-8 h-8 text-electric mb-4 flex-shrink-0" />
+                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
               </motion.div>
             ))}
-          </ul>
+          </div>
         </motion.div>
       </div>
     </section>
