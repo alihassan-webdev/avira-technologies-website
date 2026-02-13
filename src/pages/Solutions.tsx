@@ -19,7 +19,7 @@ const solutionCategories = [
     icon: Network,
     title: "Enterprise Network",
     description: "Build resilient, scalable enterprise networks with intelligent routing, load balancing, and advanced connectivity solutions.",
-    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F28a877e5d8a241b2adfbc6fddb8ef302?format=webp&width=800&height=1200",
     link: "/solutions/enterprise-work"
   },
   {
