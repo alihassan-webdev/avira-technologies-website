@@ -340,7 +340,7 @@ const PowerEnergy = () => (
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6 md:mb-8 text-center">
             Why Customers Trust Avira
           </h2>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          <div className="grid md:grid-cols-2 gap-3 md:gap-6">
             {[
               { title: "Customized Solutions", desc: "Tailored energy solutions for your specific needs and budget" },
               { title: "Compliance-Aligned", desc: "Meets global standards and regulatory requirements" },
@@ -356,7 +356,7 @@ const PowerEnergy = () => (
                 className="p-4 md:p-6 bg-card rounded-xl border border-border shadow-card"
               >
                 <div className="flex gap-3 md:gap-4 mb-2 md:mb-3">
-                  <Shield className="w-5 md:w-6 h-5 md:h-6 text-electric flex-shrink-0 flex-shrink-0 mt-1" />
+                  <Shield className="w-5 md:w-6 h-5 md:h-6 text-electric flex-shrink-0 mt-1" />
                   <h3 className="font-semibold text-card-foreground text-sm md:text-base">{item.title}</h3>
                 </div>
                 <p className="text-xs md:text-sm text-muted-foreground ml-8 md:ml-10">{item.desc}</p>
