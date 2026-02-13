@@ -98,7 +98,7 @@ const UnifiedCommunications = () => {
       {/* What is UC Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div className="max-w-5xl mx-auto text-center">
+          <motion.div className="w-full">
             <div className="mb-4">
               <span className="inline-block text-electric text-lg font-semibold">
                 Anytime, Anywhere
@@ -124,7 +124,7 @@ const UnifiedCommunications = () => {
       {/* UC Services Section */}
       <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <motion.div className="max-w-5xl mx-auto">
+          <motion.div className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               UC Services
             </h2>
@@ -153,7 +153,7 @@ const UnifiedCommunications = () => {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div className="max-w-5xl mx-auto">
+          <motion.div className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Benefits of Unified Communications
             </h2>
@@ -182,7 +182,7 @@ const UnifiedCommunications = () => {
       {/* Trusted Brands Section */}
       <section className="py-20 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <motion.div className="max-w-5xl mx-auto">
+          <motion.div className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Trusted Brands We Represent
             </h2>
