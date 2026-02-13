@@ -273,13 +273,14 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
             Why Choose Avira for Cybersecurity?
           </h2>
           <div className="w-12 h-1 bg-gradient-electric rounded-full mb-8 mx-auto"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
               {
                 title: "End-to-End Protection",
