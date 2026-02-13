@@ -26,14 +26,14 @@ const VideoSurveillance = () => (
           className="w-full"
         >
           <p className="text-sm md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed italic">
-            Security isn't just about walls and locks — it's about having eyes where it counts.
+            Security isn't just about walls and locks - it's about having eyes where it counts.
           </p>
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
             Advanced Video Surveillance Solutions
           </h2>
           <div className="space-y-3 md:space-y-4 text-sm md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              In an era of rising security challenges, having reliable and intelligent surveillance is more important than ever. Avira Technologies provides end-to-end video surveillance solutions tailored for businesses, institutions, and critical infrastructure. Our systems are designed for real-time monitoring, proactive threat detection, and 24/7 recording—keeping your people, property, and assets safe.
+              In an era of rising security challenges, having reliable and intelligent surveillance is more important than ever. Avira Technologies provides end-to-end video surveillance solutions tailored for businesses, institutions, and critical infrastructure. Our systems are designed for real-time monitoring, proactive threat detection, and 24/7 recording - keeping your people, property, and assets safe.
             </p>
             <p>
               Whether you need a basic CCTV setup or an enterprise-grade smart surveillance system, we deliver customized solutions backed by expert installation, configuration, and support.
