@@ -12,42 +12,42 @@ const solutionCategories = [
     icon: Shield,
     title: "Cyber Security",
     description: "Advanced threat detection and comprehensive protection against evolving digital threats with intelligent security solutions.",
-    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
+    image: "https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg",
     link: "/solutions/cyber-security"
   },
   {
     icon: Network,
     title: "Enterprise Network",
     description: "Build resilient, scalable enterprise networks with intelligent routing, load balancing, and advanced connectivity solutions.",
-    image: "https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg",
+    image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg",
     link: "/solutions/enterprise-work"
   },
   {
     icon: Cloud,
     title: "Network Infrastructure",
     description: "IT Infrastructure Solutions encompassing foundational hardware, software, and services for enterprise-grade performance.",
-    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
     link: "/solutions/network-infrastructure"
   },
   {
     icon: Phone,
     title: "Unified Communications",
     description: "VoIP, collaboration tools, and seamless cloud communications to connect your organization globally.",
-    image: "https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg",
+    image: "https://images.pexels.com/photos/3839969/pexels-photo-3839969.jpeg",
     link: "/solutions/unified-communications"
   },
   {
     icon: Lock,
     title: "Access Control",
     description: "Intelligent, secure, and scalable access control systems with biometric, RFID, and smart lock solutions.",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+    image: "https://images.pexels.com/photos/3394649/pexels-photo-3394649.jpeg",
     link: "/solutions/access-control"
   },
   {
     icon: Zap,
     title: "Power & Energy",
     description: "Energy-efficient solutions including UPS systems, solar integration, and real-time energy monitoring.",
-    image: "https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg",
+    image: "https://images.pexels.com/photos/7974/pexels-photo-7974.jpeg",
     link: "/solutions/power-energy"
   },
   {
@@ -61,14 +61,14 @@ const solutionCategories = [
     icon: Video,
     title: "Video Conferencing",
     description: "High-quality meetings and webinars powered by Zoom, Microsoft Teams, and Webex integration.",
-    image: "https://images.pexels.com/photos/3839969/pexels-photo-3839969.jpeg",
+    image: "https://images.pexels.com/photos/3182845/pexels-photo-3182845.jpeg",
     link: "/solutions/video-conferencing"
   },
   {
     icon: Video,
     title: "Video Surveillance",
     description: "Monitor, protect, and manage your premises with AI-based CCTV and advanced remote monitoring solutions.",
-    image: "https://images.pexels.com/photos/3651656/pexels-photo-3651656.jpeg",
+    image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg",
     link: "/solutions/video-surveillance"
   }
 ];
