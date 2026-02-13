@@ -54,7 +54,7 @@ const solutionCategories = [
     icon: Phone,
     title: "IP PABX",
     description: "Enterprise-grade voice solutions with advanced call routing, voicemail, and unified telecommunications.",
-    image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb1cf9e76dae948b29210e68955b281af?format=webp&width=800&height=1200",
     link: "/solutions/ip-pabx"
   },
   {
