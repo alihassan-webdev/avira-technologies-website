@@ -46,14 +46,14 @@ const CyberSecurity = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl"
+          className="max-w-4xl text-center"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             The Challenge
           </h3>
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              In today's digital landscape, cybersecurity demands a proactive and intelligent approach. Modern businesses face constant challenges — from phishing attacks and ransomware to insider threats — that can disrupt operations and harm reputations.
+              In today's digital landscape, cybersecurity demands a proactive and intelligent approach. Modern businesses face constant challenges from phishing attacks and ransomware to insider threats that can disrupt operations and harm reputations.
             </p>
             <p>
               At Avira Technologies, we specialize in advanced cybersecurity solutions designed not just to protect your data, but to empower your business to grow and innovate with confidence.
