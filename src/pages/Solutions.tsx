@@ -47,7 +47,7 @@ const solutionCategories = [
     icon: Zap,
     title: "Power & Energy",
     description: "Energy-efficient solutions including UPS systems, solar integration, and real-time energy monitoring.",
-    image: "https://images.pexels.com/photos/7974/pexels-photo-7974.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F38c2fa815b9240eebf4201c6220906ba?format=webp&width=800&height=1200",
     link: "/solutions/power-energy"
   },
   {
