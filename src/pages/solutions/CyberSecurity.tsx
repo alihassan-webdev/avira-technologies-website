@@ -15,29 +15,6 @@ const CyberSecurity = () => (
       ]}
     />
 
-    {/* Main Message Section */}
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto"
-        >
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Cybersecurity is much more than a matter of IT.
-          </h2>
-          <p className="text-2xl md:text-3xl text-red-600 font-bold mb-8">
-            It's a matter of Business Survival.
-          </p>
-          <p className="text-xl text-muted-foreground font-semibold mb-4">
-            Hackers don't take days off. Neither does our security.
-          </p>
-        </motion.div>
-      </div>
-    </section>
-
     {/* Introduction Section */}
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
