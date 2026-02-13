@@ -169,26 +169,37 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setMobileExpandedDropdown(
-                          mobileExpandedDropdown === item.label ? null : item.label
-                        );
-                      }}
-                      className={`w-full text-left flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link ${
-                        location.pathname === item.path || location.pathname.startsWith(item.path + "/")
-                          ? "text-red-600 active"
-                          : "text-black/70 hover:text-black"
-                      }`}
-                    >
-                      {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        mobileExpandedDropdown === item.label ? 'rotate-180' : ''
-                      }`} />
-                    </button>
+                    <div className="flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link group">
+                      <Link
+                        to={item.path}
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          handleLinkClick();
+                        }}
+                        className={`flex-1 ${
+                          location.pathname === item.path || location.pathname.startsWith(item.path + "/")
+                            ? "text-red-600 active"
+                            : "text-black/70 group-hover:text-black"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setMobileExpandedDropdown(
+                            mobileExpandedDropdown === item.label ? null : item.label
+                          );
+                        }}
+                        className="ml-2 flex-shrink-0"
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          mobileExpandedDropdown === item.label ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                    </div>
                   ) : (
                     <Link
                       to={item.path}
