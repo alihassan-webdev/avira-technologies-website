@@ -12,7 +12,7 @@ const solutionCategories = [
     icon: Shield,
     title: "Cyber Security",
     description: "Advanced threat detection and comprehensive protection against evolving digital threats with intelligent security solutions.",
-    image: "https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Ff0f51032d45e45ecb1322bd3e113d09e?format=webp&width=800&height=1200",
     link: "/solutions/cyber-security"
   },
   {
