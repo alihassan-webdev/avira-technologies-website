@@ -61,7 +61,7 @@ const solutionCategories = [
     icon: Video,
     title: "Video Conferencing",
     description: "High-quality meetings and webinars powered by Zoom, Microsoft Teams, and Webex integration.",
-    image: "https://images.pexels.com/photos/3182845/pexels-photo-3182845.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F02d19945077244b4a478151fab245a0d?format=webp&width=800&height=1200",
     link: "/solutions/video-conferencing"
   },
   {
