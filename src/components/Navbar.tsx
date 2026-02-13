@@ -5,10 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const solutions = [
   { label: "Cyber Security", path: "/solutions/cyber-security" },
-  { label: "Enterprise Work", path: "/solutions/enterprise-work" },
+  { label: "Enterprise Network", path: "/solutions/enterprise-work" },
+  { label: "Network Infrastructure", path: "/solutions/network-infrastructure" },
   { label: "Unified Communications", path: "/solutions/unified-communications" },
   { label: "Access Control", path: "/solutions/access-control" },
   { label: "Power & Energy", path: "/solutions/power-energy" },
+  { label: "IP PABX", path: "/solutions/ip-pabx" },
+  { label: "Video Conferencing", path: "/solutions/video-conferencing" },
   { label: "Video Surveillance", path: "/solutions/video-surveillance" },
 ];
 
@@ -68,7 +71,10 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-14 min-h-14">
           {/* Logo */}
-          <Link to="/" onClick={handleLinkClick} className="flex items-center gap-2 flex-shrink-0">
+          <Link to="/" onClick={() => {
+            window.scrollTo(0, 0);
+            handleLinkClick();
+          }} className="flex items-center gap-2 flex-shrink-0">
             <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto object-contain" style={{ maxHeight: '48px' }} />
           </Link>
 
@@ -83,7 +89,10 @@ const Navbar = () => {
               >
                 <Link
                   to={item.path}
-                  onClick={handleLinkClick}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    handleLinkClick();
+                  }}
                   className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors nav-link ${
                     location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                       ? "text-red-600 active"
@@ -100,14 +109,23 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="absolute top-full left-0 mt-1 w-56 rounded-lg bg-card shadow-lg border border-border overflow-hidden"
+                    className={`absolute top-full left-0 mt-1 rounded-lg bg-card shadow-lg border border-border overflow-hidden ${
+                      item.label === "Solutions" ? "w-72" : "w-56"
+                    }`}
                   >
                     {item.children.map((child) => (
                       <Link
                         key={child.path}
                         to={child.path}
-                        onClick={handleLinkClick}
-                        className="block px-4 py-2.5 text-sm text-card-foreground hover:bg-secondary transition-colors"
+                        onClick={() => {
+                          window.scrollTo(0, 0);
+                          handleLinkClick();
+                        }}
+                        className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                          location.pathname === child.path
+                            ? "text-red-600 bg-secondary"
+                            : "text-card-foreground hover:bg-secondary"
+                        }`}
                       >
                         {child.label}
                       </Link>
@@ -167,7 +185,10 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      onClick={handleLinkClick}
+                      onClick={() => {
+                        window.scrollTo(0, 0);
+                        handleLinkClick();
+                      }}
                       className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
                         location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                           ? "text-red-600 active"
@@ -189,8 +210,11 @@ const Navbar = () => {
                         <Link
                           key={child.path}
                           to={child.path}
-                          onClick={handleLinkClick}
-                          className={`block px-3 py-1.5 text-sm nav-link ${
+                          onClick={() => {
+                            window.scrollTo(0, 0);
+                            handleLinkClick();
+                          }}
+                          className={`block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
                               ? "text-red-600 active"
                               : "text-black/50 hover:text-black"

@@ -126,14 +126,23 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
-              { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
-              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
+              { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation", image: null },
+              { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing", image: null },
+              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience", image: null },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
-                <feature.icon className="w-8 h-8 text-electric mb-4" />
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.desc}</p>
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col h-full">
+                {feature.image && (
+                  <div className="h-40 overflow-hidden">
+                    <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  </div>
+                )}
+                <div className="p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <feature.icon className="w-8 h-8 text-electric mb-4" />
+                    <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{feature.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -163,7 +172,7 @@ const Index = () => {
 
             {/* Image */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg" alt="IT professionals working with data servers" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg" alt="A diverse group of professionals working together on laptops in a modern office meeting room" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </motion.div>
           </div>
         </div>

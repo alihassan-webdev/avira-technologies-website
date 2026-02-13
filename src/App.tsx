@@ -8,9 +8,12 @@ import About from "./pages/About";
 import Solutions from "./pages/Solutions";
 import CyberSecurity from "./pages/solutions/CyberSecurity";
 import EnterpriseWork from "./pages/solutions/EnterpriseWork";
+import NetworkInfrastructure from "./pages/solutions/NetworkInfrastructure";
 import UnifiedCommunications from "./pages/solutions/UnifiedCommunications";
 import AccessControl from "./pages/solutions/AccessControl";
 import PowerEnergy from "./pages/solutions/PowerEnergy";
+import IPPabx from "./pages/solutions/IPPabx";
+import VideoConferencing from "./pages/solutions/VideoConferencing";
 import VideoSurveillance from "./pages/solutions/VideoSurveillance";
 import Services from "./pages/Services";
 import ManagedServices from "./pages/services/ManagedServices";
@@ -41,9 +44,12 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/solutions/cyber-security" element={<CyberSecurity />} />
           <Route path="/solutions/enterprise-work" element={<EnterpriseWork />} />
+          <Route path="/solutions/network-infrastructure" element={<NetworkInfrastructure />} />
           <Route path="/solutions/unified-communications" element={<UnifiedCommunications />} />
           <Route path="/solutions/access-control" element={<AccessControl />} />
           <Route path="/solutions/power-energy" element={<PowerEnergy />} />
+          <Route path="/solutions/ip-pabx" element={<IPPabx />} />
+          <Route path="/solutions/video-conferencing" element={<VideoConferencing />} />
           <Route path="/solutions/video-surveillance" element={<VideoSurveillance />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/managed-services" element={<ManagedServices />} />

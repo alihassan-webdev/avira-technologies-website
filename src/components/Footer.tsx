@@ -36,10 +36,20 @@ const Footer = memo(() => {
           <div>
             <h4 className="font-display font-semibold mb-4 text-black">Solutions</h4>
             <ul className="space-y-2 md:space-y-2 text-sm">
-              {["Cyber Security", "Enterprise Work", "Unified Communications", "Access Control", "Power & Energy", "Video Surveillance"].map((s) => (
-                <li key={s} className="py-1">
-                  <Link to={`/solutions/${s.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-")}`} onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors block py-1">
-                    {s}
+              {[
+                { label: "Cyber Security", path: "/solutions/cyber-security" },
+                { label: "Enterprise Network", path: "/solutions/enterprise-work" },
+                { label: "Network Infrastructure", path: "/solutions/network-infrastructure" },
+                { label: "Unified Communications", path: "/solutions/unified-communications" },
+                { label: "Access Control", path: "/solutions/access-control" },
+                { label: "Power & Energy", path: "/solutions/power-energy" },
+                { label: "IP PABX", path: "/solutions/ip-pabx" },
+                { label: "Video Conferencing", path: "/solutions/video-conferencing" },
+                { label: "Video Surveillance", path: "/solutions/video-surveillance" }
+              ].map((s) => (
+                <li key={s.label} className="py-1">
+                  <Link to={s.path} onClick={scrollToTop} className="text-gray-600 hover:text-red-600 transition-colors block py-1">
+                    {s.label}
                   </Link>
                 </li>
               ))}
