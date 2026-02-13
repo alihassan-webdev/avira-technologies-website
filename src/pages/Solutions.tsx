@@ -115,7 +115,7 @@ const Solutions = () => {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="group h-full"
                 >
-                  <Link to={solution.link} className="block h-full">
+                  <Link to={solution.link} onClick={() => window.scrollTo(0, 0)} className="block h-full">
                     <div className="h-full rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
                       {/* Image - Larger Airbnb style */}
                       <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
