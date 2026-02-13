@@ -1,5 +1,5 @@
 import { useState, memo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -41,6 +41,7 @@ const Navbar = () => {
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const [mobileExpandedDropdown, setMobileExpandedDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -49,6 +50,7 @@ const Navbar = () => {
   const handleLinkClick = () => {
     scrollToTop();
     setMobileOpen(false);
+    setMobileExpandedDropdown(null);
   };
 
   const handleDropdownEnter = (label: string) => {
@@ -217,7 +219,8 @@ const Navbar = () => {
                           to={child.path}
                           onClick={() => {
                             window.scrollTo(0, 0);
-                            handleLinkClick();
+                            setMobileOpen(false);
+                            setMobileExpandedDropdown(null);
                           }}
                           className={`block px-3 py-1.5 text-sm font-medium nav-link ${
                             location.pathname === child.path
