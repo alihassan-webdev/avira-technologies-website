@@ -40,7 +40,7 @@ const solutionCategories = [
     icon: Lock,
     title: "Access Control",
     description: "Intelligent, secure, and scalable access control systems with biometric, RFID, and smart lock solutions.",
-    image: "https://images.pexels.com/photos/3394649/pexels-photo-3394649.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb0c3ce93850c47abb8045f02f9cc2dfc?format=webp&width=800&height=1200",
     link: "/solutions/access-control"
   },
   {
