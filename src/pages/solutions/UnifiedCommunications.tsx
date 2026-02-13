@@ -187,7 +187,7 @@ const UnifiedCommunications = () => {
               Trusted Brands We Represent
             </h2>
             <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
-            <div className="grid md:grid-cols-4 gap-4 md:gap-6 items-center">
+            <div className="grid md:grid-cols-4 gap-3 md:gap-4 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
