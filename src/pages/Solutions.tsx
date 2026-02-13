@@ -68,7 +68,7 @@ const solutionCategories = [
     icon: Video,
     title: "Video Surveillance",
     description: "Monitor, protect, and manage your premises with AI-based CCTV and advanced remote monitoring solutions.",
-    image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F57e331fe91dc460ba310be15ff9b2b06?format=webp&width=800&height=1200",
     link: "/solutions/video-surveillance"
   }
 ];
