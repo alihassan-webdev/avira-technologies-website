@@ -126,14 +126,23 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation" },
-              { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing" },
-              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience" },
+              { icon: Shield, title: "End-to-End Solutions", desc: "Complete IT solutions from consultation to implementation", image: null },
+              { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing", image: null },
+              { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience", image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg" },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="p-8 rounded-xl bg-card border border-border shadow-card">
-                <feature.icon className="w-8 h-8 text-electric mb-4" />
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.desc}</p>
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col h-full">
+                {feature.image && (
+                  <div className="h-40 overflow-hidden">
+                    <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  </div>
+                )}
+                <div className="p-8 flex-grow flex flex-col justify-between">
+                  <div>
+                    <feature.icon className="w-8 h-8 text-electric mb-4" />
+                    <h3 className="font-display font-semibold text-lg text-card-foreground mb-3">{feature.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground">{feature.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -212,11 +221,16 @@ const Index = () => {
                   We're committed to establishing lasting relationships as a premier company to partner with, delivering optimal solutions and cutting-edge products with industry-leading practices.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-card border border-border shadow-card">
-                <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Continuous Innovation</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Through innovation and process improvement, we enhance our capabilities, ensuring seamless delivery of tailored solutions and superior support services.
-                </p>
+              <div className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col">
+                <div className="h-40 overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="Continuous Innovation" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display font-semibold text-lg text-card-foreground mb-2">Continuous Innovation</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Through innovation and process improvement, we enhance our capabilities, ensuring seamless delivery of tailored solutions and superior support services.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
