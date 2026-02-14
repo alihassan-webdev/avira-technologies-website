@@ -158,7 +158,7 @@ const SmartCare = () => {
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
               Our SmartCare Solutions
             </h2>
-            <div className="space-y-6 md:space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {serviceTypes.map((service, i) => {
                 const Icon = service.icon;
                 return (
@@ -168,9 +168,9 @@ const SmartCare = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="overflow-hidden rounded-xl border border-border shadow-card"
+                    className="overflow-hidden rounded-xl border border-border shadow-card flex flex-col h-full"
                   >
-                    <div className="h-48 md:h-64 overflow-hidden bg-gray-200">
+                    <div className="h-48 md:h-56 overflow-hidden bg-gray-200">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -178,12 +178,12 @@ const SmartCare = () => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-6 md:p-8 bg-card">
-                      <div className="flex gap-4 md:gap-6 mb-4">
-                        <Icon className="w-8 md:w-10 h-8 md:h-10 text-electric flex-shrink-0" />
-                        <h3 className="font-semibold text-card-foreground text-xl md:text-2xl">{service.title}</h3>
+                    <div className="p-6 md:p-6 bg-card flex flex-col flex-grow">
+                      <div className="flex gap-3 mb-3">
+                        <Icon className="w-6 md:w-7 h-6 md:h-7 text-electric flex-shrink-0" />
+                        <h3 className="font-semibold text-card-foreground text-lg md:text-xl">{service.title}</h3>
                       </div>
-                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed ml-12 md:ml-16">{service.desc}</p>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed ml-9">{service.desc}</p>
                     </div>
                   </motion.div>
                 );
