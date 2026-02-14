@@ -276,32 +276,37 @@ const ManagedServices = () => {
                   transition={{ delay: i * 0.1 }}
                   className="border border-border rounded-xl overflow-hidden"
                 >
-                  <button
+                  <motion.button
                     onClick={() => setExpandedFAQ(expandedFAQ === i ? null : i)}
-                    className="w-full p-4 md:p-6 bg-card hover:bg-secondary transition-colors flex items-center justify-between"
+                    whileHover={{ backgroundColor: "rgba(var(--color-secondary-rgb), 0.5)" }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full p-4 md:p-6 bg-card hover:bg-secondary flex items-center justify-between cursor-pointer transition-colors"
                   >
                     <h3 className="font-semibold text-card-foreground text-sm md:text-base text-left">
                       {faq.question}
                     </h3>
-                    <ChevronDown
-                      className={`w-5 h-5 text-electric flex-shrink-0 ml-4 transition-transform duration-300 ${
-                        expandedFAQ === i ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  {expandedFAQ === i && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="px-4 md:px-6 py-4 md:py-5 bg-secondary border-t border-border"
+                      animate={{ rotate: expandedFAQ === i ? 180 : 0 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
                     >
+                      <ChevronDown className="w-5 h-5 text-electric flex-shrink-0 ml-4" />
+                    </motion.div>
+                  </motion.button>
+                  <motion.div
+                    initial={false}
+                    animate={{ height: expandedFAQ === i ? "auto" : 0, opacity: expandedFAQ === i ? 1 : 0 }}
+                    transition={{
+                      height: { duration: 0.5, ease: [0.34, 1.56, 0.64, 1] },
+                      opacity: { duration: 0.3 }
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-4 md:px-6 py-4 md:py-5 bg-secondary border-t border-border">
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                         {faq.answer}
                       </p>
-                    </motion.div>
-                  )}
+                    </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
