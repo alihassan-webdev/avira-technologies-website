@@ -22,7 +22,7 @@ const SmartCare = () => {
       icon: Server,
       title: "Smart Servers & Data Center",
       desc: "Step into the future of IT excellence with SmartCare Servers & Data Center solutions. Our cutting-edge services redefine how you experience server management and data center optimization. SmartCare isn't just a service - it's a commitment to proactive monitoring, predictive maintenance, and customized solutions tailored to your unique infrastructure needs. Our 24/7 support ensures uninterrupted operations, while continuous improvement remains at the core of our approach.",
-      image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F882d6aed96e4422896318435350903fb?format=webp&width=800&height=1200"
     },
     {
       icon: Camera,
