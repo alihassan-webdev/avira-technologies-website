@@ -155,10 +155,10 @@ const SmartCare = () => {
             transition={{ duration: 0.8 }}
             className="w-full"
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our SmartCare Solutions
             </h2>
-            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12"></div>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
             <div className="space-y-12 md:space-y-16">
               {serviceTypes.map((service, i) => {
                 const isReversed = i === 1;
