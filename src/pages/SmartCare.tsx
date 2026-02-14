@@ -34,7 +34,7 @@ const SmartCare = () => {
       icon: Network,
       title: "Smart Network Switches",
       desc: "Our innovative solutions redefine how you experience connectivity and performance. SmartCare goes beyond traditional support - it's a commitment to proactive monitoring, rapid issue resolution, and continuous optimization. Elevate your network's efficiency with our expert team, ensuring every connection is not just functional but smartly managed. With 24/7 support, customized solutions, and a focus on continuous improvement, SmartCare for Network Switches is your gateway.",
-      image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F19b7675c1ab343489af6c1e5dc86e3b5?format=webp&width=800&height=1200"
     },
   ];
 
