@@ -105,13 +105,13 @@ const OfficeSupplies = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
-                    className="overflow-hidden rounded-xl border border-border shadow-card hover:shadow-lg transition-shadow bg-card flex flex-col h-full"
+                    className="overflow-hidden rounded-xl border border-border shadow-card hover:shadow-lg transition-shadow bg-white flex flex-col h-full"
                   >
                     <div className="h-72 md:h-80 overflow-hidden bg-gray-200">
                       <img
                         src={supply.image}
                         alt={supply.label}
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-contain object-center"
                         loading="lazy"
                       />
                     </div>
