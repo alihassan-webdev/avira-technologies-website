@@ -21,17 +21,20 @@ const SmartCare = () => {
     {
       icon: Server,
       title: "Smart Servers & Data Center",
-      desc: "Step into the future of IT excellence with SmartCare Servers & Data Center solutions. Our cutting-edge services redefine how you experience server management and data center optimization. SmartCare isn't just a service - it's a commitment to proactive monitoring, predictive maintenance, and customized solutions tailored to your unique infrastructure needs. Our 24/7 support ensures uninterrupted operations, while continuous improvement remains at the core of our approach."
+      desc: "Step into the future of IT excellence with SmartCare Servers & Data Center solutions. Our cutting-edge services redefine how you experience server management and data center optimization. SmartCare isn't just a service - it's a commitment to proactive monitoring, predictive maintenance, and customized solutions tailored to your unique infrastructure needs. Our 24/7 support ensures uninterrupted operations, while continuous improvement remains at the core of our approach.",
+      image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       icon: Camera,
       title: "Smart Surveillance",
-      desc: "Our state-of-the-art SmartCare Surveillance solutions go beyond monitoring - they empower you with intelligent insights and real-time control. Unleash the power of cutting-edge technology as we prioritize the protection of what matters most to you. From seamless integration to predictive analytics, our solutions are crafted to elevate your surveillance experience. With SmartCare, it's not just about watching, it's about ensuring smart, secure spaces."
+      desc: "Our state-of-the-art SmartCare Surveillance solutions go beyond monitoring - they empower you with intelligent insights and real-time control. Unleash the power of cutting-edge technology as we prioritize the protection of what matters most to you. From seamless integration to predictive analytics, our solutions are crafted to elevate your surveillance experience. With SmartCare, it's not just about watching, it's about ensuring smart, secure spaces.",
+      image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       icon: Network,
       title: "Smart Network Switches",
-      desc: "Our innovative solutions redefine how you experience connectivity and performance. SmartCare goes beyond traditional support - it's a commitment to proactive monitoring, rapid issue resolution, and continuous optimization. Elevate your network's efficiency with our expert team, ensuring every connection is not just functional but smartly managed. With 24/7 support, customized solutions, and a focus on continuous improvement, SmartCare for Network Switches is your gateway."
+      desc: "Our innovative solutions redefine how you experience connectivity and performance. SmartCare goes beyond traditional support - it's a commitment to proactive monitoring, rapid issue resolution, and continuous optimization. Elevate your network's efficiency with our expert team, ensuring every connection is not just functional but smartly managed. With 24/7 support, customized solutions, and a focus on continuous improvement, SmartCare for Network Switches is your gateway.",
+      image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
   ];
 
@@ -165,13 +168,23 @@ const SmartCare = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-6 md:p-8 bg-card rounded-xl border border-border shadow-card"
+                    className="overflow-hidden rounded-xl border border-border shadow-card"
                   >
-                    <div className="flex gap-4 md:gap-6 mb-4">
-                      <Icon className="w-8 md:w-10 h-8 md:h-10 text-electric flex-shrink-0" />
-                      <h3 className="font-semibold text-card-foreground text-xl md:text-2xl">{service.title}</h3>
+                    <div className="h-48 md:h-64 overflow-hidden bg-gray-200">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed ml-12 md:ml-16">{service.desc}</p>
+                    <div className="p-6 md:p-8 bg-card">
+                      <div className="flex gap-4 md:gap-6 mb-4">
+                        <Icon className="w-8 md:w-10 h-8 md:h-10 text-electric flex-shrink-0" />
+                        <h3 className="font-semibold text-card-foreground text-xl md:text-2xl">{service.title}</h3>
+                      </div>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed ml-12 md:ml-16">{service.desc}</p>
+                    </div>
                   </motion.div>
                 );
               })}
