@@ -51,6 +51,7 @@ const Careers = () => {
       salary: "Market Competitive",
       location: "DHA Phase 6, Lahore",
       description: "Avira Technologies is currently seeking a dynamic System Administrator for an exciting project. As a vital team member, you will be crucial in maintaining and optimizing our network and security systems. Apply now!",
+      applyLink: "https://aviratechnologies.com/careers/#ed-679123031",
       responsibilities: [
         "Manage and support MacBooks, iPhones, and Windows OS",
         "Configure and troubleshoot Mikrotik RB, Grandstream Access Points & Controller, Fortinet or Sophos Firewall",
