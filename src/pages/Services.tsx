@@ -9,35 +9,35 @@ const serviceCategories = [
     icon: Cog,
     title: "Managed Services",
     description: "Ensure smooth, secure, and uninterrupted IT operations with our proactive Managed Services. We provide 24/7 monitoring, support, and maintenance to reduce downtime and enhance performance.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Ff0f51032d45e45ecb1322bd3e113d09e?format=webp&width=800&height=1200",
+    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200",
     link: "/services/managed-services"
   },
   {
     icon: Search,
     title: "Network Audit",
     description: "Gain full visibility into your network infrastructure with our expert Network Audit Services. We identify risks, inefficiencies, and security gaps to help you optimize performance and stay compliant.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F28a877e5d8a241b2adfbc6fddb8ef302?format=webp&width=800&height=1200",
+    image: "https://images.pexels.com/photos/3721446/pexels-photo-3721446.jpeg?auto=compress&cs=tinysrgb&w=1200",
     link: "/services/network-audit"
   },
   {
     icon: Network,
     title: "Structured Cabling",
     description: "Build a reliable, scalable foundation for your IT systems with our Structured Cabling Solutions. From planning to implementation, we deliver neat, organized, and high-performance cabling infrastructure.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb1e54328476447a1a4567c45ab1ccc01?format=webp&width=800&height=1200",
+    image: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1200",
     link: "/services/structured-cabling"
   },
   {
     icon: CheckCircle2,
     title: "Service Level Agreements",
     description: "Guarantee uptime, rapid response, and reliable IT performance with our tailored SLA Services. Backed by defined service metrics and 24/7 support, we ensure your critical systems run smoothly and securely.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2F98a465a6aa334131b7152b53b1b3ee4a?format=webp&width=800&height=1200",
+    image: "https://images.pexels.com/photos/3779035/pexels-photo-3779035.jpeg?auto=compress&cs=tinysrgb&w=1200",
     link: "/services/sla"
   },
   {
     icon: Users,
     title: "IT Resource Outsourcing",
     description: "Access skilled IT professionals without the overhead through our IT Resource Outsourcing services. We provide certified experts to support your projects, streamline operations, and reduce staffing costs.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Ff3537a826bfc443daa86b16bb9f7afcb%2Fb0c3ce93850c47abb8045f02f9cc2dfc?format=webp&width=800&height=1200",
+    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200",
     link: "/services/it-outsourcing"
   }
 ];
