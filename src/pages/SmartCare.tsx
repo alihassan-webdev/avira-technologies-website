@@ -146,7 +146,7 @@ const SmartCare = () => {
       </section>
 
       {/* Service Types */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -155,9 +155,10 @@ const SmartCare = () => {
             transition={{ duration: 0.8 }}
             className="w-full"
           >
-            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
               Our SmartCare Solutions
             </h2>
+            <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12"></div>
             <div className="space-y-6 md:space-y-8">
               {serviceTypes.map((service, i) => {
                 const Icon = service.icon;
