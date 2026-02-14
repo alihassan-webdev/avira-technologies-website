@@ -36,6 +36,32 @@ const Careers = () => {
         "Bachelors in Computer Science.",
         "CCNA + MCSE Certification"
       ]
+    },
+    {
+      title: "System Administrator (01 Person)",
+      type: "Full-Time Position",
+      salary: "Market Competitive",
+      location: "DHA Phase 6, Lahore",
+      description: "Avira Technologies is currently seeking a dynamic System Administrator for an exciting project. As a vital team member, you will be crucial in maintaining and optimizing our network and security systems. Apply now!",
+      responsibilities: [
+        "Manage and support MacBooks, iPhones, and Windows OS",
+        "Configure and troubleshoot Mikrotik RB, Grandstream Access Points & Controller, Fortinet or Sophos Firewall",
+        "Define and manage Network Policies, Group Policies, and Security Policies",
+        "Create SSIDs with MAC-based access restrictions and monitor internet usage based on company policies.",
+        "Handle VoIP systems such as Vonage, RingCentral and Zoom",
+        "Configure and manage the Domain Controller, Active Directory",
+        "Swiftly resolving network and security issues in real-time at all levels.",
+        "Demonstrating expertise in routers, encompassing routing protocols, WLAN configurations, and managing multiple sites.",
+        "Troubleshooting and analyzing firewalls such as pfSense and Fortinet.",
+        "Proficiency in network load balancers, VoIP, IP telephony, VC, Wi-Fi, and Polycom video conferencing solutions.",
+        "Conducting proactive vulnerability testing and managing firewall and security policies.",
+        "Installation and troubleshooting of Domain Controller, Active Directory, Office 365, Grand Stream Access point with Controller, and server management with VMWare expertise."
+      ],
+      qualifications: [
+        "Bachelor's degree in Computer Sciences",
+        "MCSE / CCNA",
+        "At least 03 years of relevant experience"
+      ]
     }
   ];
 
