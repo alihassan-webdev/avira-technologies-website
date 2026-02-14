@@ -158,9 +158,10 @@ const SmartCare = () => {
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
               Our SmartCare Solutions
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="space-y-6 md:space-y-8">
               {serviceTypes.map((service, i) => {
                 const Icon = service.icon;
+                const isEven = i % 2 === 0;
                 return (
                   <motion.div
                     key={i}
@@ -168,9 +169,9 @@ const SmartCare = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="overflow-hidden rounded-xl border border-border shadow-card flex flex-col h-full"
+                    className={`overflow-hidden rounded-xl border border-border shadow-card flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
-                    <div className="h-48 md:h-56 overflow-hidden bg-gray-200">
+                    <div className="h-48 md:h-auto md:w-1/2 overflow-hidden bg-gray-200">
                       <img
                         src={service.image}
                         alt={service.title}
@@ -178,12 +179,12 @@ const SmartCare = () => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-6 md:p-6 bg-card flex flex-col flex-grow">
-                      <div className="flex gap-3 mb-3">
-                        <Icon className="w-6 md:w-7 h-6 md:h-7 text-electric flex-shrink-0" />
+                    <div className="p-6 md:p-8 bg-card flex flex-col flex-grow justify-center w-full md:w-1/2">
+                      <div className="flex gap-3 md:gap-4 mb-4">
+                        <Icon className="w-7 md:w-8 h-7 md:h-8 text-electric flex-shrink-0" />
                         <h3 className="font-semibold text-card-foreground text-lg md:text-xl">{service.title}</h3>
                       </div>
-                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed ml-9">{service.desc}</p>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed ml-10 md:ml-11">{service.desc}</p>
                     </div>
                   </motion.div>
                 );
