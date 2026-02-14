@@ -87,7 +87,7 @@ const OfficeSupplies = () => {
       </section>
 
       {/* Supplies Grid */}
-      <section className="py-12 md:py-20 bg-secondary">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
