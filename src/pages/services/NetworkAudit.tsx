@@ -187,31 +187,6 @@ const NetworkAudit = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-secondary">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4">
-              Ready for Network Clarity?
-            </h2>
-            <p className="text-sm md:text-lg text-muted-foreground leading-relaxed mb-8">
-              Let our expert team audit your network and provide the insights you need to optimize performance, enhance security, and drive business growth.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block px-6 md:px-8 py-3 bg-electric text-white font-semibold rounded-lg hover:bg-electric/90 transition-colors"
-            >
-              Schedule Your Audit
-            </a>
-          </motion.div>
-        </div>
-      </section>
     </Layout>
   );
 };
