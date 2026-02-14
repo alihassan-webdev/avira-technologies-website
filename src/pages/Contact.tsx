@@ -77,10 +77,7 @@ const Contact = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex justify-between">
-                    Email
-                    <span className="text-[10px] text-red-600 font-normal normal-case italic">Use temp mail</span>
-                  </label>
+                  <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Email</label>
                   <input type="email" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter your email" />
                 </div>
 
