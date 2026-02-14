@@ -169,18 +169,18 @@ const VideoSurveillance = () => (
           <h2 className="font-display text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">
             Trusted Brands We Represent
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="flex justify-center p-4"
+              className="flex justify-center"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F75bf0a9efde44f3a84e9108df55910a1?format=webp&width=800&height=1200"
                 alt="HikVision"
-                className="h-16 md:h-20 object-contain"
+                className="max-h-12 object-contain"
               />
             </motion.div>
             <motion.div
@@ -188,12 +188,12 @@ const VideoSurveillance = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="flex justify-center p-4"
+              className="flex justify-center"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F73ea0191fe6749adb0354ce43d0df302?format=webp&width=800&height=1200"
                 alt="UniView"
-                className="h-16 md:h-20 object-contain"
+                className="max-h-12 object-contain"
               />
             </motion.div>
             <motion.div
@@ -201,12 +201,12 @@ const VideoSurveillance = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="flex justify-center p-4"
+              className="flex justify-center"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F949c3023b4194b3996f2853017794bf5?format=webp&width=800&height=1200"
                 alt="UniView"
-                className="h-16 md:h-20 object-contain"
+                className="max-h-12 object-contain"
               />
             </motion.div>
           </div>
