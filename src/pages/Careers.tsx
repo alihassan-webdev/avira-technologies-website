@@ -39,6 +39,7 @@ const Careers = () => {
       salary: "Full-Time Position",
       location: "DHA Phase 6, Lahore",
       description: "We're on the lookout for a skilled and experienced \"IT Administrator\" to be deployed at one of our esteemed clients in DHA Phase 6, Lahore. An ideal candidate must have strong technical skills in IT infrastructure, networking, Windows, and end user support.",
+      applyLink: "https://aviratechnologies.com/careers/#ed-679123031",
       qualifications: [
         "Bachelors in Computer Science.",
         "CCNA + MCSE Certification"
