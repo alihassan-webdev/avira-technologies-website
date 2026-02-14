@@ -391,7 +391,7 @@ const PowerEnergy = () => (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F1a1ad83e96c34804b74ed702059c65d5?format=webp&width=800&height=1200"
                 alt="Solis"
-                className="h-24 md:h-32 object-contain"
+                className="h-16 md:h-20 object-contain"
               />
             </motion.div>
             <motion.div
@@ -404,7 +404,7 @@ const PowerEnergy = () => (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F7f6989e8914f490098518db7746f2b84?format=webp&width=800&height=1200"
                 alt="Growatt"
-                className="h-24 md:h-32 object-contain"
+                className="h-16 md:h-20 object-contain"
               />
             </motion.div>
             <motion.div
@@ -417,7 +417,7 @@ const PowerEnergy = () => (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Ffb0d0d42042a4c3da169634dd375a4aa?format=webp&width=800&height=1200"
                 alt="Canadian Solar"
-                className="h-24 md:h-32 object-contain"
+                className="h-16 md:h-20 object-contain"
               />
             </motion.div>
             <motion.div
@@ -430,7 +430,7 @@ const PowerEnergy = () => (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F3a4be3bacc5142c4bfa323820b920438?format=webp&width=800&height=1200"
                 alt="Jinko Solar"
-                className="h-24 md:h-32 object-contain"
+                className="h-16 md:h-20 object-contain"
               />
             </motion.div>
           </div>
