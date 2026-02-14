@@ -65,7 +65,7 @@ const OfficeSupplies = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="w-full max-w-3xl mx-auto"
+            className="w-full"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               IT Office Supplies
