@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { Cog, Search, Network, CheckCircle2, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Services = () => (
+const Services = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  return (
   <Layout>
     <PageHero
       title="Services"
@@ -84,6 +89,7 @@ const Services = () => (
                       </p>
                       <Link
                         to={service.link}
+                        onClick={scrollToTop}
                         className="inline-block text-electric font-semibold hover:text-electric/80 transition-colors text-sm md:text-base"
                       >
                         {service.linkText}
@@ -98,6 +104,7 @@ const Services = () => (
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Services;
