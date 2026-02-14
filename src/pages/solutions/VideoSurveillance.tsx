@@ -180,7 +180,7 @@ const VideoSurveillance = () => (
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F75bf0a9efde44f3a84e9108df55910a1?format=webp&width=800&height=1200"
                 alt="HikVision"
-                className="max-h-12 object-contain"
+                className="max-h-8 object-contain"
               />
             </motion.div>
             <motion.div
@@ -204,8 +204,8 @@ const VideoSurveillance = () => (
               className="flex justify-center"
             >
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F949c3023b4194b3996f2853017794bf5?format=webp&width=800&height=1200"
-                alt="UniView"
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F47b45eb9d20a420789c3cc20d263cb50?format=webp&width=800&height=1200"
+                alt="Alhya Technology"
                 className="max-h-12 object-contain"
               />
             </motion.div>
