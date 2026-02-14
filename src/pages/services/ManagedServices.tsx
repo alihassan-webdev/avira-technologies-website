@@ -17,9 +17,28 @@ import {
   Video,
   Server,
   ArrowRight,
+  ChevronDown,
 } from "lucide-react";
+import { useState } from "react";
 
 const ManagedServices = () => {
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "What's included in your standard SLA?",
+      answer: "99.9% uptime, 2-hour response for critical issues, monthly health reports"
+    },
+    {
+      question: "Do you manage hybrid environments?",
+      answer: "Yes – seamless support for on-prem + cloud + edge infrastructure"
+    },
+    {
+      question: "How is data privacy handled?",
+      answer: "Zero data retention policy with E2E encryption"
+    }
+  ];
+
   const benefits = [
     {
       icon: DollarSign,
@@ -231,6 +250,62 @@ const ManagedServices = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-3xl mx-auto"
+          >
+            <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-3">
+              {faqs.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="border border-border rounded-xl overflow-hidden"
+                >
+                  <button
+                    onClick={() => setExpandedFAQ(expandedFAQ === i ? null : i)}
+                    className="w-full p-4 md:p-6 bg-card hover:bg-secondary transition-colors flex items-center justify-between"
+                  >
+                    <h3 className="font-semibold text-card-foreground text-sm md:text-base text-left">
+                      {faq.question}
+                    </h3>
+                    <ChevronDown
+                      className={`w-5 h-5 text-electric flex-shrink-0 ml-4 transition-transform duration-300 ${
+                        expandedFAQ === i ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {expandedFAQ === i && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="px-4 md:px-6 py-4 md:py-5 bg-secondary border-t border-border"
+                    >
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
     </Layout>
