@@ -28,7 +28,7 @@ const SmartCare = () => {
       icon: Camera,
       title: "Smart Surveillance",
       desc: "Our state-of-the-art SmartCare Surveillance solutions go beyond monitoring - they empower you with intelligent insights and real-time control. Unleash the power of cutting-edge technology as we prioritize the protection of what matters most to you. From seamless integration to predictive analytics, our solutions are crafted to elevate your surveillance experience. With SmartCare, it's not just about watching, it's about ensuring smart, secure spaces.",
-      image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200"
+      image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F34ce5be46cfc4402b9fa0c9f59f6442b?format=webp&width=800&height=1200"
     },
     {
       icon: Network,
