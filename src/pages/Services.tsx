@@ -37,7 +37,7 @@ const serviceCategories = [
     icon: Users,
     title: "IT Resource Outsourcing",
     description: "Access skilled IT professionals without the overhead through our IT Resource Outsourcing services. We provide certified experts to support your projects, streamline operations, and reduce staffing costs.",
-    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Fc22e77d0b2524f3bab74c9f416bc0fe6?format=webp&width=800&height=1200",
     link: "/services/it-outsourcing"
   }
 ];
