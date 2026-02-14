@@ -1,10 +1,16 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import SectionHeader from "@/components/SectionHeader";
-import { motion } from "framer-motion";
-import { Briefcase, MapPin, DollarSign, GraduationCap, ClipboardList, Mail, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Briefcase, MapPin, DollarSign, GraduationCap, ClipboardList, Mail, ArrowRight, ChevronDown } from "lucide-react";
 
 const Careers = () => {
+  const [openJobIndex, setOpenJobIndex] = useState<number | null>(0);
+
+  const toggleJob = (index: number) => {
+    setOpenJobIndex(openJobIndex === index ? null : index);
+  };
   const jobs = [
     {
       title: "Network Administrator",
@@ -102,86 +108,117 @@ const Careers = () => {
 
           <SectionHeader title="Available Positions" description="Explore our current job openings and find your next challenge." />
 
-          <div className="grid gap-8 md:gap-16 max-w-5xl mx-auto mt-12">
-            {jobs.map((job, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="group bg-card border border-border rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300"
-              >
-                <div className="p-6 md:p-12">
-                  <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 md:gap-8 mb-8 md:mb-10">
+          <div className="grid gap-6 max-w-5xl mx-auto mt-12">
+            {jobs.map((job, index) => {
+              const isOpen = openJobIndex === index;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.8 }}
+                  className={`group bg-card border border-border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 ${isOpen ? 'ring-1 ring-red-600/20 shadow-md' : ''}`}
+                >
+                  {/* Clickable Header */}
+                  <button
+                    onClick={() => toggleJob(index)}
+                    className="w-full text-left p-6 md:p-8 flex items-center justify-between group/btn focus:outline-none"
+                  >
                     <div className="flex-1">
-                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 md:mb-6 group-hover:text-red-600 transition-colors">
-                        {job.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-3 md:gap-6 text-sm">
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full text-muted-foreground font-medium whitespace-nowrap">
-                          <Briefcase className="w-4 h-4 text-red-600" />
-                          {job.type}
-                        </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full text-muted-foreground font-medium whitespace-nowrap">
-                          <DollarSign className="w-4 h-4 text-red-600" />
-                          {job.salary}
-                        </div>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full text-muted-foreground font-medium whitespace-nowrap">
-                          <MapPin className="w-4 h-4 text-red-600" />
-                          {job.location}
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <h3 className={`text-xl md:text-2xl font-bold transition-colors ${isOpen ? 'text-red-600' : 'text-foreground group-hover/btn:text-red-600'}`}>
+                          {job.title}
+                        </h3>
+                        <div className="flex flex-wrap gap-3 text-xs">
+                          <div className="flex items-center gap-1.5 px-3 py-1 bg-secondary rounded-full text-muted-foreground font-medium whitespace-nowrap">
+                            <Briefcase className="w-3.5 h-3.5 text-red-600" />
+                            {job.type}
+                          </div>
+                          <div className="flex items-center gap-1.5 px-3 py-1 bg-secondary rounded-full text-muted-foreground font-medium whitespace-nowrap">
+                            <MapPin className="w-3.5 h-3.5 text-red-600" />
+                            {job.location}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <a
-                      href="mailto:jobs@aviratechnologies.com"
-                      className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-red-600 text-white font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20 active:scale-95 text-center min-w-[160px] w-full lg:w-auto"
-                    >
-                      Apply Now
-                    </a>
-                  </div>
-
-                  <div className="space-y-8 md:space-y-10">
-                    <div>
-                      <h4 className="flex items-center gap-2 text-lg md:text-xl font-bold text-foreground mb-4">
-                        <ClipboardList className="w-5 h-5 text-red-600" />
-                        Job Description
-                      </h4>
-                      <p className="text-muted-foreground leading-relaxed mb-6 text-base md:text-lg">
-                        {job.description}
-                      </p>
-                      {job.responsibilities && (
-                        <ul className="space-y-3 ml-1">
-                          {job.responsibilities.map((resp, i) => (
-                            <li key={i} className="flex gap-3 text-muted-foreground">
-                              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] md:text-xs font-bold mt-0.5">
-                                {i + 1}
-                              </span>
-                              <span className="flex-1 leading-relaxed text-sm md:text-base">{resp}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                    <div className={`ml-4 p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-red-600 text-white rotate-180' : 'bg-secondary text-muted-foreground group-hover/btn:bg-red-50 group-hover/btn:text-red-600'}`}>
+                      <ChevronDown className="w-5 h-5" />
                     </div>
+                  </button>
 
-                    <div>
-                      <h4 className="flex items-center gap-2 text-lg md:text-xl font-bold text-foreground mb-4">
-                        <GraduationCap className="w-5 h-5 text-red-600" />
-                        Qualification
-                      </h4>
-                      <ul className="space-y-3 ml-1">
-                        {job.qualifications.map((qual, i) => (
-                          <li key={i} className="flex gap-3 text-muted-foreground">
-                            <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-600 flex-shrink-0"></div>
-                            <span className="flex-1 leading-relaxed text-sm md:text-base">{qual}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                      >
+                        <div className="px-6 md:px-8 pb-8 md:pb-12 border-t border-border/50 pt-8">
+                          <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mb-10">
+                            <div className="flex-1 space-y-8">
+                              <div>
+                                <h4 className="flex items-center gap-2 text-lg font-bold text-foreground mb-4">
+                                  <ClipboardList className="w-5 h-5 text-red-600" />
+                                  Job Description
+                                </h4>
+                                <p className="text-muted-foreground leading-relaxed mb-6 text-base md:text-lg">
+                                  {job.description}
+                                </p>
+                                {job.responsibilities && (
+                                  <ul className="space-y-3 ml-1">
+                                    {job.responsibilities.map((resp, i) => (
+                                      <li key={i} className="flex gap-3 text-muted-foreground">
+                                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-red-50 text-red-600 flex items-center justify-center text-[10px] md:text-xs font-bold mt-0.5">
+                                          {i + 1}
+                                        </span>
+                                        <span className="flex-1 leading-relaxed text-sm md:text-base">{resp}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
+                              </div>
+
+                              <div>
+                                <h4 className="flex items-center gap-2 text-lg font-bold text-foreground mb-4">
+                                  <GraduationCap className="w-5 h-5 text-red-600" />
+                                  Qualification
+                                </h4>
+                                <ul className="space-y-3 ml-1">
+                                  {job.qualifications.map((qual, i) => (
+                                    <li key={i} className="flex gap-3 text-muted-foreground">
+                                      <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-600 flex-shrink-0"></div>
+                                      <span className="flex-1 leading-relaxed text-sm md:text-base">{qual}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+
+                              <div className="pt-4 flex flex-wrap gap-6 text-sm border-t border-border pt-8 mt-8">
+                                <div className="flex items-center gap-2">
+                                  <DollarSign className="w-4 h-4 text-red-600" />
+                                  <span className="font-semibold">Salary:</span> {job.salary}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="lg:sticky lg:top-4">
+                              <a
+                                href="mailto:jobs@aviratechnologies.com"
+                                className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-red-600 text-white font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20 active:scale-95 text-center min-w-[160px] w-full"
+                              >
+                                Apply Now
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              );
+            })}
           </div>
 
           <motion.div
