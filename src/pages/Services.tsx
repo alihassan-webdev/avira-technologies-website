@@ -16,7 +16,7 @@ const serviceCategories = [
     icon: Search,
     title: "Network Audit",
     description: "Gain full visibility into your network infrastructure with our expert Network Audit Services. We identify risks, inefficiencies, and security gaps to help you optimize performance and stay compliant.",
-    image: "https://images.pexels.com/photos/3721446/pexels-photo-3721446.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Ff2d7c8aa53514f628cb451f8c85f6754?format=webp&width=800&height=1200",
     link: "/services/network-audit"
   },
   {
