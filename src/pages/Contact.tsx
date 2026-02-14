@@ -161,13 +161,13 @@ const Contact = () => {
               From Pakistan to the United Kingdom and the United States, Avira Technologies provides world-class IT solutions and support wherever you are.
             </p>
             <div className="w-full h-[400px] rounded-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.444747717464!2d74.3168673!3d31.4844391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919040000000000%3A0x0!2zMzHCsDI5JzAzLjkiTiA3NMKwMTknMDAuNyJF!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+               <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.2133282215!2d7.671395!3d45.061214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d699864f79d%3A0x7d2f099687e83f2e!2sCorso%20Vittorio%20Emanuele%20II%2C%2066%2C%2010121%20Torino%20TO%2C%20Italy!5e0!3m2!1sen!2sit!4v1711200000000!5m2!1sen!2sit"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
