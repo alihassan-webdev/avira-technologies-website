@@ -47,10 +47,10 @@ const Contact = () => {
 
   return (
     <Layout>
-      <PageHero 
-        title="Contact Us" 
-        description="Have a question, suggestion, or just want to say hello? We'd love to hear from you! Use the information below to get in touch with our team!" 
-        breadcrumbs={[{ label: "Home", path: "/" }, { label: "Contact", path: "/contact" }]} 
+      <PageHero
+        title="Contact Us"
+        description="Have a question or suggestion? We'd love to hear from you."
+        breadcrumbs={[{ label: "Home", path: "/" }, { label: "Contact", path: "/contact" }]}
       />
       
       <section className="py-20 bg-white">
