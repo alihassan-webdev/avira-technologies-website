@@ -167,7 +167,7 @@ const VideoSurveillance = () => (
           className="w-full"
         >
           <h2 className="font-display text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">
-            Our Partners
+            Trusted Brands We Represent
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center">
             <motion.div
