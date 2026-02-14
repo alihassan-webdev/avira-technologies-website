@@ -25,7 +25,7 @@ const OfficeSupplies = () => {
   const supplies = [
     { icon: Monitor, label: "Computer", image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F0fdbe215c8e742499bccc2fb0564e6e4?format=webp&width=800&height=1200" },
     { icon: Laptop, label: "Laptop", image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F306c223849a7403f8fbe151da34e2108?format=webp&width=800&height=1200" },
-    { icon: Server, label: "Server", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Server, label: "Server", image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Fde6643eb41cc4c27b5c4f8b6e04a3303?format=webp&width=800&height=1200" },
     { icon: Printer, label: "Printer & Scanner", image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200" },
     { icon: Camera, label: "CCTV Cameras", image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200" },
     { icon: Phone, label: "Panasonic PABX", image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200" },
