@@ -23,7 +23,7 @@ const serviceCategories = [
     icon: Network,
     title: "Structured Cabling",
     description: "Build a reliable, scalable foundation for your IT systems with our Structured Cabling Solutions. From planning to implementation, we deliver neat, organized, and high-performance cabling infrastructure.",
-    image: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F441b58ed096d480ba61c647ea4a62080?format=webp&width=800&height=1200",
     link: "/services/structured-cabling"
   },
   {
