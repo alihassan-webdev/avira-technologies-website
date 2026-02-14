@@ -67,24 +67,24 @@ const Contact = () => {
       
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
+          {/* Contact Form - Full Width on top */}
+          <div className="max-w-4xl mx-auto mb-24">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold mb-8">Get in touch</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-3xl font-bold mb-8 text-center">Get in touch</h2>
+              <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/5 p-8 md:p-12 rounded-3xl border border-border">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Name</label>
-                    <input type="text" required className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter your name" />
+                    <input type="text" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter your name" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Phone</label>
-                    <input type="tel" required className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter phone number" />
+                    <input type="tel" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter phone number" />
                   </div>
                 </div>
                 
@@ -93,12 +93,12 @@ const Contact = () => {
                     Email
                     <span className="text-[10px] text-red-600 font-normal normal-case italic">Use temp mail</span>
                   </label>
-                  <input type="email" required className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter your email" />
+                  <input type="email" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter your email" />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Message</label>
-                  <textarea required rows={4} className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all resize-none" placeholder="How can we help you?"></textarea>
+                  <textarea required rows={4} className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all resize-none" placeholder="How can we help you?"></textarea>
                 </div>
 
                 <div className="flex items-start gap-3">
@@ -120,7 +120,7 @@ const Contact = () => {
                       Unreadable? Load new
                     </button>
                   </div>
-                  <input type="text" required className="w-full px-4 py-3 rounded-lg border border-border bg-secondary/30 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter the code above" />
+                  <input type="text" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter the code above" />
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-red-600 text-white font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20 flex items-center justify-center gap-2">
@@ -129,48 +129,48 @@ const Contact = () => {
                 </button>
               </form>
             </motion.div>
+          </div>
 
-            {/* Location Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
-              <h2 className="text-3xl font-bold mb-8">Our Locations</h2>
-              <div className="grid gap-10">
-                {locations.map((loc, idx) => (
-                  <div key={idx} className="group p-6 rounded-2xl border border-border hover:border-red-600/30 hover:shadow-xl transition-all duration-300 bg-secondary/10">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                      <h3 className="text-xl font-bold uppercase tracking-tight text-red-600">
-                        {loc.city} <span className="text-muted-foreground font-medium">-</span> {loc.country}
-                      </h3>
+          {/* Location Information - Below Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <h2 className="text-3xl font-bold mb-12 text-center">Our Locations</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {locations.map((loc, idx) => (
+                <div key={idx} className="group p-8 rounded-2xl border border-border hover:border-red-600/30 hover:shadow-xl transition-all duration-300 bg-secondary/10">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <h3 className="text-xl font-bold uppercase tracking-tight text-red-600">
+                      {loc.city} <span className="text-muted-foreground font-medium">-</span> {loc.country}
+                    </h3>
+                  </div>
+                  
+                  <div className="grid gap-4">
+                    <div className="flex gap-4">
+                      <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p className="text-muted-foreground leading-relaxed">{loc.address}</p>
                     </div>
-                    
-                    <div className="grid gap-4">
-                      <div className="flex gap-4">
-                        <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
-                        <p className="text-muted-foreground leading-relaxed">{loc.address}</p>
-                      </div>
-                      <div className="flex gap-4">
-                        <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
-                        <p className="text-muted-foreground">{loc.phone}</p>
-                      </div>
-                      <div className="flex gap-4">
-                        <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
-                        <p className="text-muted-foreground">{loc.email}</p>
-                      </div>
-                      <div className="flex gap-4">
-                        <Globe className="w-5 h-5 text-red-600 flex-shrink-0" />
-                        <p className="text-muted-foreground">{loc.website}</p>
-                      </div>
+                    <div className="flex gap-4">
+                      <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <p className="text-muted-foreground">{loc.phone}</p>
+                    </div>
+                    <div className="flex gap-4">
+                      <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <p className="text-muted-foreground">{loc.email}</p>
+                    </div>
+                    <div className="flex gap-4">
+                      <Globe className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <p className="text-muted-foreground">{loc.website}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
       
