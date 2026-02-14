@@ -18,6 +18,7 @@ const Careers = () => {
       salary: "Market Competitive",
       location: "Head Office, Lahore",
       description: "Avira Technologies is currently seeking a dynamic Network Administrator for an exciting project. As a vital team member, you will be crucial in maintaining and optimizing our network and security systems. Apply now!",
+      applyLink: "https://aviratechnologies.com/careers/#ed-679123031",
       responsibilities: [
         "Swiftly resolving network and security issues in real-time at all levels.",
         "Demonstrating expertise in routers, encompassing routing protocols, WLAN configurations, and managing multiple sites.",
@@ -205,7 +206,9 @@ const Careers = () => {
 
                             <div className="lg:sticky lg:top-4">
                               <a
-                                href="mailto:jobs@aviratechnologies.com"
+                                href={job.applyLink || "mailto:jobs@aviratechnologies.com"}
+                                target={job.applyLink ? "_blank" : undefined}
+                                rel={job.applyLink ? "noopener noreferrer" : undefined}
                                 className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-red-600 text-white font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20 active:scale-95 text-center min-w-[160px] w-full"
                               >
                                 Apply Now
