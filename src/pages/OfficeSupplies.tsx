@@ -107,7 +107,7 @@ const OfficeSupplies = () => {
                     transition={{ delay: i * 0.05 }}
                     className="overflow-hidden rounded-xl border border-border shadow-card hover:shadow-lg transition-shadow bg-white flex flex-col h-full"
                   >
-                    <div className="h-72 md:h-80 overflow-hidden bg-gray-200">
+                    <div className="h-80 overflow-hidden bg-gray-200">
                       <img
                         src={supply.image}
                         alt={supply.label}
