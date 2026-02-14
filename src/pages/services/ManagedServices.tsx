@@ -22,7 +22,7 @@ import {
 import { useState } from "react";
 
 const ManagedServices = () => {
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(0);
 
   const faqs = [
     {
