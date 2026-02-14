@@ -13,7 +13,7 @@ const Footer = memo(() => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {/* Company */}
           <div>
-            <Link to="/" onClick={scrollToTop} className="inline-block mb-6">
+            <Link to="/" onClick={scrollToTop} className="inline-block mb-2">
               <img src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Fbe4c51314f0c4a7ab924b8f4d2934575?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-32 w-auto" />
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
