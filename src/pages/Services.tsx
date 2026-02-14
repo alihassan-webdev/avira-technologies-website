@@ -30,7 +30,7 @@ const serviceCategories = [
     icon: CheckCircle2,
     title: "Service Level Agreements",
     description: "Guarantee uptime, rapid response, and reliable IT performance with our tailored SLA Services. Backed by defined service metrics and 24/7 support, we ensure your critical systems run smoothly and securely.",
-    image: "https://images.pexels.com/photos/3779035/pexels-photo-3779035.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F14a04405b96b464f95a058ca26d8e232?format=webp&width=800&height=1200",
     link: "/services/sla"
   },
   {
