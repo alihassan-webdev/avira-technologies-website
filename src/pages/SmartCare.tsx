@@ -161,6 +161,7 @@ const SmartCare = () => {
             <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12"></div>
             <div className="space-y-12 md:space-y-16">
               {serviceTypes.map((service, i) => {
+                const isReversed = i === 1;
                 return (
                   <motion.div
                     key={i}
@@ -168,16 +169,16 @@ const SmartCare = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+                    className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${isReversed ? 'md:grid-cols-2' : ''}`}
                   >
                     {/* Text Content */}
-                    <div>
+                    <div className={isReversed ? 'md:order-2' : ''}>
                       <h3 className="font-semibold text-foreground text-2xl md:text-3xl mb-4">{service.title}</h3>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{service.desc}</p>
                     </div>
 
                     {/* Image */}
-                    <div className="rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
+                    <div className={`rounded-xl overflow-hidden shadow-lg h-64 md:h-80 ${isReversed ? 'md:order-1' : ''}`}>
                       <img
                         src={service.image}
                         alt={service.title}
