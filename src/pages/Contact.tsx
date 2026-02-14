@@ -63,8 +63,8 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">Get in touch</h2>
-              <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/5 p-8 md:p-12 rounded-3xl border border-border">
+              <h2 className="text-5xl md:text-6xl font-bold mb-10 text-center">Get in touch</h2>
+              <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/5 px-6 py-8 md:p-12 rounded-3xl border border-border">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Name</label>
