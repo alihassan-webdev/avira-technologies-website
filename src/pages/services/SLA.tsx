@@ -72,7 +72,7 @@ const SLA = () => {
   const features = [
     "Defined SLAs with measurable performance",
     "Proactive issue prevention and fast incident response",
-    "Flexible support plans – 8/5, 24/7, or custom hours",
+    "Flexible support plans - 8/5, 24/7, or custom hours",
     "Priority-based escalation and ticket resolution",
     "Security-focused monitoring and protection built-in",
     "Custom plans tailored to business size and industry",

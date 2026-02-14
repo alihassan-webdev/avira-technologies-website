@@ -31,7 +31,7 @@ const ManagedServices = () => {
     },
     {
       question: "Do you manage hybrid environments?",
-      answer: "Yes – seamless support for on-prem + cloud + edge infrastructure"
+      answer: "Yes - seamless support for on-prem + cloud + edge infrastructure"
     },
     {
       question: "How is data privacy handled?",

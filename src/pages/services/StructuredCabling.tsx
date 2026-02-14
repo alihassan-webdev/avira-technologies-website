@@ -107,7 +107,7 @@ const StructuredCabling = () => {
               Our Structured Cabling Services Include
             </h2>
             <p className="text-sm md:text-base text-muted-foreground text-center mb-8 md:mb-12">
-              Proactive, Predictable, and Scalable IT Operations – So You Can Focus on Growth
+              Proactive, Predictable, and Scalable IT Operations - So You Can Focus on Growth
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {services.map((service, i) => {

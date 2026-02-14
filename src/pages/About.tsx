@@ -6,11 +6,11 @@ import { Shield, Zap, Users, Target } from "lucide-react";
 const whyChooseUs = [
   {
     title: "Industry-Leading Expertise",
-    description: "Decades of Experience – Proven track record in security, automation, and smart technology.",
+    description: "Decades of Experience - Proven track record in security, automation, and smart technology.",
     points: [
-      "Decades of Experience – Proven track record in security, automation, and smart technology.",
+      "Decades of Experience - Proven track record in security, automation, and smart technology.",
       "Certified Professionals – Our team includes top-tier engineers, cybersecurity specialists, and system integrators.",
-      "Award-Winning Solutions – Recognized for innovation in access control, fire safety, and IT infrastructure.",
+      "Award-Winning Solutions - Recognized for innovation in access control, fire safety, and IT infrastructure.",
     ],
     icon: Shield,
   },
@@ -18,9 +18,9 @@ const whyChooseUs = [
     title: "Future-Ready Technology",
     description: "Advanced solutions that evolve with your needs.",
     points: [
-      "AI & IoT-Powered Systems – Smart, adaptive solutions that evolve with your needs.",
+      "AI & IoT-Powered Systems - Smart, adaptive solutions that evolve with your needs.",
       "Military-Grade Security – Advanced encryption, real-time threat detection, and compliance with global standards.",
-      "Seamless Integration – Unified platforms for access control, surveillance, alarms, and communications.",
+      "Seamless Integration - Unified platforms for access control, surveillance, alarms, and communications.",
     ],
     icon: Zap,
   },
@@ -28,9 +28,9 @@ const whyChooseUs = [
     title: "Unmatched Reliability",
     description: "24/7 monitoring and support for your peace of mind.",
     points: [
-      "24/7 Monitoring & Support – Proactive maintenance and instant incident response.",
-      "Redundant Systems – Minimize downtime with fail-safe architectures.",
-      "Scalable for Growth – From small businesses to enterprise-level deployments.",
+      "24/7 Monitoring & Support - Proactive maintenance and instant incident response.",
+      "Redundant Systems - Minimize downtime with fail-safe architectures.",
+      "Scalable for Growth - From small businesses to enterprise-level deployments.",
     ],
     icon: Users,
   },
@@ -38,9 +38,9 @@ const whyChooseUs = [
     title: "Customer-Centric Approach",
     description: "Solutions designed specifically for your unique needs.",
     points: [
-      "Tailored Solutions – No one-size-fits-all, we design for your unique challenges.",
-      "End-to-End Service – From consultation to installation, training, and lifetime upgrades.",
-      "Proven Success – Trusted by Fortune 500 companies, governments, and critical infrastructure providers.",
+      "Tailored Solutions - No one-size-fits-all, we design for your unique challenges.",
+      "End-to-End Service - From consultation to installation, training, and lifetime upgrades.",
+      "Proven Success - Trusted by Fortune 500 companies, governments, and critical infrastructure providers."
     ],
     icon: Target,
   },

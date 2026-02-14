@@ -104,7 +104,7 @@ const ITOutsourcing = () => {
             className="w-full"
           >
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
-              Flexible. Scalable. Expert IT Talent — When You Need It.
+              Flexible. Scalable. Expert IT Talent - When You Need It.
             </h2>
             <div className="space-y-4 md:space-y-5">
               <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">

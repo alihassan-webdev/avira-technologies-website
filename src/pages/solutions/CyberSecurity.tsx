@@ -71,8 +71,8 @@ const CyberSecurity = () => (
               <ul className="space-y-3">
                 {[
                   "Phishing, ransomware, and zero-day exploits",
-                  "Insider Risks – Accidental breaches and malicious actions",
-                  "Cloud & Hybrid Vulnerabilities – Expanding attack surfaces"
+                  "Insider Risks - Accidental breaches and malicious actions",
+                  "Cloud & Hybrid Vulnerabilities - Expanding attack surfaces"
                 ].map((threat, i) => (
                   <li key={i} className="flex gap-3 text-muted-foreground">
                     <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
@@ -94,9 +94,9 @@ const CyberSecurity = () => (
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Proactive Defense – Predict and neutralize threats before they strike",
+                  "Proactive Defense - Predict and neutralize threats before they strike",
                   "360° Protection – Secure networks, endpoints, and cloud environments holistically",
-                  "Business-Enabled Security – Safeguard data without slowing innovation"
+                  "Business-Enabled Security - Safeguard data without slowing innovation"
                 ].map((solution, i) => (
                   <li key={i} className="flex gap-3 text-muted-foreground">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
