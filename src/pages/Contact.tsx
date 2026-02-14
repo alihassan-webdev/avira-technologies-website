@@ -122,19 +122,48 @@ const Contact = () => {
                   <div className="grid gap-4">
                     <div className="flex gap-4">
                       <MapPin className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
-                      <p className="text-muted-foreground leading-relaxed">{loc.address}</p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground leading-relaxed hover:text-red-600 transition-colors"
+                      >
+                        {loc.address}
+                      </a>
                     </div>
                     <div className="flex gap-4">
-                      <Phone className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <p className="text-muted-foreground">{loc.phone}</p>
+                      <Phone className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                      <div className="flex flex-col gap-1">
+                        {loc.phone.split(',').map((p, i) => (
+                          <a
+                            key={i}
+                            href={`tel:${p.trim().replace(/\s/g, '')}`}
+                            className="text-muted-foreground hover:text-red-600 transition-colors"
+                          >
+                            {p.trim()}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                     <div className="flex gap-4">
-                      <Mail className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <p className="text-muted-foreground">{loc.email}</p>
+                      <Mail className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                      <a
+                        href={`mailto:${loc.email}`}
+                        className="text-muted-foreground hover:text-red-600 transition-colors"
+                      >
+                        {loc.email}
+                      </a>
                     </div>
                     <div className="flex gap-4">
-                      <Globe className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <p className="text-muted-foreground">{loc.website}</p>
+                      <Globe className="w-5 h-5 text-red-600 flex-shrink-0 mt-1" />
+                      <a
+                        href={`https://${loc.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-red-600 transition-colors"
+                      >
+                        {loc.website}
+                      </a>
                     </div>
                   </div>
                 </div>
