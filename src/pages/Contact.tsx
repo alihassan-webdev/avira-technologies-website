@@ -1,22 +1,10 @@
 import Layout from "@/components/Layout";
 import PageHero from "@/components/PageHero";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Globe, Send, RefreshCw } from "lucide-react";
-import { useState } from "react";
+import { MapPin, Phone, Mail, Globe, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
-  const [captchaValue, setCaptchaValue] = useState("A7B2X");
-
-  const handleRefreshCaptcha = () => {
-    const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-    let newCaptcha = "";
-    for (let i = 0; i < 5; i++) {
-      newCaptcha += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    setCaptchaValue(newCaptcha);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you! Your message has been sent successfully.");
@@ -68,14 +56,14 @@ const Contact = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           {/* Contact Form - Full Width on top */}
-          <div className="max-w-4xl mx-auto mb-24">
+          <div className="max-w-3xl mx-auto mb-24">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold mb-8 text-center">Get in touch</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center">Get in touch</h2>
               <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/5 p-8 md:p-12 rounded-3xl border border-border">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -106,21 +94,6 @@ const Contact = () => {
                   <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed">
                     I have read and understand the privacy policy.
                   </label>
-                </div>
-
-                {/* Captcha Section */}
-                <div className="space-y-4 pt-4 border-t border-border">
-                  <label className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Captcha</label>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <div className="bg-secondary px-6 py-3 rounded-lg font-mono text-xl tracking-widest select-none border border-dashed border-red-600/30 line-through decoration-red-600/20 italic">
-                      {captchaValue}
-                    </div>
-                    <button type="button" onClick={handleRefreshCaptcha} className="flex items-center gap-2 text-sm text-red-600 hover:text-red-700 font-medium transition-colors">
-                      <RefreshCw className="w-4 h-4" />
-                      Unreadable? Load new
-                    </button>
-                  </div>
-                  <input type="text" required className="w-full px-4 py-3 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-red-600 transition-all" placeholder="Enter the code above" />
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-red-600 text-white font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20 flex items-center justify-center gap-2">
