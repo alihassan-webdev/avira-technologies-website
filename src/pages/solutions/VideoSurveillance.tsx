@@ -155,6 +155,64 @@ const VideoSurveillance = () => (
         </motion.div>
       </div>
     </section>
+
+    {/* Our Partners */}
+    <section className="py-12 md:py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full"
+        >
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+            Trusted Brands We Represent
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F75bf0a9efde44f3a84e9108df55910a1?format=webp&width=800&height=1200"
+                alt="HikVision"
+                className="max-h-8 object-contain"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F73ea0191fe6749adb0354ce43d0df302?format=webp&width=800&height=1200"
+                alt="UniView"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F47b45eb9d20a420789c3cc20d263cb50?format=webp&width=800&height=1200"
+                alt="Alhya Technology"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   </Layout>
 );
 

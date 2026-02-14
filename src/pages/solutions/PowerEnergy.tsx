@@ -366,6 +366,77 @@ const PowerEnergy = () => (
         </motion.div>
       </div>
     </section>
+
+    {/* Our Partners */}
+    <section className="py-12 md:py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full"
+        >
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+            Trusted Brands We Represent
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F1a1ad83e96c34804b74ed702059c65d5?format=webp&width=800&height=1200"
+                alt="Solis"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F7f6989e8914f490098518db7746f2b84?format=webp&width=800&height=1200"
+                alt="Growatt"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Ffb0d0d42042a4c3da169634dd375a4aa?format=webp&width=800&height=1200"
+                alt="Canadian Solar"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex justify-center"
+            >
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2F3a4be3bacc5142c4bfa323820b920438?format=webp&width=800&height=1200"
+                alt="Jinko Solar"
+                className="max-h-12 object-contain"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   </Layout>
 );
 

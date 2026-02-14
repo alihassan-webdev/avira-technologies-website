@@ -15,7 +15,7 @@ const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
         {breadcrumbs && (
           <div className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">
             {breadcrumbs.map((bc, i) => (
-              <span key={bc.path} className="flex items-center gap-2">
+              <span key={`${bc.label}-${i}`} className="flex items-center gap-2">
                 {i > 0 && <span>/</span>}
                 <Link to={bc.path} className="hover:text-primary-foreground transition-colors">{bc.label}</Link>
               </span>
