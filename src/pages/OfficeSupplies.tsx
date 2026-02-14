@@ -111,7 +111,7 @@ const OfficeSupplies = () => {
                       <img
                         src={supply.image}
                         alt={supply.label}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-center"
                         loading="lazy"
                       />
                     </div>
