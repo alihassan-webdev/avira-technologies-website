@@ -14,7 +14,7 @@ const Footer = memo(() => {
           {/* Company */}
           <div>
             <Link to="/" onClick={scrollToTop} className="inline-block mb-6">
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F908b9109f6414714af82a2f291ed7235%2Fe59bf21f63bd44f6932a00eaf5042317?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F8aaf11af3d6f46b4a9a594af1977aff4%2Fbe4c51314f0c4a7ab924b8f4d2934575?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto" />
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
               Your trusted partner for end-to-end IT solutions, managed services, and technology integration.
