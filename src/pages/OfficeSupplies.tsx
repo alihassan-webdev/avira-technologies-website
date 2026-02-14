@@ -23,27 +23,27 @@ import {
 
 const OfficeSupplies = () => {
   const supplies = [
-    { icon: Monitor, label: "Computer" },
-    { icon: Laptop, label: "Laptop" },
-    { icon: Server, label: "Server" },
-    { icon: Printer, label: "Printer & Scanner" },
-    { icon: Camera, label: "CCTV Cameras" },
-    { icon: Phone, label: "Panasonic PABX" },
-    { icon: Phone, label: "IP Phone" },
-    { icon: HardDrive, label: "SSD - HDD" },
-    { icon: Tv, label: "Interactive Panel" },
-    { icon: Tv, label: "Smart Board" },
-    { icon: Projector, label: "Projector & Screen" },
-    { icon: Router, label: "Router & APs" },
-    { icon: Network, label: "Switches" },
-    { icon: Cpu, label: "RAMs" },
-    { icon: Wifi, label: "Video Conf. Equipment" },
-    { icon: Server, label: "APC UPS" },
-    { icon: Network, label: "Network I/O" },
-    { icon: Cable, label: "Network Cables" },
-    { icon: Box, label: "Racks" },
-    { icon: Headphones, label: "Headsets" },
-    { icon: Package, label: "Accessories" },
+    { icon: Monitor, label: "Computer", image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Laptop, label: "Laptop", image: "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Server, label: "Server", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Printer, label: "Printer & Scanner", image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Camera, label: "CCTV Cameras", image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Phone, label: "Panasonic PABX", image: "https://images.pexels.com/photos/3808517/pexels-photo-3808517.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Phone, label: "IP Phone", image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: HardDrive, label: "SSD - HDD", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Tv, label: "Interactive Panel", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Tv, label: "Smart Board", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Projector, label: "Projector & Screen", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Router, label: "Router & APs", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Network, label: "Switches", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Cpu, label: "RAMs", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Wifi, label: "Video Conf. Equipment", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Server, label: "APC UPS", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Network, label: "Network I/O", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Cable, label: "Network Cables", image: "https://images.pexels.com/photos/3587620/pexels-photo-3587620.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Box, label: "Racks", image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Headphones, label: "Headsets", image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+    { icon: Package, label: "Accessories", image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   ];
 
   return (
@@ -96,9 +96,8 @@ const OfficeSupplies = () => {
             transition={{ duration: 0.8 }}
             className="w-full"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
               {supplies.map((supply, i) => {
-                const Icon = supply.icon;
                 return (
                   <motion.div
                     key={i}
@@ -106,10 +105,19 @@ const OfficeSupplies = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
-                    className="p-6 bg-card rounded-xl border border-border shadow-card flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                    className="overflow-hidden rounded-xl border border-border shadow-card hover:shadow-lg transition-shadow bg-card flex flex-col h-full"
                   >
-                    <Icon className="w-12 h-12 text-electric mb-4" />
-                    <p className="text-sm md:text-base font-semibold text-card-foreground">{supply.label}</p>
+                    <div className="h-40 md:h-48 overflow-hidden bg-gray-200">
+                      <img
+                        src={supply.image}
+                        alt={supply.label}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-4 md:p-5 flex-grow flex flex-col items-center justify-center text-center">
+                      <p className="text-sm md:text-base font-semibold text-card-foreground">{supply.label}</p>
+                    </div>
                   </motion.div>
                 );
               })}
