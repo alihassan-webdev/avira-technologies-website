@@ -251,7 +251,7 @@ const Index = () => {
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
-            <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
+            <div className="bg-[#2F4F92] rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-[#2F4F92]/20 transition-shadow">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* Left Side - Text Content */}
                 <div className="flex-1">
