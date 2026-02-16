@@ -169,19 +169,19 @@
   }
 
   /* GPU Acceleration for animations */
-  [class*="motion"] {
+  /* [class*="motion"] {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
-  }
+  } */
 
   /* Optimize shadows and transitions */
   .shadow-glow {
-    will-change: box-shadow;
+    /* will-change: box-shadow; */
   }
 
   .shadow-card {
-    will-change: box-shadow;
+    /* will-change: box-shadow; */
   }
 
   /* Optimize button interactions */
@@ -191,7 +191,7 @@
 
   /* Image optimization */
   img {
-    will-change: opacity;
+    /* will-change: opacity; */
   }
 
   /* Smooth scroll */

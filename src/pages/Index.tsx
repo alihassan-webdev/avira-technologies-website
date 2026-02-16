@@ -137,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-secondary bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`, backgroundAttachment: 'fixed'}}>
+      <section className="py-20 bg-secondary bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -187,7 +187,7 @@ const Index = () => {
 
             {/* Image */}
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg" alt="A diverse group of professionals working together on laptops in a modern office meeting room" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A diverse group of professionals working together on laptops in a modern office meeting room" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </motion.div>
           </div>
         </div>
