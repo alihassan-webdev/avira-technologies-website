@@ -61,7 +61,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-10 text-center">Get in touch</h2>
               <form onSubmit={handleSubmit} className="space-y-6 bg-secondary/5 px-6 py-8 md:p-12 rounded-3xl border border-border">
@@ -106,7 +106,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-12"
           >
             <h2 className="text-3xl font-bold mb-12 text-center">Our Locations</h2>
@@ -180,7 +180,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Serving Clients Globally</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-12">

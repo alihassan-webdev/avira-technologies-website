@@ -96,7 +96,7 @@ const SmartCare = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full"
           >
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6 md:mb-8">
@@ -124,7 +124,7 @@ const SmartCare = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full max-w-3xl mx-auto"
           >
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4 text-center">
@@ -152,7 +152,7 @@ const SmartCare = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
@@ -168,7 +168,7 @@ const SmartCare = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
+                    transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${isReversed ? 'md:grid-cols-2' : ''}`}
                   >
                     {/* Text Content */}
@@ -201,7 +201,7 @@ const SmartCare = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full"
           >
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
@@ -216,7 +216,7 @@ const SmartCare = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
+                    transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     className="p-4 md:p-6 bg-card rounded-xl border border-border shadow-card"
                   >
                     <div className="flex gap-3 md:gap-4 mb-3">
@@ -239,7 +239,7 @@ const SmartCare = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full max-w-3xl mx-auto"
           >
             <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 md:mb-12 text-center">
@@ -252,7 +252,7 @@ const SmartCare = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                   className="flex gap-3 md:gap-4 p-3 md:p-4 bg-secondary rounded-lg border border-border"
                 >
                   <CheckCircle2 className="w-5 h-5 text-electric flex-shrink-0 mt-0.5" />
