@@ -67,7 +67,7 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black"
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#2F4F92]"
       >
         <AnimatePresence mode="wait">
           <motion.div

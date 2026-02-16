@@ -46,8 +46,8 @@
     --sidebar-ring: 0 100% 50%;
 
     /* Custom tokens */
-    --navy: 0 0% 0%;
-    --navy-light: 0 0% 10%;
+    --navy: 221 51% 38%;
+    --navy-light: 221 51% 45%;
     --electric: 0 100% 50%;
     --electric-glow: 0 100% 60%;
     --teal: 0 100% 50%;
@@ -116,7 +116,7 @@
 
 @layer utilities {
   .gradient-navy {
-    background: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(0, 0%, 10%) 100%);
+    background: #2F4F92;
   }
 
   .gradient-electric {
