@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
   return (
-    <section className="gradient-navy py-10 md:py-14">
+    <section className="gradient-navy py-14 md:py-20">
       <div className="container mx-auto px-6">
         {breadcrumbs && (
           <div className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">
