@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const TopHeader = memo(() => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-40 bg-black text-white py-1.5 text-xs md:text-sm h-8 min-h-8 flex items-center">
+    <div className="fixed top-0 left-0 right-0 z-40 bg-[#2F4F92] text-white py-1.5 text-xs md:text-sm h-8 min-h-8 flex items-center">
       <div className="container mx-auto px-6 w-full">
         <div className="flex flex-row items-center justify-between gap-2 min-h-fit">
           {/* Contact Info */}
