@@ -67,7 +67,7 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[400px] md:h-[520px] overflow-hidden bg-[#1B3058]"
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#1B3058]"
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -90,7 +90,7 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-52 md:pt-64 will-change-[opacity,transform]"
+            className="absolute inset-0 flex items-center justify-start pointer-events-none z-10 pt-64 md:pt-80 will-change-[opacity,transform]"
           >
             <div className="p-8 md:p-12 w-full">
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
