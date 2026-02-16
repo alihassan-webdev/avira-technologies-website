@@ -57,6 +57,12 @@ const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
+    // Preload hero images for buttery smooth transitions
+    heroSlides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
@@ -67,25 +73,33 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#1B3058]"
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#1B3058] isolate"
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false}>
           <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="absolute inset-0 pointer-events-none will-change-[opacity,transform]"
+            key={`image-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 pointer-events-none will-change-opacity"
           >
-            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" loading="eager" decoding="async" />
+            <img
+              src={heroSlides[currentSlide].image}
+              alt=""
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              // @ts-ignore - fetchpriority is a valid attribute but might not be in the types
+              fetchpriority={currentSlide === 0 ? "high" : "low"}
+            />
           </motion.div>
         </AnimatePresence>
 
         {/* Carousel Slide Title */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide}
+            key={`text-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
