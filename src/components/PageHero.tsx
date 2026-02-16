@@ -10,7 +10,7 @@ interface PageHeroProps {
 
 const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
   return (
-    <section className="gradient-navy py-20 md:py-28">
+    <section className="gradient-navy py-18 md:py-24">
       <div className="container mx-auto px-6">
         {breadcrumbs && (
           <div className="flex items-center gap-2 text-sm text-primary-foreground/50 mb-6">
@@ -25,7 +25,7 @@ const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-4xl md:text-5xl font-bold text-primary-foreground mb-4"
         >
           {title}
@@ -33,7 +33,7 @@ const PageHero = ({ title, description, breadcrumbs }: PageHeroProps) => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="text-lg text-primary-foreground/70 max-w-2xl"
         >
           {description}

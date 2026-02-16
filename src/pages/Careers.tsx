@@ -89,7 +89,7 @@ const Careers = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
                 Embark on an exhilarating journey powered by your passion and expertise in innovative business technology.
@@ -120,7 +120,7 @@ const Careers = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.8 }}
+                  transition={{ delay: index * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                   className={`group bg-card border border-border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 ${isOpen ? 'ring-1 ring-red-600/20 shadow-md' : ''}`}
                 >
                   {/* Clickable Header */}
@@ -230,6 +230,7 @@ const Careers = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-16 md:mt-24 p-8 md:p-12 bg-gradient-to-br from-secondary to-white rounded-3xl text-center border border-border shadow-inner"
           >
             <Mail className="w-12 h-12 md:w-16 md:h-16 text-red-600 mx-auto mb-6" />

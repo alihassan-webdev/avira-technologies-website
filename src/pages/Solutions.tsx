@@ -89,7 +89,7 @@ const Solutions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center max-w-3xl mx-auto px-4"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">IT Solutions</h2>
@@ -112,7 +112,7 @@ const Solutions = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  transition={{ delay: index * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                   className="group h-full"
                 >
                   <Link to={solution.link} onClick={() => window.scrollTo(0, 0)} className="block h-full">
@@ -122,8 +122,8 @@ const Solutions = () => {
                         <img
                           src={solution.image}
                           alt={solution.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="eager"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          loading="lazy"
                           decoding="async"
                         />
                       </div>
@@ -165,7 +165,7 @@ const Solutions = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center max-w-3xl mx-auto px-4"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">

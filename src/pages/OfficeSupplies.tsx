@@ -64,7 +64,7 @@ const OfficeSupplies = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
@@ -93,7 +93,7 @@ const OfficeSupplies = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="w-full"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -104,7 +104,7 @@ const OfficeSupplies = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.05 }}
+                    transition={{ delay: i * 0.05, duration: 1, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden rounded-xl border border-border shadow-card hover:shadow-lg transition-shadow bg-white flex flex-col h-full"
                   >
                     <div className="h-80 overflow-hidden bg-white">

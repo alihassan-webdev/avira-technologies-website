@@ -57,6 +57,12 @@ const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
+    // Preload hero images for buttery smooth transitions
+    heroSlides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
@@ -67,25 +73,33 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-black"
+        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#1B3058] isolate"
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false}>
           <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1.4, ease: "easeInOut" }}
-            className="absolute inset-0 pointer-events-none will-change-[opacity,transform]"
+            key={`image-${currentSlide}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 pointer-events-none will-change-opacity"
           >
-            <img src={heroSlides[currentSlide].image} alt="" className="w-full h-full object-cover" loading="eager" decoding="async" />
+            <img
+              src={heroSlides[currentSlide].image}
+              alt=""
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+              // @ts-ignore - fetchpriority is a valid attribute but might not be in the types
+              fetchpriority={currentSlide === 0 ? "high" : "low"}
+            />
           </motion.div>
         </AnimatePresence>
 
         {/* Carousel Slide Title */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide}
+            key={`text-${currentSlide}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
@@ -107,7 +121,7 @@ const Index = () => {
       {/* Welcome Section */}
       <section className="py-10 bg-gradient-to-b from-white to-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
               <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
             </div>
@@ -123,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-secondary bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`, backgroundAttachment: 'fixed'}}>
+      <section className="py-20 bg-secondary bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -131,7 +145,7 @@ const Index = () => {
               { icon: Zap, title: "Cutting-Edge Technology", desc: "Latest innovations in cybersecurity and cloud computing", image: null },
               { icon: Users, title: "Expert Team", desc: "Certified professionals with 10+ years experience", image: null },
             ].map((feature, i) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.9, ease: "easeInOut" }} className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col h-full">
+              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="rounded-xl bg-card border border-border shadow-card overflow-hidden flex flex-col h-full">
                 {feature.image && (
                   <div className="h-40 overflow-hidden">
                     <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
@@ -150,30 +164,74 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
+      {/* Mission & Vision Section */}
+      <section className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
-            About Our Mission
-          </h2>
-          <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
-              <p className="text-lg text-foreground leading-relaxed">
-                Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions, we design and deliver custom technology strategies that align with your business goals.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                At Avira Technologies, we empower the future with cutting-edge digital solutions designed to elevate your business. As a leader in cybersecurity, cloud computing, and AI-driven innovations, we provide the tools and expertise to safeguard your digital journey.
-              </p>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Mission Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">OUR MISSION</h2>
+                <div className="w-12 h-1 bg-gradient-electric rounded-full mb-6"></div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Our mission is to empower businesses by providing them with cutting-edge technology solutions that not only enhance their operational efficiency but also drive sustainable growth and ensure long-term success in a competitive market. We aim to equip organizations with the tools they need to thrive in today's fast-paced business environment.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                <img
+                  src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="IT professionals monitoring data servers"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
             </motion.div>
 
-            {/* Image */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg" alt="A diverse group of professionals working together on laptops in a modern office meeting room" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+            {/* Vision Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-8 flex flex-col-reverse md:flex-col"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group hidden md:block">
+                <img
+                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Diverse professionals collaborating in a meeting"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 mt-8 md:mt-0">OUR VISION</h2>
+                <div className="w-12 h-1 bg-gradient-electric rounded-full mb-6"></div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Our vision is to establish ourselves as a global leader in IT innovation, dedicated to shaping the future of various industries through the transformative power of technology. We aspire to lead the way in developing groundbreaking solutions that not only enhance operational efficiency but also drive growth and progress across diverse sectors on a worldwide scale.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group md:hidden mt-8">
+                <img
+                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Diverse professionals collaborating in a meeting"
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -182,7 +240,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
               What Sets Us Apart?
             </h2>
@@ -210,7 +268,7 @@ const Index = () => {
       {/* Our Approach */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Our Approach
             </h2>
@@ -250,8 +308,8 @@ const Index = () => {
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.9, ease: "easeInOut" }} className="w-full">
-            <div className="bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-red-900/20 transition-shadow">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full">
+            <div className="bg-[#1B3058] rounded-2xl p-10 md:p-16 border border-gray-800 shadow-2xl hover:shadow-[#1B3058]/20 transition-shadow">
               <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* Left Side - Text Content */}
                 <div className="flex-1">
