@@ -164,30 +164,74 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
+      {/* Mission & Vision Section */}
+      <section className="py-20 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
-            About Our Mission
-          </h2>
-          <div className="w-12 h-1 bg-gradient-electric rounded-full mb-12 mx-auto"></div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="space-y-6">
-              <p className="text-lg text-foreground leading-relaxed">
-                Avira Technologies is your trusted partner for end-to-end IT solutions, managed services, and technology integration. We empower businesses to scale, secure, and streamline operations with cutting-edge systems, expert support, and a future-ready mindset.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                Whether you're looking for enterprise networking, cloud computing, cybersecurity, unified communications, or smart energy solutions, we design and deliver custom technology strategies that align with your business goals.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed">
-                At Avira Technologies, we empower the future with cutting-edge digital solutions designed to elevate your business. As a leader in cybersecurity, cloud computing, and AI-driven innovations, we provide the tools and expertise to safeguard your digital journey.
-              </p>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Mission Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">OUR MISSION</h2>
+                <div className="w-12 h-1 bg-gradient-electric rounded-full mb-6"></div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Our mission is to empower businesses by providing them with cutting-edge technology solutions that not only enhance their operational efficiency but also drive sustainable growth and ensure long-term success in a competitive market. We aim to equip organizations with the tools they need to thrive in today's fast-paced business environment.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                <img
+                  src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="IT professionals monitoring data servers"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
             </motion.div>
 
-            {/* Image */}
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="rounded-xl overflow-hidden shadow-lg">
-              <img src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A diverse group of professionals working together on laptops in a modern office meeting room" className="w-full h-full object-cover" loading="lazy" decoding="async" />
+            {/* Vision Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-8 flex flex-col-reverse md:flex-col"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group hidden md:block">
+                <img
+                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Diverse professionals collaborating in a meeting"
+                  className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4 mt-8 md:mt-0">OUR VISION</h2>
+                <div className="w-12 h-1 bg-gradient-electric rounded-full mb-6"></div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Our vision is to establish ourselves as a global leader in IT innovation, dedicated to shaping the future of various industries through the transformative power of technology. We aspire to lead the way in developing groundbreaking solutions that not only enhance operational efficiency but also drive growth and progress across diverse sectors on a worldwide scale.
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group md:hidden mt-8">
+                <img
+                  src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Diverse professionals collaborating in a meeting"
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
