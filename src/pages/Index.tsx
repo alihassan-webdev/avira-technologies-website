@@ -141,32 +141,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full text-center mb-16">
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">Industries We Serve</h2>
-            <div className="w-24 h-1.5 bg-gradient-electric mx-auto rounded-full"></div>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {industries.map((industry, i) => (
-              <motion.div
-                key={industry.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-secondary hover:bg-white hover:shadow-xl transition-all group border border-transparent hover:border-border"
-              >
-                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm group-hover:bg-red-50 group-hover:scale-110 transition-all">
-                  <industry.icon className="w-8 h-8 text-red-600" />
-                </div>
-                <span className="font-display font-semibold text-foreground text-center">{industry.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Key Features */}
       <section className="py-20 bg-secondary bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
