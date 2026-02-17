@@ -142,6 +142,7 @@ const Navbar = () => {
           <button
             className="lg:hidden text-black flex items-center justify-center w-10 h-10 flex-shrink-0"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? (
               <X className="w-5 h-5" />

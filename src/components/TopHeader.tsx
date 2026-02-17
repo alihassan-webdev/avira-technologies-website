@@ -20,16 +20,16 @@ const TopHeader = memo(() => {
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-600">
+            <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-600" aria-label="Follow us on Facebook">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-pink-600">
+            <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-pink-600" aria-label="Follow us on Instagram">
               <Instagram className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-700">
+            <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-blue-700" aria-label="Follow us on LinkedIn">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600">
+            <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-red-600" aria-label="Subscribe to our YouTube channel">
               <Youtube className="w-4 h-4" />
             </a>
           </div>

@@ -73,7 +73,7 @@ const Index = () => {
     <Layout>
       {/* Hero Carousel */}
       <motion.section
-        className="relative h-[420px] md:h-[550px] overflow-hidden bg-[#1B3058] isolate"
+        className="relative h-[420px] md:h-[650px] overflow-hidden bg-[#1B3058] isolate"
       >
         <AnimatePresence initial={false}>
           <motion.div
@@ -110,29 +110,70 @@ const Index = () => {
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].title}
               </h2>
-              <p className="text-sm md:text-lg text-white drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
+              <p className="text-sm md:text-lg text-white drop-shadow-lg mb-8" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].tagline}
               </p>
+              <div className="pointer-events-auto">
+                <Link
+                  to={heroSlides[currentSlide].ctaLink}
+                  className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/40 transform hover:-translate-y-1"
+                >
+                  {heroSlides[currentSlide].cta}
+                  <ChevronRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
       </motion.section>
 
       {/* Welcome Section */}
-      <section className="py-10 bg-gradient-to-b from-white to-secondary">
-        <div className="container mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-3">
-              <span className="text-red-600 font-semibold text-xs md:text-sm tracking-wide">Welcome to Innovation</span>
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-secondary relative overflow-hidden">
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 rounded-full border-2 border-red-600 bg-white mb-6 shadow-sm">
+              <span className="text-red-600 font-bold text-xs md:text-sm tracking-widest uppercase">Welcome to Innovation</span>
             </div>
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-center text-foreground mb-2">
-              Avira Technologies
+            <h1 className="font-display text-5xl md:text-7xl font-bold text-center text-foreground mb-4 tracking-tight">
+              Avira <span className="text-red-600">Technologies</span>
             </h1>
-            <p className="text-xl md:text-2xl text-red-600 font-semibold text-center mb-4">
-              Your Technology Partner in Innovation
+            <p className="text-xl md:text-3xl text-gray-700 font-medium text-center mb-8 leading-relaxed">
+              Your Strategic Technology Partner for <span className="text-electric">Innovative Solutions</span>
             </p>
-            <div className="w-16 h-1 bg-gradient-electric mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-gradient-electric mx-auto rounded-full mb-8"></div>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              We empower businesses with future-ready IT infrastructure, cybersecurity, and managed services that drive growth and operational excellence.
+            </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }} className="w-full text-center mb-16">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">Industries We Serve</h2>
+            <div className="w-24 h-1.5 bg-gradient-electric mx-auto rounded-full"></div>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {industries.map((industry, i) => (
+              <motion.div
+                key={industry.label}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-secondary hover:bg-white hover:shadow-xl transition-all group border border-transparent hover:border-border"
+              >
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 shadow-sm group-hover:bg-red-50 group-hover:scale-110 transition-all">
+                  <industry.icon className="w-8 h-8 text-red-600" />
+                </div>
+                <span className="font-display font-semibold text-foreground text-center">{industry.label}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -160,6 +201,56 @@ const Index = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Grid */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <SectionHeader
+            title="Comprehensive Solutions"
+            subtitle="Tailored technology solutions designed to address your most complex business challenges."
+            center
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {solutions.map((item, i) => (
+              <ServiceCard
+                key={item.title}
+                {...item}
+                index={i}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-16">
+            <Link to="/solutions" className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20">
+              View All Solutions <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-24 bg-secondary relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <SectionHeader
+            title="Expert Services"
+            subtitle="Our professional services ensure your technology infrastructure is optimized, secure, and always available."
+            center
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            {services.map((item, i) => (
+              <ServiceCard
+                key={item.title}
+                {...item}
+                index={i}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-16">
+            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-4 bg-[#1B3058] text-white font-bold rounded-lg hover:opacity-90 transition-all shadow-lg">
+              Explore Our Services <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -302,6 +393,46 @@ const Index = () => {
               </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-white overflow-hidden relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-red-50/30 rounded-full blur-3xl -z-10"></div>
+        <div className="container mx-auto px-6">
+          <SectionHeader
+            title="Client Success Stories"
+            subtitle="Don't just take our word for it. Here's what our partners say about working with Avira Technologies."
+            center
+          />
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 1 }}
+                className="p-8 rounded-2xl bg-white border border-border shadow-card hover:shadow-xl transition-all relative"
+              >
+                <div className="flex gap-1 mb-6">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 italic mb-8 leading-relaxed">"{t.text}"</p>
+                <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
+                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold text-xl">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-foreground">{t.name}</h4>
+                    <p className="text-sm text-muted-foreground">{t.role}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

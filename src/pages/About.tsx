@@ -140,7 +140,7 @@ const About = () => (
     </section>
 
     {/* Why Choose Us */}
-    <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg')`}}>
+    <section className="py-20 bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
       <div className="container mx-auto px-0 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -89,16 +89,16 @@ const Footer = memo(() => {
             <h5 className="font-display font-semibold mb-3 text-black text-sm">Follow on</h5>
             {/* Social Icons */}
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#1877F2' }}>
+              <a href="https://www.facebook.com/AviraTechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#1877F2' }} aria-label="Follow us on Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#E4405F' }}>
+              <a href="https://www.instagram.com/aviratechnologies" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#E4405F' }} aria-label="Follow us on Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#0A66C2' }}>
+              <a href="https://www.linkedin.com/company/aviratechnologies/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#0A66C2' }} aria-label="Follow us on LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#FF0000' }}>
+              <a href="https://www.youtube.com/channel/UCKgZv8iwMsbKegrKChGm5Ww" target="_blank" rel="noopener noreferrer" className="transition-colors p-1 hover:opacity-80" style={{ color: '#FF0000' }} aria-label="Subscribe to our YouTube channel">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
