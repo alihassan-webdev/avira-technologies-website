@@ -110,18 +110,9 @@ const Index = () => {
               <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-2xl mb-4" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].title}
               </h2>
-              <p className="text-sm md:text-lg text-white drop-shadow-lg mb-8" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
+              <p className="text-sm md:text-lg text-white drop-shadow-lg" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)', fontFamily: '"Segoe UI", "Helvetica Neue", sans-serif' }}>
                 {heroSlides[currentSlide].tagline}
               </p>
-              <div className="pointer-events-auto">
-                <Link
-                  to={heroSlides[currentSlide].ctaLink}
-                  className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/40 transform hover:-translate-y-1"
-                >
-                  {heroSlides[currentSlide].cta}
-                  <ChevronRight className="w-5 h-5" />
-                </Link>
-              </div>
             </div>
           </motion.div>
         </AnimatePresence>
