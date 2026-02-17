@@ -170,30 +170,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Solutions Grid */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-6">
-          <SectionHeader
-            title="Comprehensive Solutions"
-            subtitle="Tailored technology solutions designed to address your most complex business challenges."
-            center
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            {solutions.map((item, i) => (
-              <ServiceCard
-                key={item.title}
-                {...item}
-                index={i}
-              />
-            ))}
-          </div>
-          <div className="text-center mt-16">
-            <Link to="/solutions" className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-600/20">
-              View All Solutions <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Services Grid */}
       <section className="py-24 bg-secondary relative overflow-hidden">
