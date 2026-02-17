@@ -4,7 +4,10 @@ import { memo } from "react";
 
 const Footer = memo(() => {
   const scrollToTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
   };
 
   return (
