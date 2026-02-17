@@ -137,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-secondary bg-cover bg-center relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
+      <section className="py-20 bg-secondary bg-cover bg-center bg-fixed relative" style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/7652050/pexels-photo-7652050.jpeg?auto=compress&cs=tinysrgb&w=1200')`}}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-3 gap-8">
             {[
