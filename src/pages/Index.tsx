@@ -376,7 +376,7 @@ const Index = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.5 }}
-                  className="p-6 grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center bg-gray-50 rounded-xl h-32"
+                  className="p-6 grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center bg-card rounded-xl h-32 border border-border shadow-card hover:shadow-lg"
                 >
                   <img
                     src={partner.logo}
