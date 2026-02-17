@@ -171,30 +171,6 @@ const Index = () => {
       </section>
 
 
-      {/* Services Grid */}
-      <section className="py-24 bg-secondary relative overflow-hidden">
-        <div className="container mx-auto px-6">
-          <SectionHeader
-            title="Expert Services"
-            subtitle="Our professional services ensure your technology infrastructure is optimized, secure, and always available."
-            center
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            {services.map((item, i) => (
-              <ServiceCard
-                key={item.title}
-                {...item}
-                index={i}
-              />
-            ))}
-          </div>
-          <div className="text-center mt-16">
-            <Link to="/services" className="inline-flex items-center gap-2 px-8 py-4 bg-[#1B3058] text-white font-bold rounded-lg hover:opacity-90 transition-all shadow-lg">
-              Explore Our Services <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Mission & Vision Section */}
       <section className="py-20 bg-white overflow-hidden">
@@ -337,45 +313,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-white overflow-hidden relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-red-50/30 rounded-full blur-3xl -z-10"></div>
-        <div className="container mx-auto px-6">
-          <SectionHeader
-            title="Client Success Stories"
-            subtitle="Don't just take our word for it. Here's what our partners say about working with Avira Technologies."
-            center
-          />
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            {testimonials.map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 1 }}
-                className="p-8 rounded-2xl bg-white border border-border shadow-card hover:shadow-xl transition-all relative"
-              >
-                <div className="flex gap-1 mb-6">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 italic mb-8 leading-relaxed">"{t.text}"</p>
-                <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
-                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold text-xl">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-display font-bold text-foreground">{t.name}</h4>
-                    <p className="text-sm text-muted-foreground">{t.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 24-Hour Hotline - Main Contact CTA */}
       <section className="py-16 bg-secondary">
