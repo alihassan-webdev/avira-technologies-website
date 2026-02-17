@@ -27,8 +27,8 @@ const partners = [
 
 const Partners = () => (
   <Layout>
-    <PageHero 
-      title="Our Strategic Partners" 
+    <PageHero
+      title="Our Partners"
       description="Collaborating with global technology leaders to deliver excellence." 
       breadcrumbs={[{ label: "Home", path: "/" }, { label: "Partners", path: "/partners" }]} 
     />

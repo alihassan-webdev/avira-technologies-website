@@ -349,7 +349,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
               <div className="max-w-2xl">
                 <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-                  Our Strategic Partners
+                  Our Partners
                 </h2>
                 <div className="w-12 h-1 bg-gradient-electric rounded-full mb-6"></div>
                 <h3 className="text-xl md:text-2xl font-semibold text-red-600 mb-4">
