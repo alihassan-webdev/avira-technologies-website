@@ -80,7 +80,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
             handleLinkClick();
           }} className="flex items-center gap-2 flex-shrink-0">
-            <img src="https://cdn.builder.io/api/v1/image/assets%2F0c9ff3fe6b524af2b49a033e347f98b5%2Ff78eba7ee0394561bf7b611bedcf941b?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-14 w-auto object-contain" style={{ maxHeight: '56px' }} />
+            <img src="https://cdn.builder.io/api/v1/image/assets%2F0c9ff3fe6b524af2b49a033e347f98b5%2Ff78eba7ee0394561bf7b611bedcf941b?format=webp&width=800&height=1200" alt="Avira Technologies" className="h-12 w-auto object-contain" style={{ maxHeight: '48px' }} />
           </Link>
 
           {/* Desktop Nav */}
