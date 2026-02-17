@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <TopHeader />
       <Navbar />
-      <main className="flex-1 pt-10 lg:pt-12">{children}</main>
+      <main className="flex-1 pt-20 lg:pt-[88px]">{children}</main>
       <Footer />
       <WhatsAppButton />
     </div>

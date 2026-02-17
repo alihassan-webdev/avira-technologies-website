@@ -166,14 +166,22 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+            transition={{
+              height: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 }
+            }}
+            className="lg:hidden bg-white border-t border-gray-100 overflow-hidden shadow-xl"
           >
             <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-              {navItems.map((item) => (
-                <div key={item.label}>
+              {navItems.map((item, idx) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.05, duration: 0.3 }}
+                >
                   {item.children ? (
-                    <div className="flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md nav-link group">
+                    <div className="flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-md nav-link group">
                       <Link
                         to={item.path}
                         onClick={() => {
@@ -197,9 +205,9 @@ const Navbar = () => {
                             mobileExpandedDropdown === item.label ? null : item.label
                           );
                         }}
-                        className="ml-2 flex-shrink-0"
+                        className="ml-2 flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors"
                       >
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                           mobileExpandedDropdown === item.label ? 'rotate-180' : ''
                         }`} />
                       </button>
@@ -211,7 +219,7 @@ const Navbar = () => {
                         window.scrollTo(0, 0);
                         handleLinkClick();
                       }}
-                      className={`block px-3 py-2 text-sm font-medium rounded-md nav-link ${
+                      className={`block px-3 py-2.5 text-sm font-medium rounded-md nav-link ${
                         location.pathname === item.path || location.pathname.startsWith(item.path + "/")
                           ? "text-red-600 active"
                           : "text-black/70 hover:text-black"
@@ -220,36 +228,42 @@ const Navbar = () => {
                       {item.label}
                     </Link>
                   )}
-                  {item.children && mobileExpandedDropdown === item.label && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.5, ease: "easeInOut" }}
-                      className="ml-4 space-y-1 overflow-hidden"
-                    >
-                      {item.children.map((child) => (
-                        <button
-                          key={child.path}
-                          type="button"
-                          onClick={() => {
-                            navigate(child.path);
-                            window.scrollTo(0, 0);
-                            setMobileOpen(false);
-                            setMobileExpandedDropdown(null);
-                          }}
-                          className={`w-full text-left block px-3 py-1.5 text-sm font-medium nav-link ${
-                            location.pathname === child.path
-                              ? "text-red-600 active"
-                              : "text-black/50 hover:text-black"
-                          }`}
-                        >
-                          {child.label}
-                        </button>
-                      ))}
-                    </motion.div>
-                  )}
-                </div>
+
+                  <AnimatePresence>
+                    {item.children && mobileExpandedDropdown === item.label && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{
+                          height: { type: "spring", stiffness: 400, damping: 40 },
+                          opacity: { duration: 0.2 }
+                        }}
+                        className="ml-4 space-y-1 overflow-hidden border-l border-gray-100"
+                      >
+                        {item.children.map((child) => (
+                          <button
+                            key={child.path}
+                            type="button"
+                            onClick={() => {
+                              navigate(child.path);
+                              window.scrollTo(0, 0);
+                              setMobileOpen(false);
+                              setMobileExpandedDropdown(null);
+                            }}
+                            className={`w-full text-left block px-4 py-2 text-sm font-medium transition-colors ${
+                              location.pathname === child.path
+                                ? "text-red-600 active"
+                                : "text-black/50 hover:text-black hover:bg-gray-50"
+                            }`}
+                          >
+                            {child.label}
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
               ))}
             </div>
           </motion.div>
